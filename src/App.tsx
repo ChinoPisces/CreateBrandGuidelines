@@ -93,7 +93,11 @@ export default function App() {
     <main className={egypt ? "theme-egypt" : "theme-anime"}>
       <header className="topbar">
         <a className="brand-lockup" href="#top" aria-label="Tutenramen brand guide home">
-          TUTEN<span>RAMEN</span>
+          <img
+            className="h-10 w-[clamp(90px,24vw,160px)] object-contain object-left"
+            src={egypt ? assets.wordmarkEgypt : assets.wordmarkAnime}
+            alt="Tutenramen"
+          />
         </a>
         <div className="hidden text-[10px] font-bold uppercase tracking-[0.2em] opacity-50 md:block">
           Brand standards · v1.0
