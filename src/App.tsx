@@ -213,11 +213,29 @@ export default function App() {
             <div className="logo-card logo-card-light">
               <span className="card-kicker">Primary · Modern Egyptian</span>
               <img alt="Tutenramen Modern Egyptian wordmark" src={assets.wordmarkEgypt} />
+              <div className="logo-monogram">
+                <iframe
+                  src="https://player.vimeo.com/video/1183563482?background=1&controls=0&title=0&byline=0&portrait=0&autoplay=1&muted=1&loop=1&playsinline=1&autopause=0"
+                  title="Tutenramen Modern Egyptian animated monogram"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  loading="lazy"
+                  referrerPolicy="origin-when-cross-origin"
+                />
+              </div>
               <span className="card-note">Use for premium, culinary and heritage-led moments.</span>
             </div>
             <div className="logo-card logo-card-dark">
               <span className="card-kicker">Primary · Chibi Anime</span>
               <img alt="Tutenramen Chibi Anime wordmark" src={assets.wordmarkAnime} />
+              <div className="logo-monogram">
+                <iframe
+                  src="https://player.vimeo.com/video/1183563470?background=1&controls=0&title=0&byline=0&portrait=0&autoplay=1&muted=1&loop=1&playsinline=1&autopause=0"
+                  title="Tutenramen Chibi Anime animated monogram"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  loading="lazy"
+                  referrerPolicy="origin-when-cross-origin"
+                />
+              </div>
               <span className="card-note">Use for social, guest participation and high-energy moments.</span>
             </div>
           </div>
@@ -335,7 +353,7 @@ export default function App() {
               <figure className="motion-card" key={video.id}>
                 <div className={video.square ? "motion-player motion-player-square" : "motion-player"}>
                   <iframe
-                    src={`https://player.vimeo.com/video/${video.id}?title=0&byline=0&portrait=0&autoplay=1&muted=1&loop=1&playsinline=1&autopause=0`}
+                    src={`https://player.vimeo.com/video/${video.id}?background=1&controls=0&title=0&byline=0&portrait=0&autoplay=1&muted=1&loop=1&playsinline=1&autopause=0`}
                     title={`${egypt ? "Modern Egyptian" : "Chibi Anime"} Tutenramen — ${video.label}`}
                     allow="autoplay; fullscreen; picture-in-picture"
                     allowFullScreen
