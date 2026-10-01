@@ -313,7 +313,7 @@ export default function App() {
           <div className="illustration-grid">
             {illustrationSets[direction].map((art) => (
               <figure className={art.label === "Characters" ? "illustration-card illustration-card-wide" : "illustration-card"} key={art.file}>
-                <div className="illustration-art">
+                <div className={art.label === "Ninja mummy" ? "illustration-art illustration-art-mummy" : "illustration-art"}>
                   <img src={`${CDN}/${art.file}`} alt={`${egypt ? "Modern Egyptian" : "Chibi Anime"} Tutenramen ${art.label.toLowerCase()} illustration`} loading="lazy" decoding="async" />
                 </div>
                 <figcaption>{art.label}</figcaption>
