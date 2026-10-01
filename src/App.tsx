@@ -9,6 +9,8 @@ const assets = {
   heroAnime: `${CDN}/6ab492c7fb1e0a368702ecbb_social-09-photo-wall-p-1080.webp`,
   packagingEgypt: `${CDN}/6ab47b8cd96f51e497efe57d_13fe870b-0caa-480d-8ce7-d792fa5173f0-p-1080.webp`,
   packagingAnime: `${CDN}/6ab492c2fc8cbd991d51af7b_social-01-tabletop-packaging-p-1080.webp`,
+  storefrontEgypt: `${CDN}/6aaf997ff97f052a1e295366_tutenramen-modern-egyptian-storefront-p-1080.png`,
+  detailsEgypt: `${CDN}/6aaf997e0cbf210b6ba52321_tutenramen-modern-egyptian-table-p-1080.png`,
   storefront: `${CDN}/6ab492c5fc8cbd991d51b16c_social-05-storefront-p-1080.webp`,
   menu: `${CDN}/6ab492c8ad09408dad7910b4_social-10-printed-menu-p-1080.webp`,
   egyptCharacter: `${CDN}/6ab355c2d30b7d7b4f747af5_NinjaMummy_TE_footer.svg`,
@@ -249,11 +251,17 @@ export default function App() {
               <figcaption>01 · Product in context</figcaption>
             </figure>
             <figure>
-              <img alt="Tutenramen restaurant exterior at dusk" src={assets.storefront} />
-              <figcaption>02 · Golden-hour environments</figcaption>
+              <img
+                alt={egypt ? "Tutenramen restaurant exterior with Modern Egyptian signage" : "Tutenramen restaurant exterior at dusk"}
+                src={egypt ? assets.storefrontEgypt : assets.storefront}
+              />
+              <figcaption>{egypt ? "02 · Branded environments" : "02 · Golden-hour environments"}</figcaption>
             </figure>
             <figure>
-              <img alt="Tutenramen illustrated printed menu" src={assets.menu} />
+              <img
+                alt={egypt ? "Ramen served alongside Modern Egyptian Tutenramen packaging" : "Tutenramen illustrated printed menu"}
+                src={egypt ? assets.detailsEgypt : assets.menu}
+              />
               <figcaption>03 · Crafted details</figcaption>
             </figure>
           </div>
