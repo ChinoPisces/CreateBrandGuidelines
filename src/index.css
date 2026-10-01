@@ -396,3 +396,26 @@ footer > a { position: absolute; right: 36px; bottom: 32px; color: inherit; font
 }
 
 .theme-egypt .illustration-art-mummy img { transform: translate(101%, -54%) scale(3.2); }
+
+/* Ground the cropped Egyptian torso at the card border, not above its caption. */
+.theme-egypt .illustration-card-mummy { position: relative; overflow: hidden; }
+.theme-egypt .illustration-card-mummy .illustration-art-mummy {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 0;
+  height: 260px;
+}
+.theme-egypt .illustration-card-mummy .illustration-art-mummy img {
+  transform: translate(101%, -50%) scale(3.2);
+}
+.theme-egypt .illustration-card-mummy figcaption {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  margin: 0;
+  z-index: 1;
+}
+@media (max-width: 820px) {
+  .theme-egypt .illustration-card-mummy { min-height: 308px; }
+}
