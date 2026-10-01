@@ -250,7 +250,7 @@ h1 em, h2 em { color: var(--accent); font-weight: 500; }
 .type-grid { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid color-mix(in srgb, var(--ink) 22%, transparent); }
 .type-display, .type-ui { min-height: 480px; padding: 36px; display: flex; flex-direction: column; }
 .type-display { font-family: Georgia, "Times New Roman", serif; }
-.type-ui { border-left: 1px solid color-mix(in srgb, var(--ink) 22%, transparent); }
+.type-ui { font-family: "Montserrat", sans-serif; border-left: 1px solid color-mix(in srgb, var(--ink) 22%, transparent); }
 .font-name { font-family: "Montserrat", sans-serif; font-size: 9px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; opacity: .6; }
 .glyph { margin: auto 0; font-size: clamp(130px, 18vw, 250px); line-height: .8; letter-spacing: -.08em; }
 .type-display p, .type-ui p { max-width: 400px; font-family: "Montserrat", sans-serif; font-size: 11px; line-height: 1.65; opacity: .6; }
