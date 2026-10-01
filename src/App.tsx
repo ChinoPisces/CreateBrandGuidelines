@@ -9,8 +9,8 @@ const assets = {
   heroAnime: `${CDN}/6ab492c7fb1e0a368702ecbb_social-09-photo-wall-p-1080.webp`,
   packagingEgypt: `${CDN}/6ab47b8cd96f51e497efe57d_13fe870b-0caa-480d-8ce7-d792fa5173f0-p-1080.webp`,
   packagingAnime: `${CDN}/6ab492c2fc8cbd991d51af7b_social-01-tabletop-packaging-p-1080.webp`,
-  storefrontEgypt: `${CDN}/6aaf997ff97f052a1e295366_tutenramen-modern-egyptian-storefront-p-1080.png`,
-  detailsEgypt: `${CDN}/6aaf997e0cbf210b6ba52321_tutenramen-modern-egyptian-table-p-1080.png`,
+  interiorEgypt: `${CDN}/6ab46b58b7fd433adfdffe14_TE_sc_02.png`,
+  detailsEgypt: `${CDN}/6ab479a43fe57a9400a14686_009a880c-63f2-4eaf-8cfd-5b2c42fa7b86-p-1080.webp`,
   storefront: `${CDN}/6ab492c5fc8cbd991d51b16c_social-05-storefront-p-1080.webp`,
   menu: `${CDN}/6ab492c8ad09408dad7910b4_social-10-printed-menu-p-1080.webp`,
   egyptCharacter: `${CDN}/6ab355c2d30b7d7b4f747af5_NinjaMummy_TE_footer.svg`,
@@ -252,14 +252,14 @@ export default function App() {
             </figure>
             <figure>
               <img
-                alt={egypt ? "Tutenramen restaurant exterior with Modern Egyptian signage" : "Tutenramen restaurant exterior at dusk"}
-                src={egypt ? assets.storefrontEgypt : assets.storefront}
+                alt={egypt ? "Tutenramen restaurant interior with Modern Egyptian branding" : "Tutenramen restaurant exterior at dusk"}
+                src={egypt ? assets.interiorEgypt : assets.storefront}
               />
               <figcaption>{egypt ? "02 · Branded environments" : "02 · Golden-hour environments"}</figcaption>
             </figure>
             <figure>
               <img
-                alt={egypt ? "Ramen served alongside Modern Egyptian Tutenramen packaging" : "Tutenramen illustrated printed menu"}
+                alt={egypt ? "Modern Egyptian Tutenramen takeaway bag and box" : "Tutenramen illustrated printed menu"}
                 src={egypt ? assets.detailsEgypt : assets.menu}
               />
               <figcaption>03 · Crafted details</figcaption>
