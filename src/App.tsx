@@ -19,13 +19,44 @@ const assets = {
 
 type Direction = "egypt" | "anime";
 
+const illustrationSets = {
+  egypt: [
+    { label: "Pyramid", file: "6ab0d5daf64ef41e628e11c4_Pyramid_TE_standard.svg" },
+    { label: "Sphinx", file: "6abcbdfd30fa67f98c83191f_Sphinx_ME_updated.svg" },
+    { label: "Obelisk", file: "6ab0d5dae0e8181380195463_Obelisk_TE_standard.svg" },
+    { label: "Characters", file: "6ab0d5d8b063e14a3003ce09_Characters_TE_standard.svg" },
+    { label: "Ninja mummy", file: "6ab355c2d30b7d7b4f747af5_NinjaMummy_TE_footer.svg" },
+  ],
+  anime: [
+    { label: "Pyramid", file: "6ab0d5da3a3089f25d3f122b_Pyramid_CA_standard.svg" },
+    { label: "Sphinx", file: "6ab5bbf37ae8620f992af2f5_Sphynx_CA.svg" },
+    { label: "Obelisk", file: "6ab0d5da2664b24bb566be58_Obelisk_CA_standard.svg" },
+    { label: "Characters", file: "6ab0d5d8b063e14a3003cd86_Characters_CA_standard.svg" },
+    { label: "Ninja mummy", file: "6ab355c278494f2cf0cca3ce_NinjaMummy_CA_footer.svg" },
+  ],
+};
+
+const motionSets = {
+  egypt: [
+    { label: "Chariot delivery", id: "1183563431", square: false },
+    { label: "Monogram", id: "1183563437", square: true },
+  ],
+  anime: [
+    { label: "Chariot delivery", id: "1183563451", square: false },
+    { label: "Monogram", id: "1183563415", square: true },
+  ],
+};
+
+
 const nav = [
   ["01", "Foundation", "foundation"],
   ["02", "Logo", "logo"],
   ["03", "Color", "color"],
   ["04", "Type", "type"],
   ["05", "Imagery", "imagery"],
-  ["06", "Voice", "voice"],
+  ["06", "Illustration", "illustration"],
+  ["07", "Motion", "motion"],
+  ["08", "Voice", "voice"],
 ];
 
 const palettes = {
@@ -271,8 +302,55 @@ export default function App() {
           </div>
         </section>
 
+        <section className="section illustration-section" id="illustration">
+          <SectionLabel number="06">Illustration</SectionLabel>
+          <div className="section-heading">
+            <h2>{egypt ? <>Symbols with<br />a story.</> : <>Characters with<br />personality.</>}</h2>
+            <p>{egypt
+              ? "Geometric landmarks and expressive characters bring the Modern Egyptian world to life."
+              : "Rounded landmarks and playful characters give the Chibi Anime world its distinctive charm."}</p>
+          </div>
+          <div className="illustration-grid">
+            {illustrationSets[direction].map((art) => (
+              <figure className={art.label === "Characters" ? "illustration-card illustration-card-wide" : "illustration-card"} key={art.file}>
+                <div className="illustration-art">
+                  <img src={`${CDN}/${art.file}`} alt={`${egypt ? "Modern Egyptian" : "Chibi Anime"} Tutenramen ${art.label.toLowerCase()} illustration`} loading="lazy" decoding="async" />
+                </div>
+                <figcaption>{art.label}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+
+        <section className="section motion-section" id="motion">
+          <SectionLabel number="07">Motion</SectionLabel>
+          <div className="section-heading">
+            <h2>Bring the<br />brand to life.</h2>
+            <p>{egypt
+              ? "Ceremonial movement and measured rhythm give Modern Egyptian its sense of prestige."
+              : "Expressive movement and playful rhythm bring energy to the Chibi Anime characters."}</p>
+          </div>
+          <div className="motion-grid">
+            {motionSets[direction].map((video) => (
+              <figure className="motion-card" key={video.id}>
+                <div className={video.square ? "motion-player motion-player-square" : "motion-player"}>
+                  <iframe
+                    src={`https://player.vimeo.com/video/${video.id}?title=0&byline=0&portrait=0&autoplay=1&muted=1&loop=1&playsinline=1&autopause=0`}
+                    title={`${egypt ? "Modern Egyptian" : "Chibi Anime"} Tutenramen — ${video.label}`}
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="origin-when-cross-origin"
+                  />
+                </div>
+                <figcaption>{egypt ? "Modern Egyptian" : "Chibi Anime"} · {video.label}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+
         <section className="section voice-section" id="voice">
-          <SectionLabel number="06">Voice</SectionLabel>
+          <SectionLabel number="08">Voice</SectionLabel>
           <div className="voice-grid">
             <div>
               <h2>Speak with<br /><em>warm confidence.</em></h2>
