@@ -423,3 +423,9 @@ footer > a { position: absolute; right: 36px; bottom: 32px; color: inherit; font
 .logo-monogram { position: relative; width: 100%; max-width: 340px; aspect-ratio: 1; margin: 28px auto; }
 .logo-monogram iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; pointer-events: none; }
 .motion-player iframe { pointer-events: none; }
+
+.logo-showcase { align-items: stretch; }
+.logo-wordmarks { display: grid; grid-template-rows: 1fr 1fr; aspect-ratio: 1; min-width: 0; }
+.logo-wordmarks .logo-card { min-height: 0; padding: clamp(16px, 2vw, 32px); }
+.logo-wordmarks .logo-card img { width: 78%; max-height: 100px; margin: auto; }
+.logo-monogram-full { width: 100%; max-width: none; margin: 0; aspect-ratio: 1; overflow: hidden; }
