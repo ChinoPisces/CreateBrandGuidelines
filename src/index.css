@@ -392,5 +392,7 @@ footer > a { position: absolute; right: 36px; bottom: 32px; color: inherit; font
   max-width: 100%;
   height: auto;
   flex-shrink: 0;
-  transform: translate(112%, -59%) scale(3.2);
+  transform: translate(100%, -59%) scale(3.2);
 }
+
+.theme-egypt .illustration-art-mummy img { transform: translate(101%, -54%) scale(3.2); }
