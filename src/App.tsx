@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ScrollMural from "./ScrollMural";
 
 const CDN = "https://cdn.prod.website-files.com/6553caa42be844f2b3c45e3f";
 
@@ -357,6 +358,18 @@ export default function App() {
               </figure>
             ))}
           </div>
+        </section>
+
+        <section className="mural-section" aria-label={egypt ? "Modern Egyptian mural" : "Chibi Anime mural"}>
+          {egypt ? (
+            <img
+              className="mural-image"
+              src={`${import.meta.env.BASE_URL}media/Tutenramen_Mural-2.jpg`}
+              alt="Modern Egyptian Tutenramen mural with chariot, characters, sphinx, obelisk, and pyramid"
+              loading="lazy"
+              decoding="async"
+            />
+          ) : <ScrollMural />}
         </section>
 
         <section className="section voice-section" id="voice">
