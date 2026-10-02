@@ -22,7 +22,23 @@ function loadRuntime() {
   return runtimePromise;
 }
 
-export default function ScrollMural() {
+type ScrollMuralProps = {
+  source?: string;
+  label?: string;
+  aspectRatio?: string;
+  reverse?: boolean;
+  startOffset?: number;
+  scrollSpeed?: number;
+};
+
+export default function ScrollMural({
+  source = "media/Mural_CA.json",
+  label = "Chibi Anime Tutenramen mural animated by scrolling",
+  aspectRatio = "3840 / 1950",
+  reverse = true,
+  startOffset = 0.25,
+  scrollSpeed = 4 / 3,
+}: ScrollMuralProps) {
   const frame = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const container = frame.current;
@@ -38,7 +54,7 @@ export default function ScrollMural() {
     const progress = () => {
       const bounds = container.getBoundingClientRect();
       const visibleProgress = (window.innerHeight - bounds.top) / (window.innerHeight + bounds.height);
-      return Math.max(0, Math.min(1, 0.5 + (visibleProgress - 0.5) * (4 / 3)));
+      return Math.max(0, Math.min(1, 0.5 + (visibleProgress - 0.5) * scrollSpeed));
     };
     const render = (time: number) => {
       request = 0;
@@ -48,14 +64,14 @@ export default function ScrollMural() {
       previousTime = time;
       current += (target - current) * (1 - Math.exp(-delta / 70));
       if (Math.abs(target - current) < 0.0005) current = target;
-      const frameProgress = Math.min(1, 0.25 + current);
-      animation.goToAndStop((1 - frameProgress) * Math.max(0, animation.totalFrames - 1), true);
+      const frameProgress = Math.min(1, startOffset + current);
+      animation.goToAndStop((reverse ? 1 - frameProgress : frameProgress) * Math.max(0, animation.totalFrames - 1), true);
       if (current !== target) request = requestAnimationFrame(render);
     };
     const schedule = () => { if (!request) request = requestAnimationFrame(render); };
     Promise.all([
       loadRuntime(),
-      fetch(`${import.meta.env.BASE_URL}media/Mural_CA.json`, { signal: controller.signal })
+      fetch(`${import.meta.env.BASE_URL}${source}`, { signal: controller.signal })
         .then(response => { if (!response.ok) throw new Error("Animation unavailable"); return response.json(); }),
     ]).then(([lottie, data]) => {
       if (disposed) return;
@@ -81,6 +97,6 @@ export default function ScrollMural() {
       reducedMotion.removeEventListener("change", schedule);
       animation?.destroy();
     };
-  }, []);
-  return <div ref={frame} className="mural-animation" role="img" aria-label="Chibi Anime Tutenramen mural animated by scrolling" />;
+  }, [source, reverse, startOffset, scrollSpeed]);
+  return <div ref={frame} className="mural-animation" style={{ aspectRatio }} role="img" aria-label={label} />;
 }
