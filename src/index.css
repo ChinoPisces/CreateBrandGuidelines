@@ -429,3 +429,8 @@ footer > a { position: absolute; right: 36px; bottom: 32px; color: inherit; font
 .logo-wordmarks .logo-card { min-height: 0; padding: clamp(16px, 2vw, 32px); }
 .logo-wordmarks .logo-card img { width: 78%; max-height: 100px; margin: auto; }
 .logo-monogram-full { width: 100%; max-width: none; margin: 0; aspect-ratio: 1; overflow: hidden; }
+
+.mural-section { width: 100%; margin: 0; overflow: hidden; background: var(--paper); }
+.mural-image { width: 100%; height: auto; display: block; }
+.mural-animation { width: 100%; aspect-ratio: 3840 / 1950; }
+.mural-animation canvas, .mural-animation svg { display: block; width: 100% !important; height: 100% !important; }
