@@ -22,6 +22,44 @@ function loadRuntime() {
   return runtimePromise;
 }
 
+type TransformKeyframe = {
+  t: number;
+  s?: number[];
+  i?: { x: number; y: number };
+  o?: { x: number; y: number };
+};
+type AnimatedTransform = { a: number; k: number[] | TransformKeyframe[] };
+type MuralData = {
+  ip: number;
+  op: number;
+  layers: Array<{ ks: { p?: AnimatedTransform; s?: AnimatedTransform } }>;
+};
+
+// Use the outward half of each loop as continuous, linear depth movement.
+function prepareParallax(data: MuralData) {
+  const lastFrame = data.op - 1;
+  for (const layer of data.layers) {
+    for (const property of [layer.ks.p, layer.ks.s]) {
+      if (!property || property.a !== 1) continue;
+      const keys = property.k as TransformKeyframe[];
+      const start = keys[0]?.s;
+      if (!start) continue;
+      const peak = keys.reduce((best, key) => {
+        const distance = (values?: number[]) => values
+          ? values.reduce((sum, value, index) => sum + Math.abs(value - start[index]), 0)
+          : 0;
+        return distance(key.s) > distance(best.s) ? key : best;
+      }, keys[0]);
+      if (!peak.s) continue;
+      property.k = [
+        { t: data.ip, s: start, o: { x: 0.333, y: 0.333 }, i: { x: 0.667, y: 0.667 } },
+        { t: lastFrame, s: peak.s },
+      ];
+    }
+  }
+  return data;
+}
+
 export default function ScrollMural() {
   const frame = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -38,7 +76,7 @@ export default function ScrollMural() {
     const progress = () => {
       const bounds = container.getBoundingClientRect();
       const visibleProgress = (window.innerHeight - bounds.top) / (window.innerHeight + bounds.height);
-      return Math.max(0, Math.min(1, 0.5 + (visibleProgress - 0.5) * 0.672));
+      return Math.max(0, Math.min(1, visibleProgress * 0.672));
     };
     const render = (time: number) => {
       request = 0;
@@ -60,7 +98,7 @@ export default function ScrollMural() {
     ]).then(([lottie, data]) => {
       if (disposed) return;
       animation = lottie.loadAnimation({
-        container, renderer: "canvas", loop: false, autoplay: false, animationData: data,
+        container, renderer: "canvas", loop: false, autoplay: false, animationData: prepareParallax(data),
         rendererSettings: { preserveAspectRatio: "xMidYMid meet", clearCanvas: true },
       });
       animation.addEventListener("DOMLoaded", () => {
