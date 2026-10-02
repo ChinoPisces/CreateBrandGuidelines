@@ -11,7 +11,7 @@ const assets = {
   packagingEgypt: `${import.meta.env.BASE_URL}media/modern-egyptian-table-scene.webp`,
   packagingAnime: `${CDN}/6ab492c2fc8cbd991d51af7b_social-01-tabletop-packaging-p-1080.webp`,
   interiorEgypt: `${CDN}/6ab46b58b7fd433adfdffe14_TE_sc_02.png`,
-  detailsEgypt: `${CDN}/6ab479a43fe57a9400a14686_009a880c-63f2-4eaf-8cfd-5b2c42fa7b86-p-1080.webp`,
+  detailsEgypt: `${import.meta.env.BASE_URL}media/TE_sc_05.png`,
   storefront: `${CDN}/6ab492c5fc8cbd991d51b16c_social-05-storefront-p-1080.webp`,
   menu: `${CDN}/6ab492c8ad09408dad7910b4_social-10-printed-menu-p-1080.webp`,
   egyptCharacter: `${CDN}/6ab355c2d30b7d7b4f747af5_NinjaMummy_TE_footer.svg`,
@@ -301,7 +301,7 @@ export default function App() {
             </figure>
             <figure>
               <img
-                alt={egypt ? "Modern Egyptian Tutenramen takeaway bag and box" : "Tutenramen illustrated printed menu"}
+                alt={egypt ? "Black Tutenramen delivery bag with gold Modern Egyptian branding" : "Tutenramen illustrated printed menu"}
                 src={egypt ? assets.detailsEgypt : assets.menu}
               />
               <figcaption>03 · Crafted details</figcaption>
