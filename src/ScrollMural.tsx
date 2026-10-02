@@ -32,20 +32,40 @@ type AnimatedTransform = { a: number; k: number[] | TransformKeyframe[] };
 type MuralData = {
   ip: number;
   op: number;
-  layers: Array<{ nm: string; ks: { p?: AnimatedTransform; s?: AnimatedTransform } }>;
+  h: number;
+  layers: Array<{ nm: string; ks: { a?: AnimatedTransform; p?: AnimatedTransform; s?: AnimatedTransform } }>;
 };
 
 // Use the outward half of each loop as continuous, linear depth movement.
 function prepareParallax(data: MuralData) {
   const lastFrame = data.op - 1;
   const depthStrength: Record<string, number> = {
-    foregroundPlants: 3.2,
-    peopleAndGods: 2.4,
-    riverPlants: 2.2,
-    blueLotus: 1.8,
+    peopleAndGods: 1.25,
+    riverPlants: 1.3,
+    blueLotus: 1.3,
     distantTrees: 1.2,
   };
   for (const layer of data.layers) {
+    if (layer.nm === "foregroundPlants") {
+      const position = (layer.ks.p?.k as TransformKeyframe[])[0]?.s;
+      const anchor = layer.ks.a?.k as number[];
+      const scale = layer.ks.s?.k as number[];
+      if (position && anchor && scale) {
+        // Move the scale origin to the frame's bottom without changing the initial artwork.
+        const groundedAnchor = [...anchor];
+        groundedAnchor[1] += (data.h - position[1]) / (scale[1] / 100);
+        layer.ks.a = { a: 0, k: groundedAnchor };
+        layer.ks.p = { a: 0, k: [position[0], data.h] };
+        layer.ks.s = {
+          a: 1,
+          k: [
+            { t: data.ip, s: scale, o: { x: 0.333, y: 0.333 }, i: { x: 0.667, y: 0.667 } },
+            { t: lastFrame, s: scale.map(value => value * 1.06) },
+          ],
+        };
+      }
+      continue;
+    }
     for (const property of [layer.ks.p, layer.ks.s]) {
       if (!property || property.a !== 1) continue;
       const keys = property.k as TransformKeyframe[];
