@@ -38,7 +38,7 @@ export default function ScrollMural() {
     const progress = () => {
       const bounds = container.getBoundingClientRect();
       const visibleProgress = (window.innerHeight - bounds.top) / (window.innerHeight + bounds.height);
-      return Math.max(0, Math.min(1, 0.5 + (visibleProgress - 0.5) * (4 / 3)));
+      return Math.max(0, Math.min(1, 0.5 + (visibleProgress - 0.5) * (16 / 15)));
     };
     const render = (time: number) => {
       request = 0;
