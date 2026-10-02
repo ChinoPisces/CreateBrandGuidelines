@@ -362,12 +362,13 @@ export default function App() {
 
         <section className="mural-section" aria-label={egypt ? "Modern Egyptian mural" : "Chibi Anime mural"}>
           {egypt ? (
-            <img
-              className="mural-image"
-              src={`${import.meta.env.BASE_URL}media/Tutenramen_Mural-2.jpg?v=8e1d4a75`}
-              alt="Modern Egyptian Tutenramen mural with chariot, characters, sphinx, obelisk, and pyramid"
-              loading="lazy"
-              decoding="async"
+            <ScrollMural
+              source="media/Tutenramen_Mural_ME.json"
+              label="Modern Egyptian Tutenramen mural animated by scrolling"
+              aspectRatio="1920 / 1080"
+              reverse={false}
+              startOffset={0}
+              scrollSpeed={1}
             />
           ) : <ScrollMural />}
         </section>
