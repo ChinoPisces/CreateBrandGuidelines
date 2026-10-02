@@ -364,7 +364,7 @@ export default function App() {
           {egypt ? (
             <img
               className="mural-image"
-              src={`${import.meta.env.BASE_URL}media/Tutenramen_Mural-2.jpg`}
+              src={`${import.meta.env.BASE_URL}media/Tutenramen_Mural-2.jpg?v=8e1d4a75`}
               alt="Modern Egyptian Tutenramen mural with chariot, characters, sphinx, obelisk, and pyramid"
               loading="lazy"
               decoding="async"
