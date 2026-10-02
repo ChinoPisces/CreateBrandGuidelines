@@ -32,12 +32,19 @@ type AnimatedTransform = { a: number; k: number[] | TransformKeyframe[] };
 type MuralData = {
   ip: number;
   op: number;
-  layers: Array<{ ks: { p?: AnimatedTransform; s?: AnimatedTransform } }>;
+  layers: Array<{ nm: string; ks: { p?: AnimatedTransform; s?: AnimatedTransform } }>;
 };
 
 // Use the outward half of each loop as continuous, linear depth movement.
 function prepareParallax(data: MuralData) {
   const lastFrame = data.op - 1;
+  const depthStrength: Record<string, number> = {
+    foregroundPlants: 3.2,
+    peopleAndGods: 2.4,
+    riverPlants: 2.2,
+    blueLotus: 1.8,
+    distantTrees: 1.2,
+  };
   for (const layer of data.layers) {
     for (const property of [layer.ks.p, layer.ks.s]) {
       if (!property || property.a !== 1) continue;
@@ -51,9 +58,11 @@ function prepareParallax(data: MuralData) {
         return distance(key.s) > distance(best.s) ? key : best;
       }, keys[0]);
       if (!peak.s) continue;
+      const strength = property === layer.ks.p ? (depthStrength[layer.nm] ?? 1) : 1;
+      const end = peak.s.map((value, index) => start[index] + (value - start[index]) * strength);
       property.k = [
         { t: data.ip, s: start, o: { x: 0.333, y: 0.333 }, i: { x: 0.667, y: 0.667 } },
-        { t: lastFrame, s: peak.s },
+        { t: lastFrame, s: end },
       ];
     }
   }
