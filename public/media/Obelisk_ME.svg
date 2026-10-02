@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 1000">
+  <defs>
+    <style>
+      .q {
+        fill: #c68111;
+      }
+
+      .r {
+        fill: url(#d);
+      }
+
+      .s {
+        fill: url(#l);
+      }
+
+      .t {
+        fill: url(#h);
+      }
+
+      .u {
+        fill: url(#o);
+      }
+
+      .v {
+        fill: url(#j);
+      }
+
+      .w, .x {
+        fill: none;
+      }
+
+      .y {
+        fill: url(#g);
+      }
+
+      .z {
+        fill: url(#m);
+      }
+
+      .aa {
+        fill: #f2c039;
+      }
+
+      .ab {
+        fill: url(#e);
+      }
+
+      .ac {
+        fill: url(#i);
+      }
+
+      .ad {
+        fill: url(#f);
+      }
+
+      .ae {
+        fill: url(#p);
+      }
+
+      .af {
+        fill: #b5730d;
+      }
+
+      .x {
+        stroke: #fbfdfd;
+        stroke-miterlimit: 10;
+        stroke-width: .5px;
+      }
+
+      .ag {
+        fill: url(#n);
+      }
+    </style>
+    <linearGradient id="d" x1="134.57" y1="170.85" x2="222.12" y2="1238.89" gradientTransform="translate(0 -80)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f5e07e"/>
+      <stop offset="1" stop-color="#c5830f"/>
+    </linearGradient>
+    <linearGradient id="e" x1="236.92" y1="171.71" x2="323.45" y2="1227.76" gradientTransform="translate(0 -80)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c48d46"/>
+      <stop offset="1" stop-color="#9f6100"/>
+    </linearGradient>
+    <linearGradient id="f" x1="180.08" y1="79.1" x2="217.07" y2="1078.73" gradientTransform="translate(0 -80)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f5e07e"/>
+      <stop offset="1" stop-color="#c5830f"/>
+    </linearGradient>
+    <linearGradient id="g" x1="237.93" y1="76.93" x2="269.96" y2="943.41" gradientTransform="translate(0 -80)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e4b046"/>
+      <stop offset="1" stop-color="#9f6100"/>
+    </linearGradient>
+    <linearGradient id="h" x1="163.26" y1="993.41" x2="178.84" y2="1414.23" gradientTransform="translate(0 -80)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e4b046"/>
+      <stop offset="1" stop-color="#9f6100"/>
+    </linearGradient>
+    <linearGradient id="i" x1="135.38" y1="894.13" x2="229.65" y2="1034.2" gradientTransform="translate(0 -80)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e4b046"/>
+      <stop offset="1" stop-color="#9f6100"/>
+    </linearGradient>
+    <linearGradient id="j" x1="316.46" y1="978.63" x2="334.23" y2="1458.56" gradientTransform="translate(0 -80)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c48d46"/>
+      <stop offset="1" stop-color="#9f6100"/>
+    </linearGradient>
+    <linearGradient id="l" x1="-8.35" y1="222.34" x2="239.93" y2="683.83" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f9ea93"/>
+      <stop offset=".5" stop-color="#fade66"/>
+      <stop offset="1" stop-color="#f2c039"/>
+    </linearGradient>
+    <linearGradient id="m" x1="241.24" y1="243.42" x2="296.4" y2="874.25" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c68111"/>
+      <stop offset="1" stop-color="#b5730d"/>
+    </linearGradient>
+    <linearGradient id="n" x1="199.73" y1="66.75" x2="284.65" y2="66.75" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c68111"/>
+      <stop offset=".69" stop-color="#f2c039"/>
+    </linearGradient>
+    <linearGradient id="o" x1="143.13" y1="904.43" x2="144.69" y2="873.22" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f7eac7"/>
+      <stop offset="1" stop-color="#ffc800"/>
+    </linearGradient>
+    <linearGradient id="p" x1="125.26" y1="62.88" x2="246.67" y2="75.59" xlink:href="#o"/>
+  </defs>
+  <g id="a" data-name="b">
+    <g id="b" data-name="c">
+      <g>
+        <g id="c" data-name="d">
+          <polygon class="r" points="94.54 905.46 125.21 128.24 244.58 130.01 259.16 907.24 94.54 905.46"/>
+          <polygon class="ab" points="259.16 907.24 244.58 130.01 284.15 124.04 318.97 893.83 259.16 907.24"/>
+          <polygon class="ad" points="196.66 3.51 244.58 130.01 125.21 128.24 196.66 3.51"/>
+          <polygon class="y" points="196.66 3.51 284.15 124.04 244.58 130.01 196.66 3.51"/>
+          <rect class="t" x="46.62" y="920.19" width="235.76" height="53.59"/>
+          <polygon class="ac" points="282.38 920.19 46.62 920.19 94.54 905.46 259.16 907.24 318.97 893.83 353.38 900.1 282.38 920.19"/>
+          <polygon class="v" points="353.38 953.64 282.38 973.78 282.38 920.19 353.38 900.1 353.38 953.64"/>
+        </g>
+        <rect class="w" width="400" height="1000"/>
+      </g>
+    </g>
+  </g>
+  <g id="k" data-name="Layer 2">
+    <g>
+      <g>
+        <path class="aa" d="M68.18,900.08l12.03.63,54.64,2.58,47.93,2.12,65.14,3.3,17.16.58-.11,83.46-176.68-13.09-19.2-1.2-16.36-1.28-28.49-2.21c-2.16.02-2.23-2.39-2.22-3.3l.48-64.78c0-2.45-.25-6.99-.3-9.46,6.58-1.6,12.69.97,19.05,1.29l26.93,1.36Z"/>
+        <path class="s" d="M224.57,125.04l-110.03.15-54.59,754.35,184.07,9.32-19.45-763.82Z"/>
+        <path class="z" d="M284.65,126.26l-60.08-1.22,19.45,763.82,88.26-21.78-47.63-740.81Z"/>
+        <polygon class="af" points="264.97 992.76 265.04 909.91 265.08 909.3 354.86 885.82 378.63 879.89 378.78 956.47 264.97 992.76"/>
+        <path class="ag" d="M199.73,7.24l24.85,117.79,60.08,1.22L199.73,7.24Z"/>
+        <path class="q" d="M378.63,879.89l-23.77,5.94c-.19-.71-1.7-1.24-2.95-1.13l-26.87,2.41-28.39,2.4-52.62-.64,88.26-21.78c3.03-1.2,6.28.78,9.81,1.58l36.54,11.23Z"/>
+        <path class="aa" d="M231.27,401.49c0-.36,0-.97.19-1.29.6.21.65,1.03-.19,1.29Z"/>
+        <path class="u" d="M244.03,888.86l-184.07-9.32-38.66,17.62-.07,76.69c0,1.21,2.46,1.39,3.02,1.12-2.16-.12-1.98-2.47-1.98-3.38l.29-73.67,242.53,11.38c.11-1.54-21.06-20.44-21.06-20.44Z"/>
+        <path class="aa" d="M354.86,885.82l-89.78,23.47-21.06-20.44,1.94.12,50.69.52,28.39-2.4,26.87-2.41c1.25-.11,2.76.42,2.95,1.13Z"/>
+        <path class="ae" d="M199.73,7.24l-85.18,117.95,110.03-.15L199.73,7.24Z"/>
+      </g>
+      <line class="x" x1="114.55" y1="125.19" x2="224.57" y2="125.04"/>
+    </g>
+    <rect class="w" width="400" height="1000"/>
+  </g>
+</svg>

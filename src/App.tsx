@@ -22,9 +22,9 @@ type Direction = "egypt" | "anime";
 
 const illustrationSets = {
   egypt: [
-    { label: "Pyramid", file: "6ab0d5daf64ef41e628e11c4_Pyramid_TE_standard.svg" },
+    { label: "Pyramid", file: "pyramid_ME.svg" },
     { label: "Sphinx", file: "6abcbdfd30fa67f98c83191f_Sphinx_ME_updated.svg" },
-    { label: "Obelisk", file: "6ab0d5dae0e8181380195463_Obelisk_TE_standard.svg" },
+    { label: "Obelisk", file: "Obelisk_ME.svg" },
     { label: "Characters", file: "6ab0d5d8b063e14a3003ce09_Characters_TE_standard.svg" },
     { label: "Ninja mummy", file: "6ab355c2d30b7d7b4f747af5_NinjaMummy_TE_footer.svg" },
   ],
@@ -325,7 +325,7 @@ export default function App() {
             {illustrationSets[direction].map((art) => (
               <figure className={art.label === "Characters" ? "illustration-card illustration-card-wide" : art.label === "Ninja mummy" ? "illustration-card illustration-card-mummy" : "illustration-card"} key={art.file}>
                 <div className={art.label === "Ninja mummy" ? "illustration-art illustration-art-mummy" : "illustration-art"}>
-                  <img src={`${CDN}/${art.file}`} alt={`${egypt ? "Modern Egyptian" : "Chibi Anime"} Tutenramen ${art.label.toLowerCase()} illustration`} loading="lazy" decoding="async" />
+                  <img src={["pyramid_ME.svg", "Obelisk_ME.svg"].includes(art.file) ? `${import.meta.env.BASE_URL}media/${art.file}` : `${CDN}/${art.file}`} alt={`${egypt ? "Modern Egyptian" : "Chibi Anime"} Tutenramen ${art.label.toLowerCase()} illustration`} loading="lazy" decoding="async" />
                 </div>
                 <figcaption>{art.label}</figcaption>
               </figure>
