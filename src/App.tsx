@@ -6,7 +6,7 @@ const CDN = "https://cdn.prod.website-files.com/6553caa42be844f2b3c45e3f";
 const assets = {
   wordmarkEgypt: `${CDN}/6aac551a8b83400598a702e1_c3990ae0a_brownversion.svg`,
   wordmarkAnime: `${CDN}/6aac551bf2b85351a2a53ef1_ce104ae76_tr_wordmark_orange.svg`,
-  heroEgypt: `${CDN}/6ab482de387d388ab2fcc287_media-generation-tutenramen-two-bowls-0-05a00bbd-f079-4bc7-9807-f159ef71eaf2-p-1600.webp`,
+  heroEgypt: `${import.meta.env.BASE_URL}media/modern-egyptian-ramen.webp`,
   heroAnime: `${CDN}/6ab492c7fb1e0a368702ecbb_social-09-photo-wall-p-1080.webp`,
   packagingEgypt: `${CDN}/6ab47b8cd96f51e497efe57d_13fe870b-0caa-480d-8ce7-d792fa5173f0-p-1080.webp`,
   packagingAnime: `${CDN}/6ab492c2fc8cbd991d51af7b_social-01-tabletop-packaging-p-1080.webp`,
@@ -170,7 +170,7 @@ export default function App() {
           </div>
           <div className="hero-image">
             <img
-              alt={egypt ? "Two steaming bowls of Tutenramen" : "Guests at the Tutenramen character photo wall"}
+              alt={egypt ? "Steaming Tutenramen noodles lifted above a bowl with an Egyptian Eye of Horus backdrop" : "Guests at the Tutenramen character photo wall"}
               src={egypt ? assets.heroEgypt : assets.heroAnime}
             />
             <div className="image-tag">{egypt ? "Ceremonial / Refined" : "Playful / Expressive"}</div>
