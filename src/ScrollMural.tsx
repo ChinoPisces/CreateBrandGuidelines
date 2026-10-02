@@ -37,7 +37,8 @@ export default function ScrollMural() {
     let previousTime = 0;
     const progress = () => {
       const bounds = container.getBoundingClientRect();
-      return Math.max(0, Math.min(1, (window.innerHeight - bounds.top) / (window.innerHeight + bounds.height)));
+      const visibleProgress = (window.innerHeight - bounds.top) / (window.innerHeight + bounds.height);
+      return Math.max(0, Math.min(1, 0.5 + (visibleProgress - 0.5) * (4 / 3)));
     };
     const render = (time: number) => {
       request = 0;
@@ -47,7 +48,7 @@ export default function ScrollMural() {
       previousTime = time;
       current += (target - current) * (1 - Math.exp(-delta / 70));
       if (Math.abs(target - current) < 0.0005) current = target;
-      animation.goToAndStop((1 - current) * Math.max(0, animation.totalFrames - 1), true);
+      animation.goToAndStop(current * Math.max(0, animation.totalFrames - 1), true);
       if (current !== target) request = requestAnimationFrame(render);
     };
     const schedule = () => { if (!request) request = requestAnimationFrame(render); };
