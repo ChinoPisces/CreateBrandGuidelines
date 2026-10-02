@@ -22,54 +22,6 @@ function loadRuntime() {
   return runtimePromise;
 }
 
-type TransformKeyframe = {
-  t: number;
-  s?: number[];
-  i?: { x: number; y: number };
-  o?: { x: number; y: number };
-};
-type AnimatedTransform = { a: number; k: number[] | TransformKeyframe[] };
-type MuralData = {
-  ip: number;
-  op: number;
-  layers: Array<{ nm: string; ks: { p?: AnimatedTransform; s?: AnimatedTransform } }>;
-};
-
-// Use the outward half of each loop as continuous, linear depth movement.
-function prepareParallax(data: MuralData) {
-  const lastFrame = data.op - 1;
-  const depthStrength: Record<string, number> = {
-    // Raise the foreground endpoint another 25 composition pixels.
-    foregroundPlants: 274 / 210,
-    peopleAndGods: 1,
-    riverPlants: 1.3,
-    blueLotus: 1.3,
-    distantTrees: 1.2,
-  };
-  for (const layer of data.layers) {
-    for (const property of [layer.ks.p, layer.ks.s]) {
-      if (!property || property.a !== 1) continue;
-      const keys = property.k as TransformKeyframe[];
-      const start = keys[0]?.s;
-      if (!start) continue;
-      const peak = keys.reduce((best, key) => {
-        const distance = (values?: number[]) => values
-          ? values.reduce((sum, value, index) => sum + Math.abs(value - start[index]), 0)
-          : 0;
-        return distance(key.s) > distance(best.s) ? key : best;
-      }, keys[0]);
-      if (!peak.s) continue;
-      const strength = property === layer.ks.p ? (depthStrength[layer.nm] ?? 1) : 1;
-      const end = peak.s.map((value, index) => start[index] + (value - start[index]) * strength);
-      property.k = [
-        { t: data.ip, s: start, o: { x: 0.333, y: 0.333 }, i: { x: 0.667, y: 0.667 } },
-        { t: lastFrame, s: end },
-      ];
-    }
-  }
-  return data;
-}
-
 export default function ScrollMural() {
   const frame = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -86,7 +38,7 @@ export default function ScrollMural() {
     const progress = () => {
       const bounds = container.getBoundingClientRect();
       const visibleProgress = (window.innerHeight - bounds.top) / (window.innerHeight + bounds.height);
-      return Math.max(0, Math.min(1, visibleProgress * 0.672));
+      return Math.max(0, Math.min(1, 0.5 + (visibleProgress - 0.5) * (4 / 3)));
     };
     const render = (time: number) => {
       request = 0;
@@ -96,8 +48,8 @@ export default function ScrollMural() {
       previousTime = time;
       current += (target - current) * (1 - Math.exp(-delta / 70));
       if (Math.abs(target - current) < 0.0005) current = target;
-      const frameProgress = Math.min(1, 0.15 + current);
-      animation.goToAndStop(frameProgress * Math.max(0, animation.totalFrames - 1), true);
+      const frameProgress = Math.min(1, 0.25 + current);
+      animation.goToAndStop((1 - frameProgress) * Math.max(0, animation.totalFrames - 1), true);
       if (current !== target) request = requestAnimationFrame(render);
     };
     const schedule = () => { if (!request) request = requestAnimationFrame(render); };
@@ -108,7 +60,7 @@ export default function ScrollMural() {
     ]).then(([lottie, data]) => {
       if (disposed) return;
       animation = lottie.loadAnimation({
-        container, renderer: "canvas", loop: false, autoplay: false, animationData: prepareParallax(data),
+        container, renderer: "canvas", loop: false, autoplay: false, animationData: data,
         rendererSettings: { preserveAspectRatio: "xMidYMid meet", clearCanvas: true },
       });
       animation.addEventListener("DOMLoaded", () => {
