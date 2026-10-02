@@ -8,7 +8,7 @@ const assets = {
   wordmarkAnime: `${CDN}/6aac551bf2b85351a2a53ef1_ce104ae76_tr_wordmark_orange.svg`,
   heroEgypt: `${import.meta.env.BASE_URL}media/modern-egyptian-ramen.webp`,
   heroAnime: `${CDN}/6ab492c7fb1e0a368702ecbb_social-09-photo-wall-p-1080.webp`,
-  packagingEgypt: `${CDN}/6ab47b8cd96f51e497efe57d_13fe870b-0caa-480d-8ce7-d792fa5173f0-p-1080.webp`,
+  packagingEgypt: `${import.meta.env.BASE_URL}media/modern-egyptian-table-scene.webp`,
   packagingAnime: `${CDN}/6ab492c2fc8cbd991d51af7b_social-01-tabletop-packaging-p-1080.webp`,
   interiorEgypt: `${CDN}/6ab46b58b7fd433adfdffe14_TE_sc_02.png`,
   detailsEgypt: `${CDN}/6ab479a43fe57a9400a14686_009a880c-63f2-4eaf-8cfd-5b2c42fa7b86-p-1080.webp`,
@@ -289,7 +289,7 @@ export default function App() {
           </div>
           <div className="image-mosaic">
             <figure className="mosaic-main">
-              <img alt="Tutenramen branded ramen packaging" src={egypt ? assets.packagingEgypt : assets.packagingAnime} />
+              <img alt={egypt ? "A steaming Tutenramen ramen bowl served at an Egyptian-inspired table" : "Tutenramen branded ramen packaging"} src={egypt ? assets.packagingEgypt : assets.packagingAnime} />
               <figcaption>01 · Product in context</figcaption>
             </figure>
             <figure>
