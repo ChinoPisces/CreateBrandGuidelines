@@ -48,7 +48,7 @@ export default function ScrollMural() {
       previousTime = time;
       current += (target - current) * (1 - Math.exp(-delta / 70));
       if (Math.abs(target - current) < 0.0005) current = target;
-      const frameProgress = Math.min(1, 0.2 + current);
+      const frameProgress = Math.min(1, 0.3 + current);
       animation.goToAndStop(frameProgress * Math.max(0, animation.totalFrames - 1), true);
       if (current !== target) request = requestAnimationFrame(render);
     };
