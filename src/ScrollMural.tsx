@@ -39,9 +39,8 @@ type MuralData = {
 function prepareParallax(data: MuralData) {
   const lastFrame = data.op - 1;
   const depthStrength: Record<string, number> = {
-    // Raise the endpoint by 60 composition pixels (189px -> 249px of travel).
-    // Visible scroll reaches at most 82.2%, keeping travel below the 210px source bleed.
-    foregroundPlants: 249 / 210,
+    // Raise the foreground endpoint another 25 composition pixels.
+    foregroundPlants: 274 / 210,
     peopleAndGods: 1,
     riverPlants: 1.3,
     blueLotus: 1.3,
