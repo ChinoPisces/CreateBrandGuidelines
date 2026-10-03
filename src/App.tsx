@@ -75,6 +75,15 @@ const palettes = {
   ],
 };
 
+function UsageRules({ doText, dontText }: { doText: string; dontText: string }) {
+  return (
+    <div className="usage-rules" aria-label="Usage guidance">
+      <div><h3>Do</h3><p>{doText}</p></div>
+      <div><h3>Don’t</h3><p>{dontText}</p></div>
+    </div>
+  );
+}
+
 function SectionLabel({ number, children }: { number: string; children: React.ReactNode }) {
   return (
     <div className="mb-8 flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.24em]">
@@ -100,6 +109,7 @@ function DirectionSwitch({
             direction === item ? "bg-current shadow-sm" : "opacity-55 hover:opacity-100"
           }`}
           key={item}
+          aria-pressed={direction === item}
           onClick={() => onChange(item)}
           type="button"
         >
@@ -154,15 +164,15 @@ export default function App() {
       <div className="page-content" id="top">
         <section className="hero">
           <div className="hero-copy">
-            <div className="eyebrow">One brand · Two flavors</div>
+            <div className="eyebrow">One brand · Two expressions</div>
             <h1>
               Ancient roots.
               <br />
               <em>Fresh energy.</em>
             </h1>
             <p>
-              A living identity system where the prestige of Modern Egypt meets
-              the expressive charm of Chibi Anime.
+              Egyptian imagination. The pleasure of ramen. Two expressions
+              that share one appetite, one welcome and one spirit of discovery.
             </p>
             <a className="text-link" href="#foundation">
               Explore the system <span>↓</span>
@@ -184,14 +194,16 @@ export default function App() {
             <h2>Built on contrast.<br />United by appetite.</h2>
             <div>
               <p className="lead">
-                Tutenramen is a warm-spiced ramen brand inspired by North African tradition.
-                The identity carries two distinct expressions without losing one recognizable soul.
+                Tutenramen brings the pleasure of ramen into a world of Egyptian imagination.
+                Modern Egyptian invites discovery through richness and ceremony.
+                Chibi Anime invites connection through personality and play.
               </p>
+              <p className="foundation-note">The expression changes. The food, hospitality and spirit of discovery remain constant. This guide explains how to choose an expression and carry it consistently through an experience.</p>
               <div className="pillars">
                 {[
-                  ["01", "Unexpected", "A bold cultural fusion that feels natural, never novelty."],
-                  ["02", "Generous", "Warm, abundant and inviting in every guest interaction."],
-                  ["03", "Characterful", "Full of wit and personality, with craft at the center."],
+                  ["01", "Appetite", "Keep the food compelling and the experience easy to enjoy."],
+                  ["02", "Generosity", "Make every encounter feel welcoming, abundant and considered."],
+                  ["03", "Discovery", "Give people something distinctive to notice, explore and remember."],
                 ].map(([num, title, copy]) => (
                   <article key={title}>
                     <span>{num}</span>
@@ -202,13 +214,61 @@ export default function App() {
               </div>
             </div>
           </div>
+          <div className="expression-selector">
+            <div className="guidance-heading">
+              <h3>Choose the invitation.</h3>
+              <p>Begin with the feeling you want to create. Both expressions can work in any market; the occasion and purpose guide the choice.</p>
+            </div>
+            <div className="expression-cards">
+              <button type="button" className="expression-card" aria-pressed={egypt} onClick={() => setDirection("egypt")}>
+                <span className="card-kicker">Modern Egyptian</span>
+                <strong>Ceremony. Craft. Discovery.</strong>
+                <p>Choose it when atmosphere, food presentation and considered detail should lead.</p>
+                <span className="expression-context">Restaurant environments · Food storytelling · Considered packaging</span>
+                <span className="expression-action">{egypt ? "Viewing this expression" : "View this expression →"}</span>
+              </button>
+              <button type="button" className="expression-card" aria-pressed={!egypt} onClick={() => setDirection("anime")}>
+                <span className="card-kicker">Chibi Anime</span>
+                <strong>Character. Connection. Play.</strong>
+                <p>Choose it when participation, personal connection and delight should lead.</p>
+                <span className="expression-context">Character campaigns · Collectibles · Interactive moments</span>
+                <span className="expression-action">{!egypt ? "Viewing this expression" : "View this expression →"}</span>
+              </button>
+            </div>
+            <p className="foundation-note">These are starting points. Either expression can serve a menu, storefront or campaign. Choose one for a complete application and carry it through the logo, palette, type, imagery and motion. When a larger experience introduces both, give the transition a clear purpose and place.</p>
+          </div>
+          <div className="application-study">
+            <div className="guidance-heading">
+              <h3>One brief. Two expressions.</h3>
+              <p>A takeaway message welcoming guests to their next bowl. The same practical information, with a different invitation.</p>
+            </div>
+            <div className="application-pair">
+              <figure>
+                <div className="application-example application-egypt">
+                  <img src={assets.wordmarkEgypt} alt="Modern Egyptian Tutenramen wordmark" />
+                  <p className="application-headline">A bowl worth gathering around.</p>
+                  <p className="application-detail">Warm broth. Generous noodles.<br />Made to be enjoyed.</p>
+                </div>
+                <figcaption><strong>Modern Egyptian</strong> — A composed headline, generous space and restrained gold make the welcome feel considered.</figcaption>
+              </figure>
+              <figure>
+                <div className="application-example application-anime">
+                  <img src={assets.wordmarkAnime} alt="Chibi Anime Tutenramen wordmark" />
+                  <p className="application-headline">Your next favorite bowl.</p>
+                  <p className="application-detail">Warm broth. Generous noodles.<br />Made to be enjoyed.</p>
+                </div>
+                <figcaption><strong>Chibi Anime</strong> — Direct language, bold type and a bright accent make the welcome feel immediate.</figcaption>
+              </figure>
+            </div>
+          </div>
+          <UsageRules doText="Choose an expression for the feeling and occasion you want to create. Carry it through the complete application." dontText="Choose solely by country, age or personal taste, or combine styles simply because both are available." />
         </section>
 
         <section className="section logo-section" id="logo">
           <SectionLabel number="02">Logo system</SectionLabel>
           <div className="section-heading">
             <h2>One name.<br />Two signatures.</h2>
-            <p>Choose a signature by context. Never combine both treatments in a single lockup.</p>
+            <p>Use the signature belonging to your chosen expression. Keep its proportions, clear space and contrast consistent across the application.</p>
           </div>
           <div className="logo-grid logo-showcase">
             <div className="logo-wordmarks">
@@ -236,13 +296,14 @@ export default function App() {
             <div className="clearspace-mark"><span>x</span>TUTENRAMEN<span>x</span></div>
             <p><strong>Clear space</strong><br />Protect the mark on every side by at least one cap-height (x).</p>
           </div>
+          <UsageRules doText="Use the approved signature, preserve its proportions and protect at least one cap-height of clear space." dontText="Redraw, stretch, add effects or combine the two signatures in one lockup." />
         </section>
 
         <section className="section color-section" id="color">
           <SectionLabel number="03">Color</SectionLabel>
           <div className="section-heading">
             <h2>From sandstone<br />to sunset.</h2>
-            <p>The palette begins in warm earth and expands into electric character color.</p>
+            <p>{egypt ? "Let papyrus, sand and obsidian establish the atmosphere. Use antique gold to draw attention to a considered detail." : "Let sunlit papyrus give the composition room to breathe. Use sunset, lapis and carnelian to give character and emphasis."}</p>
           </div>
           <div className="palette">
             {palettes[direction].map((color, index) => (
@@ -258,20 +319,21 @@ export default function App() {
             ))}
           </div>
           <p className="micro-note">Select any swatch to copy its hex value.</p>
+          <UsageRules doText="Establish a dominant color within the selected palette. Use accents for emphasis and preserve readable contrast." dontText="Give every color equal weight or place practical information on a background that makes it hard to read." />
         </section>
 
         <section className="section type-section" id="type">
           <SectionLabel number="04">Typography</SectionLabel>
           <div className="type-grid">
-            <div className="type-display">
-              <span className="font-name">Georgia · Traditional</span>
+            <div className={egypt ? "type-display" : "type-display type-display-anime"}>
+              <span className="font-name">{egypt ? "Georgia · Storytelling" : "Montserrat · Expressive"}</span>
               <div className="glyph">Aa</div>
-              <p>Traditional, authoritative and enduring. Use for Modern Egyptian headlines and storytelling.</p>
+              <p>{egypt ? "Use Georgia for composed headlines and storytelling. Let scale and space give each message presence." : "Use bold Montserrat for direct, expressive headlines. Keep messages short and give the words room to read."}</p>
             </div>
             <div className="type-ui">
               <span className="font-name">Montserrat · Utility</span>
               <div className="glyph">Aa</div>
-              <p>Clean and confident. Use for navigation, labels, data and practical information.</p>
+              <p>Shared functional type for both expressions. Use Montserrat for navigation, labels, prices and practical information, with a clear hierarchy.</p>
             </div>
           </div>
           <div className="type-scale">
@@ -279,13 +341,14 @@ export default function App() {
             <span>Heading 02</span><b>Warm spices. Deep broth.</b><small>34 / 1.05</small>
             <span>Body</span><p>Made for curious appetites and shared tables.</p><small>16 / 1.65</small>
           </div>
+          <UsageRules doText="Give headlines and practical information distinct jobs. Check prices, ingredients and navigation at their actual viewing size." dontText="Use decorative treatments or tight spacing that make essential information difficult to read." />
         </section>
 
         <section className="section imagery-section" id="imagery">
           <SectionLabel number="05">Imagery</SectionLabel>
           <div className="section-heading">
             <h2>Warmth you<br />can almost taste.</h2>
-            <p>Photography is cinematic but human—rich light, honest texture and food at its most inviting.</p>
+            <p>Make the food inviting and the experience recognizable. Choose approved photographs whose light, setting and branding support the selected expression.</p>
           </div>
           <div className="image-mosaic">
             <figure className="mosaic-main">
@@ -307,10 +370,12 @@ export default function App() {
               <figcaption>03 · Crafted details</figcaption>
             </figure>
           </div>
-          <div className="photo-rules">
-            <div><span>Do</span> Favor amber light, tactile details, generous crops and candid energy.</div>
-            <div><span>Don’t</span> Use cold lighting, sterile overheads or generic stock-food styling.</div>
+          <div className="application-notes">
+            <p><strong>Product.</strong> Let the bowl or packaging lead; use the setting to support its appeal.</p>
+            <p><strong>Environment.</strong> Carry the chosen expression through the space, signage and guest experience.</p>
+            <p><strong>Detail.</strong> Make everyday objects feel like part of the same considered world.</p>
           </div>
+          <UsageRules doText="Use approved photography with consistent branding. Preserve the food’s appeal and compose crops intentionally." dontText="Introduce conflicting logos, unapproved photography or a visual treatment that clashes with the application." />
         </section>
 
         <section className="section illustration-section" id="illustration">
@@ -318,8 +383,8 @@ export default function App() {
           <div className="section-heading">
             <h2>{egypt ? <>Symbols with<br />a story.</> : <>Characters with<br />personality.</>}</h2>
             <p>{egypt
-              ? "Geometric landmarks and expressive characters bring the Modern Egyptian world to life."
-              : "Rounded landmarks and playful characters give the Chibi Anime world its distinctive charm."}</p>
+              ? "Use geometric landmarks and expressive figures to create a sense of ceremony and discovery. Give each symbol a role in the story."
+              : "Use rounded landmarks and expressive characters to invite connection and play. Let gestures and relationships carry the story."}</p>
           </div>
           <div className="illustration-grid">
             {illustrationSets[direction].map((art) => (
@@ -331,6 +396,7 @@ export default function App() {
               </figure>
             ))}
           </div>
+          <UsageRules doText="Use the approved artwork, preserve proportions and plan crops around the composition." dontText="Mix illustration styles within an application, distort characters or accidentally cut defining features and artwork edges." />
         </section>
 
         <section className="section motion-section" id="motion">
@@ -338,8 +404,8 @@ export default function App() {
           <div className="section-heading">
             <h2>Bring the<br />brand to life.</h2>
             <p>{egypt
-              ? "Ceremonial movement and measured rhythm give Modern Egyptian its sense of prestige."
-              : "Expressive movement and playful rhythm bring energy to the Chibi Anime characters."}</p>
+              ? "Let measured gestures and composed pacing reveal the story. Movement should give the scene presence and direct attention."
+              : "Let expressive gestures and playful rhythm reveal personality. Give each action a clear focus and room to land."}</p>
           </div>
           <div className="motion-grid">
             {motionSets[direction].map((video) => (
@@ -358,6 +424,7 @@ export default function App() {
               </figure>
             ))}
           </div>
+          <UsageRules doText="Give movement a purpose: reveal character, create depth or guide attention. Review the entire sequence in its frame." dontText="Let motion expose cropped edges, break the composition or compete with essential information." />
         </section>
 
         <section className="mural-section" aria-label={egypt ? "Modern Egyptian mural" : "Chibi Anime mural"}>
@@ -379,13 +446,28 @@ export default function App() {
           <div className="voice-grid">
             <div>
               <h2>Speak with<br /><em>warm confidence.</em></h2>
-              <p>Our voice is inviting, vivid and lightly playful. We know our craft, but never lecture.</p>
+              <p>Both expressions share a welcoming, specific and appetizing voice. Modern Egyptian can linger on craft and discovery; Chibi Anime can lead with wit and personality. Keep the useful message clear.</p>
             </div>
             <div className="voice-examples">
               <article><span>Menu</span><p>Slow-simmered. Spice-warmed. Worth the wait.</p></article>
-              <article><span>Social</span><p>Your rainy-day bowl has entered the chat.</p></article>
+              <article><span>Social</span><p>{egypt ? "A little warmth for your rainy evening." : "Your rainy-day bowl has entered the chat."}</p></article>
               <article><span>Service</span><p>Come hungry. We’ll take it from here.</p></article>
             </div>
+          </div>
+          <UsageRules doText="Be welcoming, specific and appetizing. Let personality help people understand the message." dontText="Let elaborate lore, exaggerated grandeur or repeated jokes hide what people need to know." />
+          <div className="approval-checklist">
+            <div className="guidance-heading">
+              <h3>Before it goes out.</h3>
+              <p>Review the complete experience, including its smallest screen and every animated frame.</p>
+            </div>
+            <ul>
+              <li>The expression suits the occasion and stays consistent.</li>
+              <li>Logos, photographs and illustrations come from the approved assets.</li>
+              <li>The signature, hierarchy and practical information are easy to read.</li>
+              <li>Crops are intentional and motion stays composed throughout.</li>
+              <li>The writing makes the food and hospitality feel inviting.</li>
+              <li>Any transition between expressions has a clear purpose.</li>
+            </ul>
           </div>
         </section>
 
