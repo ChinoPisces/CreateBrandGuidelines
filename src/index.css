@@ -498,3 +498,5 @@ footer > a { position: absolute; right: 36px; bottom: 32px; color: inherit; font
 .texture-preview { height: 240px; background-repeat: repeat; background-size: 240px auto; border: 1px solid var(--line); }
 .texture-swatch figcaption { margin-top: 16px; font-family: "Montserrat", sans-serif; font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
 @media (max-width: 600px) { .texture-swatches { grid-template-columns: 1fr; } }
+
+.logo-symbol video { width: 82%; height: 82%; min-height: 0; object-fit: contain; margin: auto; pointer-events: none; }
