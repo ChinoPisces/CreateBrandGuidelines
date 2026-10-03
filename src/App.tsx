@@ -68,6 +68,8 @@ const palettes = {
     { name: "Desert Sand", value: "#C8B9A6", className: "bg-[#C8B9A6] text-[#1C1408]" },
     { name: "Obsidian", value: "#1C1408", className: "bg-[#1C1408] text-[#F4EAD3]" },
     { name: "Antique Gold", value: "#B8860B", className: "bg-[#B8860B] text-white" },
+    { name: "Lapis Lazuli", value: "#183B82", className: "bg-[#183B82] text-white" },
+    { name: "Carnelian Red", value: "#B33A2B", className: "bg-[#B33A2B] text-white" },
   ],
   anime: [
     { name: "Sunlit Papyrus", value: "#F2E3C6", className: "bg-[#F2E3C6] text-[#0A0A0A]" },
@@ -302,9 +304,9 @@ export default function App() {
           <SectionLabel number="03">Color</SectionLabel>
           <div className="section-heading">
             <h2>From sandstone<br />to sunset</h2>
-            <p>{egypt ? "Let papyrus, sand and obsidian establish the atmosphere. Use antique gold to draw attention to a considered detail." : "Let sunlit papyrus give the composition room to breathe. Use sunset, lapis and carnelian to give character and emphasis."}</p>
+            <p>{egypt ? "Let papyrus, sand and obsidian establish the atmosphere. Use antique gold for considered details, lapis lazuli for depth and carnelian red for warmth. Keep these accents selective so the composition stays composed." : "Let sunlit papyrus give the composition room to breathe. Use sunset, lapis and carnelian to give character and emphasis."}</p>
           </div>
-          <div className="palette">
+          <div className={egypt ? "palette palette-modern" : "palette"}>
             {palettes[direction].map((color, index) => (
               <button
                 className={`swatch ${color.className} ${index === 0 ? "swatch-large" : ""}`}
