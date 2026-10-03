@@ -10,7 +10,7 @@ const assets = {
   heroAnime: `${CDN}/6ab492c7fb1e0a368702ecbb_social-09-photo-wall-p-1080.webp`,
   packagingEgypt: `${import.meta.env.BASE_URL}media/modern-egyptian-table-scene.webp`,
   packagingAnime: `${CDN}/6ab492c2fc8cbd991d51af7b_social-01-tabletop-packaging-p-1080.webp`,
-  interiorEgypt: `${CDN}/6ab46b58b7fd433adfdffe14_TE_sc_02.png`,
+  interiorEgypt: `${import.meta.env.BASE_URL}media/modern-egyptian-restaurant-interior.png`,
   detailsEgypt: `${import.meta.env.BASE_URL}media/TE_sc_05.png`,
   storefront: `${CDN}/6ab492c5fc8cbd991d51b16c_social-05-storefront-p-1080.webp`,
   menu: `${CDN}/6ab492c8ad09408dad7910b4_social-10-printed-menu-p-1080.webp`,
