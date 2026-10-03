@@ -410,14 +410,21 @@ export default function App() {
             {motionSets[direction].map((video) => (
               <figure className={video.label === "Animated monogram" ? "motion-card motion-card-monogram" : "motion-card"} key={video.id}>
                 <div className={video.square ? "motion-player motion-player-square" : "motion-player"}>
-                  <iframe
+                  {video.label === "Animated monogram" ? (
+                    <video
+                      key={direction}
+                      src={`${import.meta.env.BASE_URL}media/${egypt ? "tutenramenTurnaround_B3.mp4" : "tutenramenTurnaround_A0.mp4"}`}
+                      aria-label={`${egypt ? "Modern Egyptian" : "Chibi Anime"} animated logo`}
+                      autoPlay muted loop playsInline preload="auto"
+                    />
+                  ) : <iframe
                     src={`https://player.vimeo.com/video/${video.id}?background=1&controls=0&title=0&byline=0&portrait=0&autoplay=1&muted=1&loop=1&playsinline=1&autopause=0`}
                     title={`${egypt ? "Modern Egyptian" : "Chibi Anime"} Tutenramen — ${video.label}`}
                     allow="autoplay; fullscreen; picture-in-picture"
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="origin-when-cross-origin"
-                  />
+                  />}
                 </div>
                 <figcaption>{egypt ? "Modern Egyptian" : "Chibi Anime"} · {video.label}</figcaption>
               </figure>

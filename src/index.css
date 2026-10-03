@@ -486,3 +486,5 @@ footer > a { position: absolute; right: 36px; bottom: 32px; color: inherit; font
 .logo-symbol { position: relative; aspect-ratio: 1; min-width: 0; padding: clamp(20px, 3vw, 40px); display: flex; flex-direction: column; align-items: center; justify-content: space-between; color: var(--ink); background: var(--paper); }
 .logo-symbol .card-kicker { align-self: flex-start; }
 .logo-symbol img { width: 82%; height: 82%; min-height: 0; object-fit: contain; margin: auto; }
+
+.motion-player video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; pointer-events: none; }
