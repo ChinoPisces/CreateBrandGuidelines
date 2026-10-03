@@ -533,3 +533,5 @@ footer > a { position: absolute; right: 36px; bottom: 32px; color: inherit; font
 @media (forced-colors: active) {
   .theme-anime .hero h1 em { background: none; color: CanvasText; -webkit-text-fill-color: CanvasText; }
 }
+
+.theme-anime .logo-card-light { background: #FFF7E8; }
