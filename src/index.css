@@ -499,3 +499,12 @@ footer > a { position: absolute; right: 36px; bottom: 32px; color: inherit; font
 .texture-swatch figcaption { margin-top: 16px; font-family: "Montserrat", sans-serif; font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
 @media (max-width: 600px) { .texture-swatches { grid-template-columns: 1fr; } }
 
+
+.gradient-guidance { margin-top: 64px; }
+.gradient-swatches { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.gradient-swatch { min-width: 0; margin: 0; }
+.gradient-preview { height: 210px; border: 1px solid var(--line); }
+.gradient-swatch figcaption { display: flex; flex-direction: column; gap: 8px; margin-top: 18px; font-family: "Montserrat", sans-serif; font-size: 12px; line-height: 1.5; }
+.gradient-swatch figcaption strong { font-size: 10px; letter-spacing: .14em; text-transform: uppercase; }
+.gradient-swatch figcaption span:last-child { font-size: 11px; }
+@media (max-width: 600px) { .gradient-swatches { grid-template-columns: 1fr; } }

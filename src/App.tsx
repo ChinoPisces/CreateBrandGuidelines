@@ -79,6 +79,19 @@ const palettes = {
   ],
 };
 
+const gradients = {
+  egypt: [
+    { name: "Sand", from: "#D7CDBE", to: "#C8B9A6", note: "Papyrus → Desert Sand" },
+    { name: "Gold", from: "#D0A84D", to: "#B8860B", note: "Antique Gold tint → Antique Gold" },
+    { name: "Lapis", from: "#34568F", to: "#183B82", note: "Lapis Lazuli tint → Lapis Lazuli" },
+  ],
+  anime: [
+    { name: "Sunset", from: "#F6B274", to: "#F3903F", note: "Sunset tint → Sunset" },
+    { name: "Carnelian", from: "#FF6884", to: "#FF2D55", note: "Neo Carnelian tint → Neo Carnelian" },
+    { name: "Lapis", from: "#34568F", to: "#183B82", note: "Lapis Lazuli tint → Lapis Lazuli" },
+  ],
+};
+
 function UsageRules({ doText, dontText }: { doText: string; dontText: string }) {
   return (
     <div className="usage-rules" aria-label="Usage guidance">
@@ -334,6 +347,21 @@ export default function App() {
             ))}
           </div>
           <UsageRules doText="Establish a dominant color within the selected palette. Use accents for emphasis and preserve readable contrast." dontText="Give every color equal weight or place practical information on a background that makes it hard to read." />
+          <div className="gradient-guidance">
+            <div className="guidance-heading">
+              <h3>Approved gradients</h3>
+              <p>Use a gentle blend to bring depth to a background or a considered detail. Each approved gradient uses two stops within one color family, or the closely related paper and sand tones. Tints shown here are approved for these blends.</p>
+            </div>
+            <div className="gradient-swatches">
+              {gradients[direction].map((gradient) => (
+                <figure className="gradient-swatch" key={gradient.name}>
+                  <div className="gradient-preview" role="img" aria-label={`${gradient.name} gradient from ${gradient.from} to ${gradient.to}`} style={{ backgroundImage: `linear-gradient(135deg, ${gradient.from} 0%, ${gradient.to} 100%)` }} />
+                  <figcaption><strong>{gradient.name}</strong><span>{gradient.note}</span><span>{gradient.from} → {gradient.to}</span></figcaption>
+                </figure>
+              ))}
+            </div>
+            <UsageRules doText="Use the approved two-stop blends with a smooth, gradual transition. Keep one gradient direction within an application and check text contrast across the entire blend." dontText="Add multiple color stops, rainbow effects, abrupt bands or drastic shifts between unrelated colors. Avoid stacking gradients or using them where they compete with the food, logo or essential information." />
+          </div>
         </section>
 
         <section className="section type-section" id="type">
