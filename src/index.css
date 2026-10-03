@@ -508,3 +508,6 @@ footer > a { position: absolute; right: 36px; bottom: 32px; color: inherit; font
 .gradient-swatch figcaption strong { font-size: 10px; letter-spacing: .14em; text-transform: uppercase; }
 .gradient-swatch figcaption span:last-child { font-size: 11px; }
 @media (max-width: 600px) { .gradient-swatches { grid-template-columns: 1fr; } }
+
+.theme-egypt .logo-card-light { background: var(--paper); }
+.theme-egypt .logo-symbol { background: #efe2cb; }
