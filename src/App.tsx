@@ -260,7 +260,7 @@ export default function App() {
         <section className="section intro-section" id="foundation">
           <SectionLabel number="01">Foundation</SectionLabel>
           <div className="intro-grid">
-            <h2>Built on contrast<br />United by appetite</h2>
+            <h2>Two expressions<br />One shared spirit</h2>
             <div>
               <p className="lead">
                 Tutenramen brings the pleasure of ramen into a world of Egyptian imagination, creating a fusion dining experience rooted in curiosity and discovery.
