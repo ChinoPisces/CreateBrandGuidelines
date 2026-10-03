@@ -347,7 +347,7 @@ export default function App() {
               </div>
               <div className="logo-card logo-card-dark">
                 <span className="card-kicker">Wordmark-on dark backgrounds</span>
-                <img alt={`Tutenramen ${egypt ? "Modern Egyptian" : "Chibi Anime"} wordmark on dark backgrounds`} src={`${import.meta.env.BASE_URL}media/${egypt ? "tr_wordmark_orange_1.svg" : "TR_wordmark_carnelian_sunset.svg"}`} />
+                <img alt={`Tutenramen ${egypt ? "Modern Egyptian" : "Chibi Anime"} wordmark on dark backgrounds`} src={`${import.meta.env.BASE_URL}media/${egypt ? "TR_wordmark_golden.svg" : "TR_wordmark_carnelian_sunset.svg"}`} />
               </div>
             </div>
             <div className="logo-symbol">
