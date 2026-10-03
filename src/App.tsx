@@ -301,7 +301,7 @@ export default function App() {
             <div className="logo-symbol">
               <span className="card-kicker">Logo</span>
               <img
-                src={`${import.meta.env.BASE_URL}media/${egypt ? "TR_logo_ME.svg" : "TR_logo_CA_updated.svg"}`}
+                src={`${import.meta.env.BASE_URL}media/${egypt ? "TR_logo_ME_refreshed.svg" : "TR_logo_CA_updated.svg"}`}
                 alt={`Tutenramen ${egypt ? "Modern Egyptian" : "Chibi Anime"} logo`}
               />
             </div>
