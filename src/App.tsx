@@ -320,6 +320,19 @@ export default function App() {
             ))}
           </div>
           <p className="micro-note">Select any swatch to copy its hex value.</p>
+          <div className="texture-swatches">
+            {["Sandstone", "Papyrus"].map((texture) => (
+              <figure className="texture-swatch" key={texture}>
+                <div
+                  className="texture-preview"
+                  role="img"
+                  aria-label={`${texture} repeating texture`}
+                  style={{ backgroundImage: `url(${import.meta.env.BASE_URL}media/${texture.toLowerCase()}-texture.jpg)` }}
+                />
+                <figcaption>{texture}</figcaption>
+              </figure>
+            ))}
+          </div>
           <UsageRules doText="Establish a dominant color within the selected palette. Use accents for emphasis and preserve readable contrast." dontText="Give every color equal weight or place practical information on a background that makes it hard to read." />
         </section>
 
