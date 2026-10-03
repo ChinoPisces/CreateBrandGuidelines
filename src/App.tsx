@@ -408,7 +408,7 @@ export default function App() {
           </div>
           <div className="motion-grid">
             {motionSets[direction].map((video) => (
-              <figure className="motion-card" key={video.id}>
+              <figure className={video.label === "Animated monogram" ? "motion-card motion-card-monogram" : "motion-card"} key={video.id}>
                 <div className={video.square ? "motion-player motion-player-square" : "motion-player"}>
                   <iframe
                     src={`https://player.vimeo.com/video/${video.id}?background=1&controls=0&title=0&byline=0&portrait=0&autoplay=1&muted=1&loop=1&playsinline=1&autopause=0`}
