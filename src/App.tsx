@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { flushSync } from "react-dom";
 import ScrollMural from "./ScrollMural";
 
@@ -144,6 +144,28 @@ export default function App() {
   const [direction, setDirection] = useState<Direction>("egypt");
   const [copied, setCopied] = useState("");
   const egypt = direction === "egypt";
+
+  useLayoutEffect(() => {
+    document.querySelectorAll(".page-content h1, .page-content h2, .page-content h3, .page-content p, .page-content figcaption, .page-content li, .expression-card > strong, .voice-examples > article").forEach(group => {
+      const walker = document.createTreeWalker(group, NodeFilter.SHOW_TEXT);
+      const nodes: Text[] = [];
+      while (walker.nextNode()) nodes.push(walker.currentNode as Text);
+      const copy = nodes.map(node => node.data).join("");
+      // Keep only the final pair together; earlier words remain free to wrap.
+      const ending = /[ \t\r\n]+(?=\S+\s*$)/.exec(copy);
+      if (!ending) return;
+      let offset = 0;
+      for (const node of nodes) {
+        const length = node.length;
+        const start = Math.max(0, ending.index - offset);
+        const end = Math.min(node.length, ending.index + ending[0].length - offset);
+        if (start < end) {
+          node.replaceData(start, end - start, offset <= ending.index ? "\u00a0" : "");
+        }
+        offset += length;
+      }
+    });
+  }, [direction]);
   const styleChange = useRef(0);
   const activeTransition = useRef<{ skipTransition: () => void } | null>(null);
 
