@@ -556,7 +556,6 @@ export default function App() {
             <span className="footer-kicker">That’s the spirit.</span>
             <h2>Make it memorable<br />Make it Tutenramen</h2>
           </div>
-          <img alt="" src={egypt ? assets.egyptCharacter : assets.animeCharacter} />
           <a href="#top">Back to top ↑</a>
         </footer>
       </div>
