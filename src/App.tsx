@@ -249,7 +249,7 @@ export default function App() {
                   <p className="application-headline">A bowl worth gathering around.</p>
                   <p className="application-detail">Warm broth. Generous noodles.<br />Made to be enjoyed.</p>
                 </div>
-                <figcaption><strong>Modern Egyptian</strong> — A composed headline, generous space and restrained gold make the welcome feel considered.</figcaption>
+                <figcaption><strong>Modern Egyptian</strong> — A composed headline, generous space and a restrained accent make the welcome feel considered.</figcaption>
               </figure>
               <figure>
                 <div className="application-example application-anime">
