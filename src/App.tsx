@@ -146,7 +146,7 @@ export default function App() {
   const egypt = direction === "egypt";
 
   useLayoutEffect(() => {
-    document.querySelectorAll(".page-content h1, .page-content h2, .page-content h3, .page-content p, .page-content figcaption, .page-content li, .expression-card > strong, .voice-examples > article").forEach(group => {
+    document.querySelectorAll(".page-content h2, .page-content h3, .page-content p, .page-content figcaption, .page-content li, .expression-card > strong, .voice-examples > article").forEach(group => {
       const walker = document.createTreeWalker(group, NodeFilter.SHOW_TEXT);
       const nodes: Text[] = [];
       while (walker.nextNode()) nodes.push(walker.currentNode as Text);
