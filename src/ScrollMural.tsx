@@ -30,6 +30,7 @@ type ScrollMuralProps = {
   reverse?: boolean;
   startOffset?: number;
   scrollSpeed?: number;
+  ambientSmoke?: boolean;
 };
 
 export default function ScrollMural({
@@ -40,6 +41,7 @@ export default function ScrollMural({
   reverse = true,
   startOffset = 0.25,
   scrollSpeed = 4 / 3,
+  ambientSmoke = false,
 }: ScrollMuralProps) {
   const frame = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -48,6 +50,10 @@ export default function ScrollMural({
     const controller = new AbortController();
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     let animation: Animation | undefined;
+    const scrollAnimations: Animation[] = [];
+    const animationInstances: Animation[] = [];
+    let smokeAnimation: Animation | undefined;
+    let smokeStarted = 0;
     let disposed = false;
     let ready = false;
     let request = 0;
@@ -67,8 +73,16 @@ export default function ScrollMural({
       current += (target - current) * (1 - Math.exp(-delta / 70));
       if (Math.abs(target - current) < 0.0005) current = target;
       const frameProgress = Math.min(1, startOffset + current);
-      animation.goToAndStop((reverse ? 1 - frameProgress : frameProgress) * Math.max(0, animation.totalFrames - 1), true);
-      if (current !== target) request = requestAnimationFrame(render);
+      for (const item of scrollAnimations) {
+        item.goToAndStop((reverse ? 1 - frameProgress : frameProgress) * Math.max(0, item.totalFrames - 1), true);
+      }
+      if (smokeAnimation) {
+        if (!smokeStarted) smokeStarted = time;
+        // A gentle out-and-back cycle avoids jumping between different endpoint shapes.
+        const smokeProgress = reducedMotion.matches ? 0 : (1 - Math.cos((time - smokeStarted) * Math.PI * 2 / 6000)) / 2;
+        smokeAnimation.goToAndStop(smokeProgress * Math.max(0, smokeAnimation.totalFrames - 1), true);
+      }
+      if (current !== target || (smokeAnimation && !reducedMotion.matches)) request = requestAnimationFrame(render);
     };
     const schedule = () => { if (!request) request = requestAnimationFrame(render); };
     Promise.all([
@@ -77,15 +91,39 @@ export default function ScrollMural({
         .then(response => { if (!response.ok) throw new Error("Animation unavailable"); return response.json(); }),
     ]).then(([lottie, data]) => {
       if (disposed) return;
-      animation = lottie.loadAnimation({
-        container, renderer, loop: false, autoplay: false, animationData: data,
-        rendererSettings: { preserveAspectRatio: "xMidYMid meet", clearCanvas: true },
-      });
-      animation.addEventListener("DOMLoaded", () => {
-        ready = true;
-        current = reducedMotion.matches ? 0 : progress();
-        schedule();
-      });
+      const smokeIndices = ambientSmoke
+        ? data.layers.flatMap((layer: { ty: number; nm: string }, index: number) =>
+          layer.ty === 4 && ["Shape Layer 1", "Shape Layer 2"].includes(layer.nm) ? [index] : [])
+        : [];
+      const groups = smokeIndices.length
+        ? [
+          { layers: data.layers.slice(Math.max(...smokeIndices) + 1), smoke: false },
+          { layers: data.layers.filter((_: unknown, index: number) => smokeIndices.includes(index)), smoke: true },
+          { layers: data.layers.slice(0, Math.min(...smokeIndices)), smoke: false },
+        ]
+        : [{ layers: data.layers, smoke: false }];
+      let loaded = 0;
+      for (const group of groups) {
+        const surface = document.createElement("div");
+        Object.assign(surface.style, { position: "absolute", inset: "0", pointerEvents: "none" });
+        container.appendChild(surface);
+        const item = lottie.loadAnimation({
+          container: surface, renderer, loop: false, autoplay: false,
+          animationData: { ...data, layers: group.layers },
+          rendererSettings: { preserveAspectRatio: "xMidYMid meet", clearCanvas: true },
+        });
+        animationInstances.push(item);
+        if (group.smoke) smokeAnimation = item;
+        else scrollAnimations.push(item);
+        animation = item;
+        item.addEventListener("DOMLoaded", () => {
+          loaded += 1;
+          if (loaded !== groups.length) return;
+          ready = true;
+          current = reducedMotion.matches ? 0 : progress();
+          schedule();
+        });
+      }
     }).catch(error => { if (!disposed && error.name !== "AbortError") console.error(error); });
     window.addEventListener("scroll", schedule, { passive: true });
     window.addEventListener("resize", schedule);
@@ -97,8 +135,9 @@ export default function ScrollMural({
       window.removeEventListener("scroll", schedule);
       window.removeEventListener("resize", schedule);
       reducedMotion.removeEventListener("change", schedule);
-      animation?.destroy();
+      animationInstances.forEach(item => item.destroy());
+      container.replaceChildren();
     };
-  }, [source, renderer, reverse, startOffset, scrollSpeed]);
-  return <div ref={frame} className="mural-animation" style={{ aspectRatio }} role="img" aria-label={label} />;
+  }, [source, renderer, reverse, startOffset, scrollSpeed, ambientSmoke]);
+  return <div ref={frame} className="mural-animation" style={{ aspectRatio, position: "relative" }} role="img" aria-label={label} />;
 }
