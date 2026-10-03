@@ -457,10 +457,10 @@ footer > a { position: absolute; right: 36px; bottom: 32px; color: inherit; font
 .application-pair figure { margin: 0; }
 .application-example { min-height: 310px; padding: 32px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between; }
 .application-example img { width: 150px; height: 35px; object-fit: contain; object-position: left center; }
-.application-egypt { background: #efe2cb; color: #1c1408; border: 1px solid #1c1408; }
+.application-egypt { background: #d7cdbe; color: #1c1408; border: 1px solid #1c1408; }
 .application-anime { background: #f2e3c6; color: #0a0a0a; border: 1px solid #0a0a0a; }
 .application-headline { max-width: 300px; margin: 34px 0; font-size: clamp(26px, 3vw, 38px); line-height: 1.1; }
-.application-egypt .application-headline { font-family: Georgia, "Times New Roman", serif; color: #7e5818; }
+.application-egypt .application-headline { font-family: Georgia, "Times New Roman", serif; color: #1c1408; }
 .application-anime .application-headline { font-family: "Montserrat", sans-serif; font-weight: 700; color: #183b82; }
 .application-detail { font-family: "Montserrat", sans-serif; font-size: 11px; line-height: 1.7; }
 .application-pair figcaption { margin-top: 16px; font-family: "Montserrat", sans-serif; font-size: 11px; line-height: 1.8; }
