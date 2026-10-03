@@ -287,15 +287,10 @@ export default function App() {
             </div>
             <div className="logo-symbol">
               <span className="card-kicker">Logo</span>
-              {egypt ? (
-                <video
-                  src={`${import.meta.env.BASE_URL}media/tutenramenTurnaround_B1.mp4`}
-                  aria-label="Tutenramen Modern Egyptian logo"
-                  autoPlay muted loop playsInline preload="auto"
-                />
-              ) : (
-                <img src={`${import.meta.env.BASE_URL}media/TR_logo_CA.svg`} alt="Tutenramen Chibi Anime logo" />
-              )}
+              <img
+                src={`${import.meta.env.BASE_URL}media/${egypt ? "TR_logo_ME.svg" : "TR_logo_CA.svg"}`}
+                alt={`Tutenramen ${egypt ? "Modern Egyptian" : "Chibi Anime"} logo`}
+              />
             </div>
           </div>
           <div className="clearspace">
