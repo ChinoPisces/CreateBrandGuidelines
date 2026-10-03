@@ -24,6 +24,7 @@ function loadRuntime() {
 
 type ScrollMuralProps = {
   source?: string;
+  renderer?: "canvas" | "svg";
   label?: string;
   aspectRatio?: string;
   reverse?: boolean;
@@ -33,6 +34,7 @@ type ScrollMuralProps = {
 
 export default function ScrollMural({
   source = "media/Mural_CA.json",
+  renderer = "canvas",
   label = "Chibi Anime Tutenramen mural animated by scrolling",
   aspectRatio = "3840 / 1950",
   reverse = true,
@@ -76,7 +78,7 @@ export default function ScrollMural({
     ]).then(([lottie, data]) => {
       if (disposed) return;
       animation = lottie.loadAnimation({
-        container, renderer: "canvas", loop: false, autoplay: false, animationData: data,
+        container, renderer, loop: false, autoplay: false, animationData: data,
         rendererSettings: { preserveAspectRatio: "xMidYMid meet", clearCanvas: true },
       });
       animation.addEventListener("DOMLoaded", () => {
@@ -97,6 +99,6 @@ export default function ScrollMural({
       reducedMotion.removeEventListener("change", schedule);
       animation?.destroy();
     };
-  }, [source, reverse, startOffset, scrollSpeed]);
+  }, [source, renderer, reverse, startOffset, scrollSpeed]);
   return <div ref={frame} className="mural-animation" style={{ aspectRatio }} role="img" aria-label={label} />;
 }
