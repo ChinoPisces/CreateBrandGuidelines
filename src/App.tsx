@@ -431,6 +431,7 @@ export default function App() {
             <ScrollMural
               source="media/Tutenramen_Mural_ME.json"
               renderer="svg"
+              ambientSmoke
               label="Modern Egyptian Tutenramen mural animated by scrolling"
               aspectRatio="1920 / 1080"
               reverse={false}
