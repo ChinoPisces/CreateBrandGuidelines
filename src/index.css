@@ -511,3 +511,11 @@ footer > a { position: absolute; right: 36px; bottom: 32px; color: inherit; font
 
 .theme-egypt .logo-card-light { background: var(--paper); }
 .theme-egypt .logo-symbol { background: #efe2cb; }
+
+::view-transition-old(root),
+::view-transition-new(root) { animation-duration: 300ms; animation-timing-function: ease-in-out; }
+.topbar, .logo-card, .logo-symbol, .motion-section, footer { transition: background-color 300ms ease, color 300ms ease; }
+@media (prefers-reduced-motion: reduce) {
+  main, .topbar, .logo-card, .logo-symbol, .motion-section, footer { transition: none; }
+  ::view-transition-old(root), ::view-transition-new(root) { animation: none; }
+}
