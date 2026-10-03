@@ -522,3 +522,5 @@ footer > a { position: absolute; right: 36px; bottom: 32px; color: inherit; font
 
 
 .hero h1 em { color: #B8860B; }
+
+.theme-anime .hero h1 em { color: #B33A2B; }
