@@ -40,11 +40,13 @@ const illustrationSets = {
 const motionSets = {
   egypt: [
     { label: "Chariot delivery", id: "1183563431", square: false },
-    { label: "Monogram", id: "1183563437", square: true },
+    { label: "Date night", id: "1183563437", square: true },
+    { label: "Animated monogram", id: "1183563482", square: true },
   ],
   anime: [
     { label: "Chariot delivery", id: "1183563451", square: false },
-    { label: "Monogram", id: "1183563415", square: true },
+    { label: "Date night", id: "1183563415", square: true },
+    { label: "Animated monogram", id: "1183563470", square: true },
   ],
 };
 
@@ -281,14 +283,11 @@ export default function App() {
                 <img alt="Tutenramen Chibi Anime wordmark" src={assets.wordmarkAnime} />
               </div>
             </div>
-            <div className="logo-monogram logo-monogram-full">
-              <iframe
-                key={direction}
-                src={`https://player.vimeo.com/video/${egypt ? "1183563482" : "1183563470"}?background=1&controls=0&title=0&byline=0&portrait=0&autoplay=1&muted=1&loop=1&playsinline=1&autopause=0`}
-                title={`Tutenramen ${egypt ? "Modern Egyptian" : "Chibi Anime"} animated monogram`}
-                allow="autoplay; fullscreen; picture-in-picture"
-                loading="lazy"
-                referrerPolicy="origin-when-cross-origin"
+            <div className="logo-symbol">
+              <span className="card-kicker">Logo · {egypt ? "Modern Egyptian" : "Chibi Anime"}</span>
+              <img
+                src={`${import.meta.env.BASE_URL}media/${egypt ? "TR_logo_ME.svg" : "TR_logo_CA.svg"}`}
+                alt={`Tutenramen ${egypt ? "Modern Egyptian" : "Chibi Anime"} logo`}
               />
             </div>
           </div>

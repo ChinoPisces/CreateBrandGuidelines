@@ -370,7 +370,7 @@ footer > a { position: absolute; right: 36px; bottom: 32px; color: inherit; font
 .illustration-art img { width: 100%; height: 100%; object-fit: contain; }
 .illustration-card figcaption, .motion-card figcaption { margin-top: 24px; font-family: "Montserrat", sans-serif; font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
 .motion-section { background: var(--paper-deep); }
-.motion-grid { display: grid; grid-template-columns: minmax(0, 16fr) minmax(0, 9fr); gap: 24px; align-items: start; }
+.motion-grid { display: grid; grid-template-columns: minmax(0, 16fr) repeat(2, minmax(0, 9fr)); gap: 24px; align-items: start; }
 .motion-card { margin: 0; }
 .motion-player { position: relative; aspect-ratio: 16 / 9; background: #090806; }
 .motion-player-square { aspect-ratio: 1; }
@@ -479,3 +479,8 @@ footer > a { position: absolute; right: 36px; bottom: 32px; color: inherit; font
   .expression-selector, .application-study { margin-top: 56px; }
   .usage-rules { gap: 24px; }
 }
+
+/* Approved static logos belong beside the stacked wordmarks. */
+.logo-symbol { position: relative; aspect-ratio: 1; min-width: 0; padding: clamp(20px, 3vw, 40px); display: flex; flex-direction: column; align-items: center; justify-content: space-between; color: var(--ink); background: var(--paper); }
+.logo-symbol .card-kicker { align-self: flex-start; }
+.logo-symbol img { width: 82%; height: 82%; min-height: 0; object-fit: contain; margin: auto; }
