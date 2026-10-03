@@ -5,7 +5,7 @@ const CDN = "https://cdn.prod.website-files.com/6553caa42be844f2b3c45e3f";
 
 const assets = {
   wordmarkEgypt: `${CDN}/6aac551a8b83400598a702e1_c3990ae0a_brownversion.svg`,
-  wordmarkAnime: `${CDN}/6aac551bf2b85351a2a53ef1_ce104ae76_tr_wordmark_orange.svg`,
+  wordmarkAnime: `${import.meta.env.BASE_URL}media/TR_wordmark_carnelian_sunset.svg`,
   heroEgypt: `${import.meta.env.BASE_URL}media/modern-egyptian-ramen-logo.jpg`,
   heroAnime: `${CDN}/6ab492c7fb1e0a368702ecbb_social-09-photo-wall-p-1080.webp`,
   packagingEgypt: `${import.meta.env.BASE_URL}media/modern-egyptian-table-scene.webp`,
@@ -291,11 +291,11 @@ export default function App() {
             <div className="logo-wordmarks">
               <div className="logo-card logo-card-light">
                 <span className="card-kicker">Wordmark-on light backgrounds</span>
-                <img alt={`Tutenramen ${egypt ? "Modern Egyptian" : "Chibi Anime"} wordmark on light backgrounds`} src={egypt ? assets.wordmarkEgypt : `${import.meta.env.BASE_URL}media/TR_wordmark_pink.svg`} />
+                <img alt={`Tutenramen ${egypt ? "Modern Egyptian" : "Chibi Anime"} wordmark on light backgrounds`} src={egypt ? assets.wordmarkEgypt : `${import.meta.env.BASE_URL}media/TR_wordmark_carnelian.svg`} />
               </div>
               <div className="logo-card logo-card-dark">
                 <span className="card-kicker">Wordmark-on dark backgrounds</span>
-                <img alt={`Tutenramen ${egypt ? "Modern Egyptian" : "Chibi Anime"} wordmark on dark backgrounds`} src={`${import.meta.env.BASE_URL}media/${egypt ? "tr_wordmark_orange_1.svg" : "TR_wordmark_pinkOrange.svg"}`} />
+                <img alt={`Tutenramen ${egypt ? "Modern Egyptian" : "Chibi Anime"} wordmark on dark backgrounds`} src={`${import.meta.env.BASE_URL}media/${egypt ? "tr_wordmark_orange_1.svg" : "TR_wordmark_carnelian_sunset.svg"}`} />
               </div>
             </div>
             <div className="logo-symbol">
