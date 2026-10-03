@@ -520,13 +520,5 @@ footer > a { position: absolute; right: 36px; bottom: 32px; color: inherit; font
   ::view-transition-old(root), ::view-transition-new(root) { animation: none; }
 }
 
-.hero h1 em {
-  background-image: linear-gradient(90deg, #B33A2B 0%, #F3903F 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-}
-@media (forced-colors: active) {
-  .hero h1 em { background: none; color: CanvasText; -webkit-text-fill-color: CanvasText; }
-}
+
+.hero h1 em { color: #B8860B; }
