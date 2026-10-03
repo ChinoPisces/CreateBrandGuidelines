@@ -75,7 +75,7 @@ const palettes = {
     { name: "Sunlit Papyrus", value: "#F2E3C6", className: "bg-[#F2E3C6] text-[#0A0A0A]" },
     { name: "Sunset", value: "#F3903F", className: "bg-[#F3903F] text-[#0A0A0A]" },
     { name: "Lapis Lazuli", value: "#183B82", className: "bg-[#183B82] text-white" },
-    { name: "Carnelian Red", value: "#FF2D55", className: "bg-[#FF2D55] text-white" },
+    { name: "Carnelian Red", value: "#B33A2B", className: "bg-[#B33A2B] text-white" },
   ],
 };
 
@@ -87,7 +87,7 @@ const gradients = {
   ],
   anime: [
     { name: "Sunset", from: "#F6B274", to: "#F3903F", note: "Sunset tint → Sunset" },
-    { name: "Carnelian", from: "#FF6884", to: "#FF2D55", note: "Carnelian Red tint → Carnelian Red" },
+    { name: "Carnelian", from: "#CA6557", to: "#B33A2B", note: "Carnelian Red tint → Carnelian Red" },
     { name: "Lapis", from: "#34568F", to: "#183B82", note: "Lapis Lazuli tint → Lapis Lazuli" },
   ],
 };
