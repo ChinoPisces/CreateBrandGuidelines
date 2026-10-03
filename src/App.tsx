@@ -531,7 +531,7 @@ export default function App() {
         <section className="mural-section" aria-label={egypt ? "Modern Egyptian mural" : "Chibi Anime mural"}>
           {egypt ? (
             <ScrollMural
-              source="media/Tutenramen_Mural_ME.json"
+              source="media/Tutenramen_Mural_ME_updated.json"
               renderer="svg"
               ambientSmoke
               label="Modern Egyptian Tutenramen mural animated by scrolling"
