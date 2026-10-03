@@ -78,8 +78,8 @@ export default function ScrollMural({
       }
       if (smokeAnimation) {
         if (!smokeStarted) smokeStarted = time;
-        // A gentle out-and-back cycle avoids jumping between different endpoint shapes.
-        const smokeProgress = reducedMotion.matches ? 0 : (1 - Math.cos((time - smokeStarted) * Math.PI * 2 / 6000)) / 2;
+        // Advance in one direction, then restart the supplied smoke sequence.
+        const smokeProgress = reducedMotion.matches ? 0 : ((time - smokeStarted) % 3000) / 3000;
         smokeAnimation.goToAndStop(smokeProgress * Math.max(0, smokeAnimation.totalFrames - 1), true);
       }
       if (current !== target || (smokeAnimation && !reducedMotion.matches)) request = requestAnimationFrame(render);
