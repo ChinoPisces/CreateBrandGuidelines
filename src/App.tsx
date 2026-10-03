@@ -86,9 +86,9 @@ const gradients = {
     { name: "Gold to Sand", from: "#B8860B", to: "#C8B9A6", note: "Antique Gold → Desert Sand" },
   ],
   anime: [
-    { name: "Sunset", from: "#F6B274", to: "#F3903F", note: "Sunset tint → Sunset" },
-    { name: "Carnelian", from: "#CA6557", to: "#B33A2B", note: "Carnelian Red tint → Carnelian Red" },
-    { name: "Lapis", from: "#34568F", to: "#183B82", note: "Lapis Lazuli tint → Lapis Lazuli" },
+    { name: "Carnelian to Sunset", from: "#B33A2B", to: "#F3903F", note: "Carnelian Red → Sunset" },
+    { name: "Lapis to Obsidian", from: "#183B82", to: "#1C1408", note: "Lapis Lazuli → Obsidian" },
+    { name: "Sunset to Papyrus", from: "#F3903F", to: "#F2E3C6", note: "Sunset → Sunlit Papyrus" },
   ],
 };
 
@@ -350,7 +350,7 @@ export default function App() {
           <div className="gradient-guidance">
             <div className="guidance-heading">
               <h3>Approved gradients</h3>
-              <p>{egypt ? "Use these approved two-color pairings to bring depth to a background or a considered detail. Keep the blend gradual and the direction consistent, with no additional color stops." : "Use a gentle blend to bring depth to a background or a considered detail. Each approved gradient uses two stops within one color family. Tints shown here are approved for these blends."}</p>
+              <p>{egypt ? "Use these approved two-color pairings to bring depth to a background or a considered detail. Keep the blend gradual and the direction consistent, with no additional color stops." : "Use these approved two-color pairings to bring depth to a background or a considered detail. Keep the blend gradual and the direction consistent, with no additional color stops."}</p>
             </div>
             <div className="gradient-swatches">
               {gradients[direction].map((gradient) => (
