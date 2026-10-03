@@ -81,9 +81,9 @@ const palettes = {
 
 const gradients = {
   egypt: [
-    { name: "Sand", from: "#D7CDBE", to: "#C8B9A6", note: "Papyrus → Desert Sand" },
-    { name: "Gold", from: "#D0A84D", to: "#B8860B", note: "Antique Gold tint → Antique Gold" },
-    { name: "Lapis", from: "#34568F", to: "#183B82", note: "Lapis Lazuli tint → Lapis Lazuli" },
+    { name: "Gold to Carnelian", from: "#B8860B", to: "#B33A2B", note: "Antique Gold → Carnelian Red" },
+    { name: "Lapis to Obsidian", from: "#183B82", to: "#1C1408", note: "Lapis Lazuli → Obsidian" },
+    { name: "Gold to Sand", from: "#B8860B", to: "#C8B9A6", note: "Antique Gold → Desert Sand" },
   ],
   anime: [
     { name: "Sunset", from: "#F6B274", to: "#F3903F", note: "Sunset tint → Sunset" },
@@ -350,7 +350,7 @@ export default function App() {
           <div className="gradient-guidance">
             <div className="guidance-heading">
               <h3>Approved gradients</h3>
-              <p>Use a gentle blend to bring depth to a background or a considered detail. Each approved gradient uses two stops within one color family, or the closely related paper and sand tones. Tints shown here are approved for these blends.</p>
+              <p>{egypt ? "Use these approved two-color pairings to bring depth to a background or a considered detail. Keep the blend gradual and the direction consistent, with no additional color stops." : "Use a gentle blend to bring depth to a background or a considered detail. Each approved gradient uses two stops within one color family. Tints shown here are approved for these blends."}</p>
             </div>
             <div className="gradient-swatches">
               {gradients[direction].map((gradient) => (
