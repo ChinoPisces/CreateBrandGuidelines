@@ -195,8 +195,8 @@ export default function App() {
             <div>
               <p className="lead">
                 Tutenramen brings the pleasure of ramen into a world of Egyptian imagination.
-                Modern Egyptian invites discovery through richness and ceremony.
-                Chibi Anime invites connection through personality and play.
+                It is a place for generous bowls, warm welcomes and curious appetites,
+                where every meal offers something to discover and every guest feels invited to stay.
               </p>
               <p className="foundation-note">The expression changes. The food, hospitality and spirit of discovery remain constant. This guide explains how to choose an expression and carry it consistently through an experience.</p>
               <div className="pillars">
