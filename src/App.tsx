@@ -499,7 +499,7 @@ export default function App() {
                     referrerPolicy="origin-when-cross-origin"
                   />}
                 </div>
-                <figcaption>{egypt ? "Modern Egyptian" : "Chibi Anime"} · {video.label}</figcaption>
+                <figcaption>{video.label}</figcaption>
               </figure>
             ))}
           </div>
