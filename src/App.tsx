@@ -168,9 +168,9 @@ export default function App() {
           <div className="hero-copy">
             <div className="eyebrow">One brand · Two expressions</div>
             <h1>
-              Ancient roots.
+              Ancient roots
               <br />
-              <em>Fresh energy.</em>
+              <em>Fresh energy</em>
             </h1>
             <p>
               Egyptian imagination. The pleasure of ramen. Two expressions
@@ -193,7 +193,7 @@ export default function App() {
         <section className="section intro-section" id="foundation">
           <SectionLabel number="01">Foundation</SectionLabel>
           <div className="intro-grid">
-            <h2>Built on contrast.<br />United by appetite.</h2>
+            <h2>Built on contrast<br />United by appetite</h2>
             <div>
               <p className="lead">
                 Tutenramen brings the pleasure of ramen into a world of Egyptian imagination.
@@ -218,20 +218,20 @@ export default function App() {
           </div>
           <div className="expression-selector">
             <div className="guidance-heading">
-              <h3>Choose the invitation.</h3>
+              <h3>Choose the invitation</h3>
               <p>Begin with the feeling you want to create. Both expressions can work in any market; the occasion and purpose guide the choice.</p>
             </div>
             <div className="expression-cards">
               <button type="button" className="expression-card" aria-pressed={egypt} onClick={() => setDirection("egypt")}>
                 <span className="card-kicker">Modern Egyptian</span>
-                <strong>Ceremony. Craft. Discovery.</strong>
+                <strong>Ceremony, Craft, Discovery</strong>
                 <p>Choose it when atmosphere, food presentation and considered detail should lead.</p>
                 <span className="expression-context">Restaurant environments · Food storytelling · Considered packaging</span>
                 <span className="expression-action">{egypt ? "Viewing this expression" : "View this expression →"}</span>
               </button>
               <button type="button" className="expression-card" aria-pressed={!egypt} onClick={() => setDirection("anime")}>
                 <span className="card-kicker">Chibi Anime</span>
-                <strong>Character. Connection. Play.</strong>
+                <strong>Character, Connection, Play</strong>
                 <p>Choose it when participation, personal connection and delight should lead.</p>
                 <span className="expression-context">Character campaigns · Collectibles · Interactive moments</span>
                 <span className="expression-action">{!egypt ? "Viewing this expression" : "View this expression →"}</span>
@@ -241,14 +241,14 @@ export default function App() {
           </div>
           <div className="application-study">
             <div className="guidance-heading">
-              <h3>One brief. Two expressions.</h3>
+              <h3>One brief, Two expressions</h3>
               <p>A takeaway message welcoming guests to their next bowl. The same practical information, with a different invitation.</p>
             </div>
             <div className="application-pair">
               <figure>
                 <div className="application-example application-egypt">
                   <img src={assets.wordmarkEgypt} alt="Modern Egyptian Tutenramen wordmark" />
-                  <p className="application-headline">A bowl worth gathering around.</p>
+                  <p className="application-headline">A bowl worth gathering around</p>
                   <p className="application-detail">Warm broth. Generous noodles.<br />Made to be enjoyed.</p>
                 </div>
                 <figcaption><strong>Modern Egyptian</strong> — A composed headline, generous space and a restrained accent make the welcome feel considered.</figcaption>
@@ -256,7 +256,7 @@ export default function App() {
               <figure>
                 <div className="application-example application-anime">
                   <img src={assets.wordmarkAnime} alt="Chibi Anime Tutenramen wordmark" />
-                  <p className="application-headline">Your next favorite bowl.</p>
+                  <p className="application-headline">Your next favorite bowl</p>
                   <p className="application-detail">Warm broth. Generous noodles.<br />Made to be enjoyed.</p>
                 </div>
                 <figcaption><strong>Chibi Anime</strong> — Direct language, bold type and a bright accent make the welcome feel immediate.</figcaption>
@@ -269,7 +269,7 @@ export default function App() {
         <section className="section logo-section" id="logo">
           <SectionLabel number="02">Logo system</SectionLabel>
           <div className="section-heading">
-            <h2>One name.<br />Two signatures.</h2>
+            <h2>One name<br />Two signatures</h2>
             <p>Use the signature belonging to your chosen expression. Keep its proportions, clear space and contrast consistent across the application.</p>
           </div>
           <div className="logo-grid logo-showcase">
@@ -301,7 +301,7 @@ export default function App() {
         <section className="section color-section" id="color">
           <SectionLabel number="03">Color</SectionLabel>
           <div className="section-heading">
-            <h2>From sandstone<br />to sunset.</h2>
+            <h2>From sandstone<br />to sunset</h2>
             <p>{egypt ? "Let papyrus, sand and obsidian establish the atmosphere. Use antique gold to draw attention to a considered detail." : "Let sunlit papyrus give the composition room to breathe. Use sunset, lapis and carnelian to give character and emphasis."}</p>
           </div>
           <div className="palette">
@@ -336,8 +336,8 @@ export default function App() {
             </div>
           </div>
           <div className="type-scale">
-            <span>Display 01</span><strong>Flavor with a story.</strong><small>64 / 0.94</small>
-            <span>Heading 02</span><b>Warm spices. Deep broth.</b><small>34 / 1.05</small>
+            <span>Display 01</span><strong>Flavor with a story</strong><small>64 / 0.94</small>
+            <span>Heading 02</span><b>Warm spices, Deep broth</b><small>34 / 1.05</small>
             <span>Body</span><p>Made for curious appetites and shared tables.</p><small>16 / 1.65</small>
           </div>
           <UsageRules doText="Give headlines and practical information distinct jobs. Check prices, ingredients and navigation at their actual viewing size." dontText="Use decorative treatments or tight spacing that make essential information difficult to read." />
@@ -346,7 +346,7 @@ export default function App() {
         <section className="section imagery-section" id="imagery">
           <SectionLabel number="05">Imagery</SectionLabel>
           <div className="section-heading">
-            <h2>Warmth you<br />can almost taste.</h2>
+            <h2>Warmth you<br />can almost taste</h2>
             <p>Make the food inviting and the experience recognizable. Choose approved photographs whose light, setting and branding support the selected expression.</p>
           </div>
           <div className="image-mosaic">
@@ -380,7 +380,7 @@ export default function App() {
         <section className="section illustration-section" id="illustration">
           <SectionLabel number="06">Illustration</SectionLabel>
           <div className="section-heading">
-            <h2>{egypt ? <>Symbols with<br />a story.</> : <>Characters with<br />personality.</>}</h2>
+            <h2>{egypt ? <>Symbols with<br />a story</> : <>Characters with<br />personality</>}</h2>
             <p>{egypt
               ? "Use geometric landmarks and expressive figures to create a sense of ceremony and discovery. Give each symbol a role in the story."
               : "Use rounded landmarks and expressive characters to invite connection and play. Let gestures and relationships carry the story."}</p>
@@ -401,7 +401,7 @@ export default function App() {
         <section className="section motion-section" id="motion">
           <SectionLabel number="07">Motion</SectionLabel>
           <div className="section-heading">
-            <h2>Bring the<br />brand to life.</h2>
+            <h2>Bring the<br />brand to life</h2>
             <p>{egypt
               ? "Let measured gestures and composed pacing reveal the story. Movement should give the scene presence and direct attention."
               : "Let expressive gestures and playful rhythm reveal personality. Give each action a clear focus and room to land."}</p>
@@ -445,7 +445,7 @@ export default function App() {
           <SectionLabel number="08">Voice</SectionLabel>
           <div className="voice-grid">
             <div>
-              <h2>Speak with<br /><em>warm confidence.</em></h2>
+              <h2>Speak with<br /><em>warm confidence</em></h2>
               <p>Both expressions share a welcoming, specific and appetizing voice. Modern Egyptian can linger on craft and discovery; Chibi Anime can lead with wit and personality. Keep the useful message clear.</p>
             </div>
             <div className="voice-examples">
@@ -457,7 +457,7 @@ export default function App() {
           <UsageRules doText="Be welcoming, specific and appetizing. Let personality help people understand the message." dontText="Let elaborate lore, exaggerated grandeur or repeated jokes hide what people need to know." />
           <div className="approval-checklist">
             <div className="guidance-heading">
-              <h3>Before it goes out.</h3>
+              <h3>Before it goes out</h3>
               <p>Review the complete experience, including its smallest screen and every animated frame.</p>
             </div>
             <ul>
@@ -474,7 +474,7 @@ export default function App() {
         <footer>
           <div>
             <span className="footer-kicker">That’s the spirit.</span>
-            <h2>Make it memorable.<br />Make it Tutenramen.</h2>
+            <h2>Make it memorable<br />Make it Tutenramen</h2>
           </div>
           <img alt="" src={egypt ? assets.egyptCharacter : assets.animeCharacter} />
           <a href="#top">Back to top ↑</a>
