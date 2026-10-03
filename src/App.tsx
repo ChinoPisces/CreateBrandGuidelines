@@ -275,16 +275,16 @@ export default function App() {
           <div className="logo-grid logo-showcase">
             <div className="logo-wordmarks">
               <div className="logo-card logo-card-light">
-                <span className="card-kicker">Wordmark · Modern Egyptian</span>
+                <span className="card-kicker">Wordmark</span>
                 <img alt="Tutenramen Modern Egyptian wordmark" src={assets.wordmarkEgypt} />
               </div>
               <div className="logo-card logo-card-dark">
-                <span className="card-kicker">Wordmark · Chibi Anime</span>
+                <span className="card-kicker">Wordmark</span>
                 <img alt="Tutenramen Chibi Anime wordmark" src={assets.wordmarkAnime} />
               </div>
             </div>
             <div className="logo-symbol">
-              <span className="card-kicker">Logo · {egypt ? "Modern Egyptian" : "Chibi Anime"}</span>
+              <span className="card-kicker">Logo</span>
               <img
                 src={`${import.meta.env.BASE_URL}media/${egypt ? "TR_logo_ME.svg" : "TR_logo_CA.svg"}`}
                 alt={`Tutenramen ${egypt ? "Modern Egyptian" : "Chibi Anime"} logo`}
