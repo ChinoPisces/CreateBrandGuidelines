@@ -196,7 +196,7 @@ export default function App() {
             <h2>Built on contrast<br />United by appetite</h2>
             <div>
               <p className="lead">
-                Tutenramen brings the pleasure of ramen into a world of Egyptian imagination.
+                Tutenramen brings the pleasure of ramen into a world of Egyptian imagination, creating a fusion dining experience rooted in curiosity and discovery.
                 It is a place for generous bowls, warm welcomes and curious appetites,
                 where every meal offers something to discover and every guest feels invited to stay.
               </p>
