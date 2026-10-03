@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { flushSync } from "react-dom";
 import ScrollMural from "./ScrollMural";
 
 const CDN = "https://cdn.prod.website-files.com/6553caa42be844f2b3c45e3f";
@@ -143,6 +144,35 @@ export default function App() {
   const [direction, setDirection] = useState<Direction>("egypt");
   const [copied, setCopied] = useState("");
   const egypt = direction === "egypt";
+  const styleChange = useRef(0);
+  const activeTransition = useRef<{ skipTransition: () => void } | null>(null);
+
+  const changeDirection = async (next: Direction) => {
+    if (next === direction) return;
+    const change = ++styleChange.current;
+    activeTransition.current?.skipTransition();
+    const update = () => flushSync(() => setDirection(next));
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      update();
+      return;
+    }
+    const transitionDocument = document as Document & {
+      startViewTransition?: (callback: () => void) => { skipTransition: () => void };
+    };
+    if (transitionDocument.startViewTransition) {
+      activeTransition.current = transitionDocument.startViewTransition(update);
+      return;
+    }
+    const content = document.querySelector<HTMLElement>(".page-content");
+    if (!content) { update(); return; }
+    const fade = content.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 150, easing: "ease", fill: "forwards" });
+    await fade.finished;
+    if (change !== styleChange.current) { fade.cancel(); return; }
+    update();
+    fade.cancel();
+    content.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 150, easing: "ease" });
+  };
+
 
   const copyColor = async (value: string) => {
     await navigator.clipboard?.writeText(value);
@@ -163,7 +193,7 @@ export default function App() {
         <div className="hidden text-[10px] font-bold uppercase tracking-[0.2em] opacity-50 md:block">
           Brand standards · v1.0
         </div>
-        <DirectionSwitch direction={direction} onChange={setDirection} />
+        <DirectionSwitch direction={direction} onChange={changeDirection} />
       </header>
 
       <aside className="sidebar" aria-label="Brand guide navigation">
@@ -237,14 +267,14 @@ export default function App() {
               <p>Begin with the feeling you want to create. Both expressions can work in any market; the occasion and purpose guide the choice.</p>
             </div>
             <div className="expression-cards">
-              <button type="button" className="expression-card" aria-pressed={egypt} onClick={() => setDirection("egypt")}>
+              <button type="button" className="expression-card" aria-pressed={egypt} onClick={() => changeDirection("egypt")}>
                 <span className="card-kicker">Modern Egyptian</span>
                 <strong>Ceremony, Craft, Discovery</strong>
                 <p>Choose it when atmosphere, food presentation and considered detail should lead.</p>
                 <span className="expression-context">Restaurant environments · Food storytelling · Considered packaging</span>
                 <span className="expression-action">{egypt ? "Viewing this expression" : "View this expression →"}</span>
               </button>
-              <button type="button" className="expression-card" aria-pressed={!egypt} onClick={() => setDirection("anime")}>
+              <button type="button" className="expression-card" aria-pressed={!egypt} onClick={() => changeDirection("anime")}>
                 <span className="card-kicker">Chibi Anime</span>
                 <strong>Character, Connection, Play</strong>
                 <p>Choose it when participation, personal connection and delight should lead.</p>
