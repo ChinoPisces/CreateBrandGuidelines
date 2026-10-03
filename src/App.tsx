@@ -576,7 +576,7 @@ export default function App() {
         <footer>
           <div>
             <span className="footer-kicker">That’s the spirit.</span>
-            <h2>Make it memorable<br />Make it Tutenramen</h2>
+            <h2>Every detail<br />Part of the story</h2>
           </div>
           <a href="#top">Back to top ↑</a>
         </footer>
