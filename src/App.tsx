@@ -1,6 +1,7 @@
 import { useLayoutEffect, useRef, useState } from "react";
 import { flushSync } from "react-dom";
 import ScrollMural from "./ScrollMural";
+import LoopAnimation from "./LoopAnimation";
 
 const CDN = "https://cdn.prod.website-files.com/6553caa42be844f2b3c45e3f";
 
@@ -527,6 +528,12 @@ export default function App() {
                 <figcaption>{video.label}</figcaption>
               </figure>
             ))}
+            <figure className="motion-card motion-card-sun">
+              <div className="motion-player motion-player-square">
+                <LoopAnimation source={`media/sun_${egypt ? "ModernEgyptian" : "ChibiAnime"}.json`} label="Animated sun" />
+              </div>
+              <figcaption>Animated sun</figcaption>
+            </figure>
           </div>
           <UsageRules doText="Give movement a purpose: reveal character, create depth or guide attention. Review the entire sequence in its frame." dontText="Let motion expose cropped edges, break the composition or compete with essential information." />
         </section>

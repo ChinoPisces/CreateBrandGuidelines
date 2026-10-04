@@ -537,3 +537,7 @@ footer > a { position: absolute; right: 36px; bottom: 32px; color: inherit; font
 .theme-anime .logo-card-light { background: #FFF7E8; }
 
 .foundation-couple { width: 100%; max-width: 440px; height: auto; margin: 98px auto 0; }
+
+.motion-card-sun { grid-column: 2; grid-row: 2; }
+.sun-animation { position: absolute; inset: 0; }
+@media (max-width: 760px) { .motion-card-sun { grid-column: 1; grid-row: auto; } }

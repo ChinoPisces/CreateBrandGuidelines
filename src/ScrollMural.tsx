@@ -5,11 +5,13 @@ type Animation = {
   goToAndStop: (frame: number, isFrame: boolean) => void;
   addEventListener: (name: string, callback: () => void) => void;
   destroy: () => void;
+  play: () => void;
+  pause: () => void;
 };
 type Lottie = { loadAnimation: (options: Record<string, unknown>) => Animation };
 let runtimePromise: Promise<Lottie> | undefined;
 
-function loadRuntime() {
+export function loadRuntime() {
   if (!runtimePromise) {
     runtimePromise = new Promise<Lottie>((resolve, reject) => {
       const script = document.createElement("script");
