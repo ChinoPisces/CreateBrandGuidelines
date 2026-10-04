@@ -553,3 +553,14 @@ footer > a { position: absolute; right: 36px; bottom: 32px; color: inherit; font
 .clearspace-x-bottom { bottom: 14px; left: 50%; }
 .clearspace-x-left { left: 14px; top: 50%; }
 .clearspace-x-right { right: 14px; top: 50%; }
+
+.theme-anime .voice-section h2 em {
+  background-image: linear-gradient(180deg, #B33A2B 0%, #F3903F 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+@media (forced-colors: active) {
+  .theme-anime .voice-section h2 em { background: none; color: CanvasText; -webkit-text-fill-color: CanvasText; }
+}
