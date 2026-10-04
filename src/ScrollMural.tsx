@@ -93,6 +93,13 @@ export default function ScrollMural({
         .then(response => { if (!response.ok) throw new Error("Animation unavailable"); return response.json(); }),
     ]).then(([lottie, data]) => {
       if (disposed) return;
+      // Slightly accelerate the modern sun precomposition independently of the mural.
+      if (ambientSmoke) {
+        data.layers = data.layers.map((layer: { nm: string; sr?: number }) =>
+          layer.nm.startsWith("sun_ModernEgyptian")
+            ? { ...layer, sr: (layer.sr ?? 1) / 1.25 }
+            : layer);
+      }
       const smokeIndices = ambientSmoke
         ? data.layers.flatMap((layer: { ty: number; nm: string }, index: number) =>
           layer.ty === 4 && ["Shape Layer 1", "Shape Layer 2"].includes(layer.nm) ? [index] : [])
