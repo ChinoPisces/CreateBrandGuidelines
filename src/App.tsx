@@ -578,12 +578,12 @@ export default function App() {
           <div className="voice-grid">
             <div>
               <h2>Speak with<br /><em>warm confidence</em></h2>
-              <p>Both expressions share a welcoming, specific and appetizing voice. Modern Egyptian can linger on craft and discovery; Chibi Anime can lead with wit and personality. Keep the useful message clear.</p>
+              <p>{egypt ? "Speak with warmth and quiet assurance. Let the broth, spices and care behind each bowl carry the story. Invite discovery with specific, considered language." : "Speak with warmth, wit and a little playful energy. Use short, direct language that makes the food feel irresistible and every guest feel included. Let the joke support the invitation."}</p>
             </div>
             <div className="voice-examples">
-              <article><span>Menu</span><p>Slow-simmered. Spice-warmed. Worth the wait.</p></article>
-              <article><span>Social</span><p>{egypt ? "A little warmth for your rainy evening." : "Your rainy-day bowl has entered the chat."}</p></article>
-              <article><span>Service</span><p>Come hungry. We’ll take it from here.</p></article>
+              <article><span>Menu</span><p>{egypt ? "Slow-simmered broth, fragrant spices, a bowl worth lingering over." : "Big noodles, bold broth, your new favorite bowl."}</p></article>
+              <article><span>Social</span><p>{egypt ? "As the evening settles, gather around something warm." : "Rainy day? Your bowl of sunshine is ready."}</p></article>
+              <article><span>Service</span><p>{egypt ? "Take your time. We’ll help you find a bowl to savor." : "First bowl with us? Let’s find your favorite."}</p></article>
             </div>
           </div>
           <UsageRules doText="Be welcoming, specific and appetizing. Let personality help people understand the message." dontText="Let elaborate lore, exaggerated grandeur or repeated jokes hide what people need to know." />
