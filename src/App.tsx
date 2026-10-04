@@ -530,7 +530,7 @@ export default function App() {
             ))}
             <figure className="motion-card motion-card-sun">
               <div className="motion-player motion-player-square">
-                <LoopAnimation source={`media/sun_${egypt ? "ModernEgyptian" : "ChibiAnime"}.json`} label="Animated sun" />
+                <LoopAnimation source={`media/sun_${egypt ? "ModernEgyptian" : "ChibiAnime"}.json`} label="Animated sun" pingPong={egypt} scale={egypt ? 1 : 0.65} />
               </div>
               <figcaption>Animated sun</figcaption>
             </figure>
