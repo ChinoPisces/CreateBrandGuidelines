@@ -262,7 +262,7 @@ export default function App() {
           <SectionLabel number="01">Foundation</SectionLabel>
           <div className="intro-grid">
             <div className="foundation-heading">
-              <h2>Two expressions<br />One shared spirit</h2>
+              <h2>Two expressions<br />One spirit</h2>
               <img className="foundation-couple" src={`${import.meta.env.BASE_URL}media/${egypt ? "TR_couple_ME_complete.svg" : "TR_couple_CA.svg"}`} alt={`${egypt ? "Modern Egyptian" : "Chibi Anime"} couple sharing ramen`} />
             </div>
             <div>
