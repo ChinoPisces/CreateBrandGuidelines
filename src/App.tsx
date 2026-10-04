@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { flushSync } from "react-dom";
 import ScrollMural from "./ScrollMural";
 import LoopAnimation from "./LoopAnimation";
@@ -196,6 +196,20 @@ export default function App() {
     content.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 150, easing: "ease" });
   };
 
+
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.defaultPrevented || event.repeat || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+      const target = event.target;
+      if (target instanceof Element && target.closest('input, textarea, select, [contenteditable]:not([contenteditable="false"]), [role="textbox"], [role="slider"], [role="spinbutton"]')) return;
+      if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+      event.preventDefault();
+      void changeDirection(event.key === "ArrowLeft" ? "egypt" : "anime");
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [direction]);
 
   const copyColor = async (value: string) => {
     await navigator.clipboard?.writeText(value);
