@@ -211,6 +211,37 @@ export default function App() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [direction]);
 
+
+  useEffect(() => {
+    if (direction !== "anime") return;
+    const hero = document.querySelector<HTMLElement>(".hero");
+    const accent = hero?.querySelector<HTMLElement>("h1 em");
+    if (!hero || !accent) return;
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let request = 0;
+    const update = () => {
+      request = 0;
+      const bounds = hero.getBoundingClientRect();
+      const progress = reduced.matches ? 0 : Math.max(0, Math.min(1, -bounds.top / Math.max(1, bounds.height * 0.65)));
+      const mix = (from: number, to: number) => Math.round(from + (to - from) * progress);
+      accent.style.setProperty("--hero-scroll-start", `rgb(${mix(179, 243)}, ${mix(58, 144)}, ${mix(43, 63)})`);
+      accent.style.setProperty("--hero-scroll-end", `rgb(${mix(243, 251)}, ${mix(144, 201)}, ${mix(63, 38)})`);
+    };
+    const schedule = () => { if (!request) request = requestAnimationFrame(update); };
+    update();
+    window.addEventListener("scroll", schedule, { passive: true });
+    window.addEventListener("resize", schedule);
+    reduced.addEventListener("change", schedule);
+    return () => {
+      cancelAnimationFrame(request);
+      window.removeEventListener("scroll", schedule);
+      window.removeEventListener("resize", schedule);
+      reduced.removeEventListener("change", schedule);
+      accent.style.removeProperty("--hero-scroll-start");
+      accent.style.removeProperty("--hero-scroll-end");
+    };
+  }, [direction]);
+
   const copyColor = async (value: string) => {
     await navigator.clipboard?.writeText(value);
     setCopied(value);
