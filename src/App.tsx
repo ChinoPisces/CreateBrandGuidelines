@@ -260,7 +260,10 @@ export default function App() {
         <section className="section intro-section" id="foundation">
           <SectionLabel number="01">Foundation</SectionLabel>
           <div className="intro-grid">
-            <h2>Two expressions<br />One shared spirit</h2>
+            <div className="foundation-heading">
+              <h2>Two expressions<br />One shared spirit</h2>
+              <img className="foundation-couple" src={`${import.meta.env.BASE_URL}media/${egypt ? "TR_couple_ME.svg" : "TR_couple_CA.svg"}`} alt={`${egypt ? "Modern Egyptian" : "Chibi Anime"} couple sharing ramen`} />
+            </div>
             <div>
               <p className="lead">
                 Tutenramen brings the pleasure of ramen into a world of Egyptian imagination, creating a fusion dining experience rooted in curiosity and discovery.
