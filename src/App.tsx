@@ -377,8 +377,14 @@ export default function App() {
             </div>
           </div>
           <div className="clearspace">
-            <div className="clearspace-mark"><span>x</span>TUTENRAMEN<span>x</span></div>
-            <p><strong>Clear space</strong><br />Protect the mark on every side by at least one cap-height (x).</p>
+            <div className="clearspace-diagram" role="img" aria-label="Wordmark with a minimum clear space of one capital-letter height on all four sides">
+              <span className="clearspace-x clearspace-x-top" aria-hidden="true">x</span>
+              <span className="clearspace-x clearspace-x-left" aria-hidden="true">x</span>
+              <img src={`${import.meta.env.BASE_URL}media/wordmark-obsidian-${egypt ? "ME" : "CA"}.svg`} alt="" />
+              <span className="clearspace-x clearspace-x-right" aria-hidden="true">x</span>
+              <span className="clearspace-x clearspace-x-bottom" aria-hidden="true">x</span>
+            </div>
+            <p><strong>Clear space</strong><br />Let x equal the height of a capital letter in the wordmark. Leave at least x of empty space above, below and on both sides. Keep text, images and edges outside this area.</p>
           </div>
           <UsageRules doText="Use the approved signature, preserve its proportions and protect at least one cap-height of clear space." dontText="Redraw, stretch, add effects or combine the two signatures in one lockup." />
         </section>

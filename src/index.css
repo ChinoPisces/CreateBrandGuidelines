@@ -542,3 +542,14 @@ footer > a { position: absolute; right: 36px; bottom: 32px; color: inherit; font
 .motion-card-sun .motion-player { background: var(--paper); }
 .sun-animation { position: absolute; inset: 0; }
 @media (max-width: 820px) { .motion-card-sun { grid-column: 1; grid-row: auto; width: 100%; margin-left: 0; } }
+
+/* Keep the clear-space explanation beside its SVG diagram. */
+.clearspace { justify-content: flex-start; gap: 28px; flex-wrap: wrap; }
+.clearspace p { max-width: 330px; }
+.clearspace-diagram { position: relative; width: min(100%, 360px); padding: 40px; box-sizing: border-box; border: 1px dashed #1C1408; color: #1C1408; background: var(--paper); flex-shrink: 0; }
+.clearspace-diagram img { width: 100%; height: auto; }
+.clearspace-x { position: absolute; font-family: "Montserrat", sans-serif; font-size: 12px; line-height: 1; }
+.clearspace-x-top { top: 14px; left: 50%; }
+.clearspace-x-bottom { bottom: 14px; left: 50%; }
+.clearspace-x-left { left: 14px; top: 50%; }
+.clearspace-x-right { right: 14px; top: 50%; }
