@@ -538,6 +538,12 @@ export default function App() {
               </div>
               <figcaption>Animated sun</figcaption>
             </figure>
+            <figure className="motion-card motion-card-bowl">
+              <div className="motion-player motion-player-square">
+                <LoopAnimation source={`media/RamenBowl_${egypt ? "ME" : "CA"}.json`} label="Steaming ramen bowl" />
+              </div>
+              <figcaption>Steaming bowl</figcaption>
+            </figure>
           </div>
           <UsageRules doText="Give movement a purpose: reveal character, create depth or guide attention. Review the entire sequence in its frame." dontText="Let motion expose cropped edges, break the composition or compete with essential information." />
         </section>
