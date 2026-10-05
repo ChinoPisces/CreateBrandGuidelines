@@ -31,7 +31,7 @@ const illustrationSets = {
     { label: "Gold mask", file: "gold-mask-ME.png" },
   ],
   anime: [
-    { label: "Pyramid", file: "6ab0d5da3a3089f25d3f122b_Pyramid_CA_standard.svg" },
+    { label: "Pyramid", file: "Pyramid_CA.svg" },
     { label: "Sphinx", file: "6ab5bbf37ae8620f992af2f5_Sphynx_CA.svg" },
     { label: "Obelisk", file: "6ab0d5da2664b24bb566be58_Obelisk_CA_standard.svg" },
     { label: "Characters", file: "6ab0d5d8b063e14a3003cd86_Characters_CA_standard.svg" },
@@ -491,7 +491,7 @@ export default function App() {
             {illustrationSets[direction].map((art) => (
               <figure className={art.label === "Characters" ? "illustration-card illustration-card-wide" : art.label === "Gold mask" ? "illustration-card illustration-card-gold-mask" : art.label === "Ninja mummy" ? "illustration-card illustration-card-mummy" : "illustration-card"} key={art.file}>
                 <div className={art.label === "Ninja mummy" ? "illustration-art illustration-art-mummy" : "illustration-art"}>
-                  <img src={["pyramid_ME.svg", "Obelisk_ME.svg", "gold-mask-ME.png"].includes(art.file) ? `${import.meta.env.BASE_URL}media/${art.file}` : `${CDN}/${art.file}`} alt={`${egypt ? "Modern Egyptian" : "Chibi Anime"} Tutenramen ${art.label.toLowerCase()} illustration`} loading="lazy" decoding="async" />
+                  <img src={["pyramid_ME.svg", "Obelisk_ME.svg", "gold-mask-ME.png", "Pyramid_CA.svg"].includes(art.file) ? `${import.meta.env.BASE_URL}media/${art.file}` : `${CDN}/${art.file}`} alt={`${egypt ? "Modern Egyptian" : "Chibi Anime"} Tutenramen ${art.label.toLowerCase()} illustration`} loading="lazy" decoding="async" />
                 </div>
                 <figcaption>{art.label}</figcaption>
               </figure>
