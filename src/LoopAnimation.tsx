@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { loadRuntime } from "./ScrollMural";
 
-export default function LoopAnimation({ source, label, pingPong = false, scale = 1 }: { source: string; label: string; pingPong?: boolean; scale?: number }) {
+export default function LoopAnimation({ source, label, pingPong = false, scale = 1, frameByFrame = false }: { source: string; label: string; pingPong?: boolean; scale?: number; frameByFrame?: boolean }) {
   const surface = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const container = surface.current;
@@ -16,8 +16,10 @@ export default function LoopAnimation({ source, label, pingPong = false, scale =
     const render = (time: number) => {
       if (!animation || disposed || reduced.matches) return;
       if (!started) started = time;
-      const progress = ((time - started) % (duration * 2)) / duration;
-      const frame = (progress <= 1 ? progress : 2 - progress) * Math.max(0, animation.totalFrames - 1);
+      const progress = ((time - started) % (duration * (pingPong ? 2 : 1))) / duration;
+      const frame = frameByFrame
+        ? Math.min(animation.totalFrames - 1, Math.floor(progress * animation.totalFrames))
+        : (progress <= 1 ? progress : 2 - progress) * Math.max(0, animation.totalFrames - 1);
       animation.goToAndStop(frame, true);
       request = requestAnimationFrame(render);
     };
@@ -25,7 +27,7 @@ export default function LoopAnimation({ source, label, pingPong = false, scale =
       cancelAnimationFrame(request);
       started = 0;
       if (reduced.matches) animation?.goToAndStop(0, true);
-      else if (pingPong) request = requestAnimationFrame(render);
+      else if (pingPong || frameByFrame) request = requestAnimationFrame(render);
       else animation?.play();
     };
     Promise.all([
@@ -37,7 +39,7 @@ export default function LoopAnimation({ source, label, pingPong = false, scale =
     ]).then(([lottie, data]) => {
       if (disposed) return;
       animation = lottie.loadAnimation({
-        container, renderer: "svg", loop: !pingPong, autoplay: !reduced.matches && !pingPong,
+        container, renderer: "svg", loop: !pingPong && !frameByFrame, autoplay: !reduced.matches && !pingPong && !frameByFrame,
         animationData: data, rendererSettings: { preserveAspectRatio: "xMidYMid meet" },
       });
       duration = ((data.op - data.ip) / data.fr) * 1000;
@@ -51,6 +53,6 @@ export default function LoopAnimation({ source, label, pingPong = false, scale =
       cancelAnimationFrame(request);
       animation?.destroy();
     };
-  }, [source, pingPong]);
+  }, [source, pingPong, frameByFrame]);
   return <div ref={surface} className="sun-animation" style={{ transform: `scale(${scale})` }} role="img" aria-label={label} />;
 }

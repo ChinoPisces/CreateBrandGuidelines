@@ -540,7 +540,7 @@ export default function App() {
             </figure>
             <figure className="motion-card motion-card-bowl">
               <div className="motion-player motion-player-square">
-                <LoopAnimation source={`media/RamenBowl_${egypt ? "ME" : "CA"}.json`} label="Steaming ramen bowl" />
+                <LoopAnimation source={`media/RamenBowl_${egypt ? "ME" : "CA"}.json`} label="Steaming ramen bowl" frameByFrame />
               </div>
               <figcaption>Steaming bowl</figcaption>
             </figure>
