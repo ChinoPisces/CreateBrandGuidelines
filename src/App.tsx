@@ -512,11 +512,11 @@ export default function App() {
             {motionSets[direction].filter(video => video.label !== "Animated monogram").map((video) => (
               <figure className={video.label === "Animated monogram" ? "motion-card motion-card-monogram" : "motion-card"} key={video.id}>
                 <div className={video.square ? "motion-player motion-player-square" : "motion-player"}>
-                  {video.label === "Animated monogram" ? (
+                  {video.label === "Chariot delivery" ? (
                     <video
                       key={direction}
-                      src={`${import.meta.env.BASE_URL}media/${egypt ? "tutenramenTurnaround_B3.mp4" : "tutenramenTurnaround_A0.mp4"}`}
-                      aria-label={`${egypt ? "Modern Egyptian" : "Chibi Anime"} animated logo`}
+                      src={`${import.meta.env.BASE_URL}media/${egypt ? "Tutenramen_KeyArt_B2.mp4" : "Tutenramen_KeyArt_A2.mp4"}`}
+                      aria-label={`${egypt ? "Modern Egyptian" : "Chibi Anime"} key art animation`}
                       autoPlay muted loop playsInline preload="auto"
                     />
                   ) : <iframe
