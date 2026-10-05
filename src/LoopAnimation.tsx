@@ -42,7 +42,7 @@ export default function LoopAnimation({ source, label, pingPong = false, scale =
         container, renderer: "svg", loop: !pingPong && !frameByFrame, autoplay: !reduced.matches && !pingPong && !frameByFrame,
         animationData: data, rendererSettings: { preserveAspectRatio: "xMidYMid meet" },
       });
-      duration = ((data.op - data.ip) / data.fr) * 1000 / (pingPong ? 1.2 : 1);
+      duration = ((data.op - data.ip) / data.fr) * 1000 / (pingPong ? 2.4 : 1);
       animation.addEventListener("DOMLoaded", syncMotion);
     }).catch(error => { if (!disposed && error.name !== "AbortError") console.error(error); });
     reduced.addEventListener("change", syncMotion);
