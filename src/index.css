@@ -568,3 +568,5 @@ footer > a { position: absolute; right: 36px; bottom: 32px; color: inherit; font
 .motion-card-bowl { grid-column: 1; grid-row: 3; width: 56.25%; }
 .motion-card-bowl .motion-player { background: var(--paper); overflow: hidden; }
 @media (max-width: 820px) { .motion-card-bowl { grid-row: auto; width: 100%; } }
+
+.motion-card-bowl .sun-animation svg { transform: translateX(15%); }
