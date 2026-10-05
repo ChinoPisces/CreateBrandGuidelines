@@ -222,7 +222,7 @@ export default function App() {
     const update = () => {
       request = 0;
       const bounds = hero.getBoundingClientRect();
-      const progress = reduced.matches ? 0 : Math.max(0, Math.min(1, -bounds.top / Math.max(1, bounds.height * 0.65)));
+      const progress = reduced.matches ? 0 : Math.max(0, Math.min(1, (74 - bounds.top) / Math.max(1, Math.min(220, bounds.height * 0.25))));
       const mix = (from: number, to: number) => Math.round(from + (to - from) * progress);
       accent.style.setProperty("--hero-scroll-start", `rgb(${mix(179, 251)}, ${mix(58, 201)}, ${mix(43, 38)})`);
       accent.style.setProperty("--hero-scroll-end", `rgb(${mix(243, 251)}, ${mix(144, 201)}, ${mix(63, 38)})`);
@@ -330,53 +330,6 @@ export default function App() {
                   </article>
                 ))}
               </div>
-            </div>
-          </div>
-          <div className="expression-selector">
-            <div className="guidance-heading">
-              <h3>Choose the invitation</h3>
-              <p>Begin with the feeling you want to create. Both expressions can work in any market; the occasion and purpose guide the choice.</p>
-            </div>
-            <div className="expression-cards">
-              <button type="button" className="expression-card" aria-pressed={egypt} onClick={() => changeDirection("egypt")}>
-                <span className="card-kicker">Modern Egyptian</span>
-                <strong>Ceremony, Craft, Discovery</strong>
-                <p>Choose it when atmosphere, food presentation and considered detail should lead.</p>
-                <span className="expression-context">Restaurant environments · Food storytelling · Considered packaging</span>
-                <span className="expression-action">{egypt ? "Viewing this expression" : "View this expression →"}</span>
-              </button>
-              <button type="button" className="expression-card" aria-pressed={!egypt} onClick={() => changeDirection("anime")}>
-                <span className="card-kicker">Chibi Anime</span>
-                <strong>Character, Connection, Play</strong>
-                <p>Choose it when participation, personal connection and delight should lead.</p>
-                <span className="expression-context">Character campaigns · Collectibles · Interactive moments</span>
-                <span className="expression-action">{!egypt ? "Viewing this expression" : "View this expression →"}</span>
-              </button>
-            </div>
-            <p className="foundation-note">These are starting points. Either expression can serve a menu, storefront or campaign. Choose one for a complete application and carry it through the logo, palette, type, imagery and motion. When a larger experience introduces both, give the transition a clear purpose and place.</p>
-          </div>
-          <div className="application-study">
-            <div className="guidance-heading">
-              <h3>One brief, Two expressions</h3>
-              <p>A takeaway message welcoming guests to their next bowl. The same practical information, with a different invitation.</p>
-            </div>
-            <div className="application-pair">
-              <figure>
-                <div className="application-example application-egypt">
-                  <img src={assets.wordmarkEgypt} alt="Modern Egyptian Tutenramen wordmark" />
-                  <p className="application-headline">A bowl worth gathering around</p>
-                  <p className="application-detail">Warm broth. Generous noodles.<br />Made to be enjoyed.</p>
-                </div>
-                <figcaption><strong>Modern Egyptian</strong> — A composed headline, generous space and a restrained accent make the welcome feel considered.</figcaption>
-              </figure>
-              <figure>
-                <div className="application-example application-anime">
-                  <img src={assets.wordmarkAnime} alt="Chibi Anime Tutenramen wordmark" />
-                  <p className="application-headline">Your next favorite bowl</p>
-                  <p className="application-detail">Warm broth. Generous noodles.<br />Made to be enjoyed.</p>
-                </div>
-                <figcaption><strong>Chibi Anime</strong> — Direct language, bold type and a bright accent make the welcome feel immediate.</figcaption>
-              </figure>
             </div>
           </div>
           <UsageRules doText="Choose an expression for the feeling and occasion you want to create. Carry it through the complete application." dontText="Choose solely by country, age or personal taste, or combine styles simply because both are available." />
