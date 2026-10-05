@@ -224,8 +224,8 @@ export default function App() {
       const bounds = hero.getBoundingClientRect();
       const progress = reduced.matches ? 0 : Math.max(0, Math.min(1, (74 - bounds.top) / Math.max(1, Math.min(220, bounds.height * 0.25))));
       const mix = (from: number, to: number) => Math.round(from + (to - from) * progress);
-      accent.style.setProperty("--hero-scroll-start", `rgb(${mix(179, 251)}, ${mix(58, 201)}, ${mix(43, 38)})`);
-      accent.style.setProperty("--hero-scroll-end", `rgb(${mix(243, 251)}, ${mix(144, 201)}, ${mix(63, 38)})`);
+      accent.style.setProperty("--hero-scroll-start", `rgb(${mix(179, 243)}, ${mix(58, 144)}, ${mix(43, 63)})`);
+      accent.style.setProperty("--hero-scroll-end", `rgb(${mix(243, 243)}, ${mix(144, 144)}, ${mix(63, 63)})`);
     };
     const schedule = () => { if (!request) request = requestAnimationFrame(update); };
     update();
