@@ -19,7 +19,7 @@ export default function LoopAnimation({ source, label, pingPong = false, scale =
       const progress = ((time - started) % (duration * (pingPong ? 2 : 1))) / duration;
       const frame = frameByFrame
         ? Math.min(animation.totalFrames - 1, Math.floor(progress * animation.totalFrames))
-        : (progress <= 1 ? progress : 2 - progress) * Math.max(0, animation.totalFrames - 1);
+        : (pingPong ? (1 - Math.cos(Math.PI * progress)) / 2 : progress) * Math.max(0, animation.totalFrames - 1);
       animation.goToAndStop(frame, true);
       request = requestAnimationFrame(render);
     };
@@ -42,7 +42,7 @@ export default function LoopAnimation({ source, label, pingPong = false, scale =
         container, renderer: "svg", loop: !pingPong && !frameByFrame, autoplay: !reduced.matches && !pingPong && !frameByFrame,
         animationData: data, rendererSettings: { preserveAspectRatio: "xMidYMid meet" },
       });
-      duration = ((data.op - data.ip) / data.fr) * 1000;
+      duration = ((data.op - data.ip) / data.fr) * 1000 / (pingPong ? 1.2 : 1);
       animation.addEventListener("DOMLoaded", syncMotion);
     }).catch(error => { if (!disposed && error.name !== "AbortError") console.error(error); });
     reduced.addEventListener("change", syncMotion);
