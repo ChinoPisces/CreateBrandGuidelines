@@ -620,3 +620,8 @@ footer > a { position: absolute; right: 36px; bottom: 32px; color: inherit; font
 @media (max-width: 520px) { .pillars article { grid-template-columns: 1fr; } .pillars article p { grid-column: 1; } }
 
 .type-display, .type-ui { background: var(--inverse); }
+
+@media (max-width: 820px) {
+  .motion-grid > .motion-card:first-child .motion-player { aspect-ratio: 1; }
+  .motion-grid > .motion-card:first-child video { object-fit: cover; }
+}
