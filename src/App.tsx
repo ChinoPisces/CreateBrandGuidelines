@@ -510,7 +510,7 @@ export default function App() {
               : "Let expressive gestures and playful rhythm reveal personality. Give each action a clear focus and room to land."}</p>
           </div>
           <div className="motion-grid">
-            {motionSets[direction].map((video) => (
+            {motionSets[direction].filter(video => video.label !== "Animated monogram").map((video) => (
               <figure className={video.label === "Animated monogram" ? "motion-card motion-card-monogram" : "motion-card"} key={video.id}>
                 <div className={video.square ? "motion-player motion-player-square" : "motion-player"}>
                   {video.label === "Animated monogram" ? (
@@ -532,6 +532,14 @@ export default function App() {
                 <figcaption>{video.label}</figcaption>
               </figure>
             ))}
+          </div>
+          <div className="motion-animation-grid">
+            <figure className="motion-card motion-card-monogram">
+              <div className="motion-player motion-player-square">
+                <video src={`${import.meta.env.BASE_URL}media/${egypt ? "tutenramenTurnaround_B3.mp4" : "tutenramenTurnaround_A0.mp4"}`} aria-label="Animated monogram" autoPlay muted loop playsInline preload="auto" />
+              </div>
+              <figcaption>Animated monogram</figcaption>
+            </figure>
             <figure className="motion-card motion-card-sun">
               <div className="motion-player motion-player-square">
                 <LoopAnimation source={`media/sun_${egypt ? "ModernEgyptian" : "ChibiAnime"}.json`} label="Animated sun" pingPong={egypt} scale={egypt ? 1 : 0.65} />
