@@ -12,7 +12,7 @@ export default function LoopAnimation({ source, label, pingPong = false, scale =
     let request = 0;
     let started = 0;
     let duration = 5000;
-    let animation: { totalFrames: number; addEventListener: (name: string, callback: () => void) => void; destroy: () => void; play: () => void; pause: () => void; goToAndStop: (frame: number, isFrame: boolean) => void } | undefined;
+    let animation: { totalFrames: number; addEventListener: (name: string, callback: () => void) => void; destroy: () => void; play: () => void; pause: () => void; goToAndStop: (frame: number, isFrame: boolean) => void; setSubframe?: (enabled: boolean) => void } | undefined;
     const render = (time: number) => {
       if (!animation || disposed || reduced.matches) return;
       if (!started) started = time;
@@ -38,10 +38,24 @@ export default function LoopAnimation({ source, label, pingPong = false, scale =
       }),
     ]).then(([lottie, data]) => {
       if (disposed) return;
+      if (source.includes("sun_ChibiAnime")) {
+        const cycle = (data.op - data.ip) / 2;
+        const accelerateSmile = (value: any): void => {
+          if (!value || typeof value !== "object") return;
+          if (value.a === 1 && Array.isArray(value.k) && value.k.every((key: any) => typeof key.t === "number")) {
+            const keys = value.k.map((key: any) => ({ ...key, t: key.t / 2 }));
+            value.k = [...keys, ...keys.map((key: any) => ({ ...key, t: key.t + cycle }))];
+            return;
+          }
+          Object.values(value).forEach(accelerateSmile);
+        };
+        data.layers.filter((layer: any) => ["tongue", "mouth", "mouth 2"].includes(layer.nm)).forEach(accelerateSmile);
+      }
       animation = lottie.loadAnimation({
-        container, renderer: "svg", loop: !pingPong && !frameByFrame, autoplay: !reduced.matches && !pingPong && !frameByFrame,
+        container, renderer: pingPong ? "canvas" : "svg", loop: !pingPong && !frameByFrame, autoplay: !reduced.matches && !pingPong && !frameByFrame,
         animationData: data, rendererSettings: { preserveAspectRatio: "xMidYMid meet" },
       });
+      animation.setSubframe?.(!frameByFrame);
       duration = ((data.op - data.ip) / data.fr) * 1000 / (pingPong ? 2.4 : 1);
       animation.addEventListener("DOMLoaded", syncMotion);
     }).catch(error => { if (!disposed && error.name !== "AbortError") console.error(error); });
