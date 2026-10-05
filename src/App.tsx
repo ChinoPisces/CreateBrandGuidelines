@@ -28,7 +28,7 @@ const illustrationSets = {
     { label: "Sphinx", file: "6abcbdfd30fa67f98c83191f_Sphinx_ME_updated.svg" },
     { label: "Obelisk", file: "Obelisk_ME.svg" },
     { label: "Characters", file: "6ab0d5d8b063e14a3003ce09_Characters_TE_standard.svg" },
-    { label: "Ninja mummy", file: "6ab355c2d30b7d7b4f747af5_NinjaMummy_TE_footer.svg" },
+    { label: "Gold mask", file: "gold-mask-ME.png" },
   ],
   anime: [
     { label: "Pyramid", file: "6ab0d5da3a3089f25d3f122b_Pyramid_CA_standard.svg" },
@@ -490,9 +490,9 @@ export default function App() {
           </div>
           <div className="illustration-grid">
             {illustrationSets[direction].map((art) => (
-              <figure className={art.label === "Characters" ? "illustration-card illustration-card-wide" : art.label === "Ninja mummy" ? "illustration-card illustration-card-mummy" : "illustration-card"} key={art.file}>
+              <figure className={art.label === "Characters" ? "illustration-card illustration-card-wide" : art.label === "Gold mask" ? "illustration-card illustration-card-gold-mask" : art.label === "Ninja mummy" ? "illustration-card illustration-card-mummy" : "illustration-card"} key={art.file}>
                 <div className={art.label === "Ninja mummy" ? "illustration-art illustration-art-mummy" : "illustration-art"}>
-                  <img src={["pyramid_ME.svg", "Obelisk_ME.svg"].includes(art.file) ? `${import.meta.env.BASE_URL}media/${art.file}` : `${CDN}/${art.file}`} alt={`${egypt ? "Modern Egyptian" : "Chibi Anime"} Tutenramen ${art.label.toLowerCase()} illustration`} loading="lazy" decoding="async" />
+                  <img src={["pyramid_ME.svg", "Obelisk_ME.svg", "gold-mask-ME.png"].includes(art.file) ? `${import.meta.env.BASE_URL}media/${art.file}` : `${CDN}/${art.file}`} alt={`${egypt ? "Modern Egyptian" : "Chibi Anime"} Tutenramen ${art.label.toLowerCase()} illustration`} loading="lazy" decoding="async" />
                 </div>
                 <figcaption>{art.label}</figcaption>
               </figure>
