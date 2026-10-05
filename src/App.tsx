@@ -253,7 +253,7 @@ export default function App() {
       <header className="topbar">
         <a className="brand-lockup" href="#top" aria-label="Tutenramen brand guide home">
           <img
-            className="h-10 w-[clamp(90px,24vw,160px)] object-contain object-left"
+            className="h-14 w-[clamp(126px,33.6vw,224px)] object-contain object-left"
             src={egypt ? assets.wordmarkEgypt : assets.wordmarkAnime}
             alt="Tutenramen"
           />
