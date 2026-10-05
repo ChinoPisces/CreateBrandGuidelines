@@ -512,7 +512,7 @@ export default function App() {
             {motionSets[direction].filter(video => video.label !== "Animated monogram").map((video) => (
               <figure className={video.label === "Animated monogram" ? "motion-card motion-card-monogram" : "motion-card"} key={video.id}>
                 <div className={video.square ? "motion-player motion-player-square" : "motion-player"}>
-                  {video.label === "Chariot delivery" ? (
+                  {video.label === "Date night" ? (
                     <video
                       key={direction}
                       src={`${import.meta.env.BASE_URL}media/${egypt ? "Tutenramen_KeyArt_B2.mp4" : "Tutenramen_KeyArt_A2.mp4"}`}
