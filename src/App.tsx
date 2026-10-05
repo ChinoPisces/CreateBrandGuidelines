@@ -319,12 +319,11 @@ export default function App() {
               <p className="foundation-note">The expression changes. The food, hospitality and spirit of discovery remain constant. This guide explains how to choose an expression and carry it consistently through an experience.</p>
               <div className="pillars">
                 {[
-                  ["01", "Appetite", "Keep the food compelling and the experience easy to enjoy."],
-                  ["02", "Generosity", "Make every encounter feel welcoming, abundant and considered."],
-                  ["03", "Discovery", "Give people something distinctive to notice, explore and remember."],
-                ].map(([num, title, copy]) => (
+                  ["Appetite", "Keep the food compelling and the experience easy to enjoy."],
+                  ["Generosity", "Make every encounter feel welcoming, abundant and considered."],
+                  ["Discovery", "Give people something distinctive to notice, explore and remember."],
+                ].map(([title, copy]) => (
                   <article key={title}>
-                    <span>{num}</span>
                     <h3>{title}</h3>
                     <p>{copy}</p>
                   </article>
