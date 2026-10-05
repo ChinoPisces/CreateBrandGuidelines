@@ -615,3 +615,6 @@ footer > a { position: absolute; right: 36px; bottom: 32px; color: inherit; font
   .motion-section .motion-player,
   .motion-section .motion-player-square { width: 100%; }
 }
+
+.pillars article { grid-template-columns: 140px 1fr; }
+@media (max-width: 520px) { .pillars article { grid-template-columns: 1fr; } .pillars article p { grid-column: 1; } }
