@@ -596,3 +596,14 @@ footer > a { position: absolute; right: 36px; bottom: 32px; color: inherit; font
 @media (max-width: 820px) {
   .motion-grid > .motion-card:first-child .motion-player { flex: none; aspect-ratio: 16 / 9; }
 }
+
+/* Preserve the original 16:9 and square video pairing. */
+.motion-grid { grid-template-columns: minmax(0, 16fr) minmax(0, 9fr); align-items: start; }
+.motion-grid > .motion-card,
+.motion-grid > .motion-card:first-child { display: block; grid-column: auto !important; grid-row: auto; }
+.motion-grid > .motion-card:first-child .motion-player { aspect-ratio: 16 / 9; }
+.motion-animation-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 24px; }
+.motion-animation-grid > .motion-card { grid-column: auto; grid-row: auto; width: 100%; margin-left: 0; }
+@media (max-width: 820px) {
+  .motion-grid, .motion-animation-grid { grid-template-columns: 1fr; }
+}
