@@ -663,7 +663,7 @@ export default function App() {
         <section className="section motion-section" id="motion">
           <SectionLabel number="07">Motion</SectionLabel>
           <div className="section-heading">
-            <h2>{egypt ? <>Grace in<br />every gesture</> : <>Ramen takes<br />the stage</>}</h2>
+            <h2>{egypt ? <>Grace in<br />every gesture</> : <>Ramen&nbsp;takes<br />the stage</>}</h2>
             <p>{copy.motion}</p>
           </div>
           <div className="motion-grid">
