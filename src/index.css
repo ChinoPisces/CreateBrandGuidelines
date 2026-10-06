@@ -646,3 +646,16 @@ footer > a { position: absolute; right: 36px; bottom: 32px; color: inherit; font
     column-gap: 0;
   }
 }
+
+/* Leave breathing room before the aligned right-hand copy. */
+@media (min-width: 821px) {
+  .section-heading > :first-child,
+  .intro-grid > :first-child,
+  .voice-grid > :first-child,
+  .usage-rules > :first-child,
+  .guidance-heading > :first-child {
+    padding-right: clamp(32px, 4vw, 72px);
+    min-width: 0;
+    box-sizing: border-box;
+  }
+}
