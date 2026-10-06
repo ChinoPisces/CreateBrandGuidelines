@@ -83,13 +83,13 @@ const palettes = {
 
 const gradients = {
   egypt: [
-    { name: "Gold to Carnelian", from: "#B8860B", to: "#B33A2B", note: "Antique Gold → Carnelian Red" },
-    { name: "Lapis to Obsidian", from: "#183B82", to: "#1C1408", note: "Lapis Lazuli → Obsidian" },
-    { name: "Gold to Sand", from: "#B8860B", to: "#C8B9A6", note: "Antique Gold → Desert Sand" },
+    { name: "Gold Carnelian", from: "#B8860B", to: "#B33A2B", note: "Antique Gold → Carnelian Red" },
+    { name: "Lapis Obsidian", from: "#183B82", to: "#1C1408", note: "Lapis Lazuli → Obsidian" },
+    { name: "Gold Sand", from: "#B8860B", to: "#C8B9A6", note: "Antique Gold → Desert Sand" },
   ],
   anime: [
-    { name: "Carnelian to Sunset", from: "#B33A2B", to: "#F3903F", note: "Carnelian Red → Sunset" },
-    { name: "Lapis to Obsidian", from: "#183B82", to: "#1C1408", note: "Lapis Lazuli → Obsidian" },
+    { name: "Carnelian Sunset", from: "#B33A2B", to: "#F3903F", note: "Carnelian Red → Sunset" },
+    { name: "Lapis Obsidian", from: "#183B82", to: "#1C1408", note: "Lapis Lazuli → Obsidian" },
     { name: "Ancient Gold", from: "#FFF0A6", to: "#D4A017", note: "Light Gold → Ancient Gold" },
   ],
 };
