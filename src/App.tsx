@@ -423,7 +423,7 @@ export default function App() {
           </div>
         </section>
 
-        <section className="section type-section" id="type">
+        <section className="section type-section" id="type" style={{ backgroundImage: `linear-gradient(color-mix(in srgb, var(--paper) 50%, transparent), color-mix(in srgb, var(--paper) 50%, transparent)), url(${import.meta.env.BASE_URL}media/${egypt ? "sandstone" : "papyrus"}-texture.jpg)`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
           <SectionLabel number="04">Typography</SectionLabel>
           <div className="type-grid">
             <div className={egypt ? "type-display" : "type-display type-display-anime"}>
