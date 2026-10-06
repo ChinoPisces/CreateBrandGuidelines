@@ -479,7 +479,7 @@ export default function App() {
           <UsageRules doText="Use approved photography with consistent branding. Preserve the food’s appeal and compose crops intentionally." dontText="Introduce conflicting logos, unapproved photography or a visual treatment that clashes with the application." />
         </section>
 
-        <section className="section illustration-section" id="illustration">
+        <section className="section illustration-section" id="illustration" style={{ backgroundImage: `linear-gradient(color-mix(in srgb, var(--paper) 50%, transparent), color-mix(in srgb, var(--paper) 50%, transparent)), url(${import.meta.env.BASE_URL}media/${egypt ? "sandstone" : "papyrus"}-texture.jpg)`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
           <SectionLabel number="06">Illustration</SectionLabel>
           <div className="section-heading">
             <h2>{egypt ? <>Symbols with<br />a story</> : <>Characters with<br />personality</>}</h2>
