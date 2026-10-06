@@ -32,7 +32,7 @@ export default function LoopAnimation({ source, label, pingPong = false, scale =
     };
     Promise.all([
       loadRuntime(),
-      fetch(`${import.meta.env.BASE_URL}${source}`, { signal: controller.signal }).then(response => {
+      fetch(`${import.meta.env.BASE_URL.replace(/\/?$/, "/")}${source}`, { signal: controller.signal }).then(response => {
         if (!response.ok) throw new Error("Animation unavailable");
         return response.json();
       }),
