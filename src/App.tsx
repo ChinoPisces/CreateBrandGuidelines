@@ -90,7 +90,7 @@ const gradients = {
   anime: [
     { name: "Carnelian to Sunset", from: "#B33A2B", to: "#F3903F", note: "Carnelian Red → Sunset" },
     { name: "Lapis to Obsidian", from: "#183B82", to: "#1C1408", note: "Lapis Lazuli → Obsidian" },
-    { name: "Sunset to Papyrus", from: "#F3903F", to: "#F2E3C6", note: "Sunset → Sunlit Papyrus" },
+    { name: "Ancient Gold", from: "#FFF0A6", to: "#D4A017", note: "Light Gold → Ancient Gold" },
   ],
 };
 
