@@ -668,11 +668,10 @@ footer > .portfolio-return { left: 36px; right: auto; }
 
 /* Give every navigation and text link a visible interactive state. */
 main a {
-  transition: color 180ms ease, background-color 180ms ease, opacity 180ms ease;
+  transition: color 180ms ease, opacity 180ms ease;
 }
 main a:is(:hover, :focus-visible) {
   color: var(--accent);
-  background-color: color-mix(in srgb, var(--accent) 12%, transparent);
   opacity: 1;
 }
 main a:focus-visible {
