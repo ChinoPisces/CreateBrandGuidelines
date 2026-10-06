@@ -303,7 +303,7 @@ export default function App() {
           <div className="hero-index">BG—01</div>
         </section>
 
-        <section className="section intro-section" id="foundation" style={{ backgroundImage: `url(${import.meta.env.BASE_URL}media/${egypt ? "sandstone" : "papyrus"}-texture.jpg)` }}>
+        <section className="section intro-section" id="foundation" style={{ backgroundImage: `linear-gradient(color-mix(in srgb, var(--paper) 50%, transparent), color-mix(in srgb, var(--paper) 50%, transparent)), url(${import.meta.env.BASE_URL}media/${egypt ? "sandstone" : "papyrus"}-texture.jpg)` }}>
           <SectionLabel number="01">Foundation</SectionLabel>
           <div className="intro-grid">
             <div className="foundation-heading">
