@@ -242,6 +242,33 @@ export default function App() {
     };
   }, [direction]);
 
+
+  useLayoutEffect(() => {
+    const textureImages = new Map<string, HTMLImageElement>();
+    const targets = [...document.querySelectorAll<HTMLElement>(".intro-section, .type-section, .illustration-section, .texture-preview")];
+    let disposed = false;
+    const update = (element: HTMLElement) => {
+      const texture = element.classList.contains("texture-preview")
+        ? (element.getAttribute("aria-label")?.toLowerCase().includes("sandstone") ? "sandstone" : "papyrus")
+        : (direction === "egypt" ? "sandstone" : "papyrus");
+      const image = textureImages.get(texture);
+      if (!image?.naturalWidth || disposed) return;
+      const width = Math.max(element.clientWidth, element.clientHeight * image.naturalWidth / image.naturalHeight) / 2;
+      const tile = `${width}px auto`;
+      element.style.backgroundSize = element.classList.contains("texture-preview") ? tile : `100% 100%, ${tile}`;
+      element.style.backgroundRepeat = element.classList.contains("texture-preview") ? "repeat" : "no-repeat, repeat";
+    };
+    const observer = new ResizeObserver(entries => entries.forEach(entry => update(entry.target as HTMLElement)));
+    for (const texture of ["sandstone", "papyrus"]) {
+      const image = new Image();
+      textureImages.set(texture, image);
+      image.onload = () => targets.forEach(update);
+      image.src = `${import.meta.env.BASE_URL}media/${texture}-texture.jpg`;
+    }
+    targets.forEach(element => { observer.observe(element); update(element); });
+    return () => { disposed = true; observer.disconnect(); textureImages.forEach(image => { image.onload = null; }); };
+  }, [direction]);
+
   const copyColor = async (value: string) => {
     await navigator.clipboard?.writeText(value);
     setCopied(value);
