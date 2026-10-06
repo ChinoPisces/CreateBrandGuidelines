@@ -644,7 +644,7 @@ export default function App() {
         <section className="section illustration-section" id="illustration" style={{ backgroundImage: `linear-gradient(color-mix(in srgb, var(--paper) 50%, transparent), color-mix(in srgb, var(--paper) 50%, transparent)), url(${import.meta.env.BASE_URL}media/${egypt ? "sandstone" : "papyrus"}-texture.jpg)`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
           <SectionLabel number="06">Illustration</SectionLabel>
           <div className="section-heading">
-            <h2>{egypt ? <>Heritage<br />in every line</> : <>Ancient icons<br />Ramen stories</>}</h2>
+            <h2>{egypt ? <>Heritage<br />in every line</> : <>Drawn from<br />the Nile</>}</h2>
             <p>{copy.illustration}</p>
           </div>
           <div className="illustration-grid">
@@ -663,7 +663,7 @@ export default function App() {
         <section className="section motion-section" id="motion">
           <SectionLabel number="07">Motion</SectionLabel>
           <div className="section-heading">
-            <h2>{egypt ? <>Grace in<br />every gesture</> : <>Ramen&nbsp;takes<br />the stage</>}</h2>
+            <h2>{egypt ? <>Grace in<br />every gesture</> : <>Chopsticks<br />and chariots</>}</h2>
             <p>{copy.motion}</p>
           </div>
           <div className="motion-grid">
