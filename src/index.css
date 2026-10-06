@@ -659,3 +659,9 @@ footer > a { position: absolute; right: 36px; bottom: 32px; color: inherit; font
     box-sizing: border-box;
   }
 }
+
+/* Return to the project without competing with the footer headline. */
+footer > .portfolio-return { left: 36px; right: auto; }
+@media (max-width: 640px) {
+  footer > .portfolio-return { left: 24px; }
+}
