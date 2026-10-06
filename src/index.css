@@ -625,3 +625,5 @@ footer > a { position: absolute; right: 36px; bottom: 32px; color: inherit; font
   .motion-grid > .motion-card:first-child .motion-player { aspect-ratio: 16 / 9; }
   .motion-grid .motion-player-square video { object-fit: cover; }
 }
+
+.intro-section { background-size: cover; background-position: center; background-repeat: no-repeat; }
