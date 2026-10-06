@@ -458,6 +458,9 @@ export default function App() {
             <a className="text-link" href="#foundation">
               Explore the system <span>↓</span>
             </a>
+            <a className="text-link" href="https://www.chinopisces.com/tutenramen">
+              View the case study <span>↗</span>
+            </a>
           </div>
           <div className="hero-image">
             <img
