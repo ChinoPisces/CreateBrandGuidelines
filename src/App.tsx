@@ -104,7 +104,7 @@ const brandCopy = {
       "Offer an unhurried welcome, with thoughtful details and hospitality that puts guests at ease.",
       "Draw on Egyptian symbols with purpose, giving guests something meaningful to notice."
     ],
-    "logo": "Treat the signature as a seal of distinction. Use the approved artwork with generous clear space, balanced proportions and a background that gives it presence.",
+    "logo": "The monogram draws Egyptian symbolism into a contemporary seal; the wordmark gives that seal a name. Let both carry the assurance of a gracious host. Use the approved artwork, preserve its proportions and give it clear space on a calm, contrasting background.",
     "color": "Papyrus, Desert Sand and Obsidian create a composed foundation. Antique Gold recalls precious ornament, Lapis Lazuli lends depth and Carnelian Red brings warmth. Use these accents with restraint, allowing each to earn its place.",
     "gradient": "Let a gradual blend suggest the warmth of metal or the depth of stone. Use only the approved two-color pairings, with one clear direction and no extra color stops.",
     "typeDisplay": "Use Georgia to give headlines the composure of an inscription. Let scale, measured spacing and a clear hierarchy convey distinction.",
@@ -173,7 +173,7 @@ const brandCopy = {
       "Welcome everyone, from first-time ramen guests to chopstick regulars. There is room at this table.",
       "Reward a closer look with Egyptian landmarks, expressive characters and small noodle adventures."
     ],
-    "logo": "Give the name a confident entrance. Use the approved artwork, keep its proportions and leave breathing room. Big personality works best when everyone can read it.",
+    "logo": "A little Egyptian drama, a lot of Japanese character charm. The monogram makes an entrance; the wordmark handles introductions. Use the approved artwork and background pairing, keep the proportions intact and leave clear space. Even a character with a royal appetite needs breathing room.",
     "color": "Sunlit Papyrus gives the colors room to play. Sunset brings warmth, Lapis Lazuli adds punch and Carnelian Red draws the eye. Give one color the lead; the others can be its enthusiastic supporting cast.",
     "gradient": "Give the approved color pairs a smooth handoff. Two colors, one direction, no surprise guests. Keep text readable from one end of the blend to the other.",
     "typeDisplay": "Use bold Montserrat for headlines with something to say. Keep them short, give them space, and let the words do the work. A good punchline needs room to land.",
@@ -499,7 +499,7 @@ export default function App() {
         <section className="section logo-section" id="logo">
           <SectionLabel number="02">Logo system</SectionLabel>
           <div className="section-heading">
-            <h2>One name<br />Two signatures</h2>
+            <h2>{egypt ? <>A mark of<br />distinction</> : <>Big character<br />One little mark</>}</h2>
             <p>{copy.logo}</p>
           </div>
           <div className="logo-grid logo-showcase">
