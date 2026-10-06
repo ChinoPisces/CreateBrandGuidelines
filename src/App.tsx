@@ -7,13 +7,13 @@ const CDN = "https://cdn.prod.website-files.com/6553caa42be844f2b3c45e3f";
 
 const assets = {
   wordmarkEgypt: `${CDN}/6aac551a8b83400598a702e1_c3990ae0a_brownversion.svg`,
-  wordmarkAnime: `${import.meta.env.BASE_URL}media/TR_wordmark_carnelian_sunset.svg`,
-  heroEgypt: `${import.meta.env.BASE_URL}media/modern-egyptian-ramen-logo.jpg`,
+  wordmarkAnime: `${import.meta.env.BASE_URL.replace(/\/?$/, "/")}media/TR_wordmark_carnelian_sunset.svg`,
+  heroEgypt: `${import.meta.env.BASE_URL.replace(/\/?$/, "/")}media/modern-egyptian-ramen-logo.jpg`,
   heroAnime: `${CDN}/6ab492c7fb1e0a368702ecbb_social-09-photo-wall-p-1080.webp`,
-  packagingEgypt: `${import.meta.env.BASE_URL}media/modern-egyptian-table-scene.webp`,
+  packagingEgypt: `${import.meta.env.BASE_URL.replace(/\/?$/, "/")}media/modern-egyptian-table-scene.webp`,
   packagingAnime: `${CDN}/6ab492c2fc8cbd991d51af7b_social-01-tabletop-packaging-p-1080.webp`,
-  interiorEgypt: `${import.meta.env.BASE_URL}media/modern-egyptian-restaurant-interior.png`,
-  detailsEgypt: `${import.meta.env.BASE_URL}media/TE_sc_05.png`,
+  interiorEgypt: `${import.meta.env.BASE_URL.replace(/\/?$/, "/")}media/modern-egyptian-restaurant-interior.png`,
+  detailsEgypt: `${import.meta.env.BASE_URL.replace(/\/?$/, "/")}media/TE_sc_05.png`,
   storefront: `${CDN}/6ab492c5fc8cbd991d51b16c_social-05-storefront-p-1080.webp`,
   menu: `${CDN}/6ab492c8ad09408dad7910b4_social-10-printed-menu-p-1080.webp`,
   egyptCharacter: `${CDN}/6ab355c2d30b7d7b4f747af5_NinjaMummy_TE_footer.svg`,
@@ -405,7 +405,7 @@ export default function App() {
       const image = new Image();
       textureImages.set(texture, image);
       image.onload = () => targets.forEach(update);
-      image.src = `${import.meta.env.BASE_URL}media/${texture}-texture.jpg`;
+      image.src = `${import.meta.env.BASE_URL.replace(/\/?$/, "/")}media/${texture}-texture.jpg`;
     }
     targets.forEach(element => { observer.observe(element); update(element); });
     return () => { disposed = true; observer.disconnect(); textureImages.forEach(image => { image.onload = null; }); };
@@ -469,12 +469,12 @@ export default function App() {
           <div className="hero-index">BG—01</div>
         </section>
 
-        <section className="section intro-section" id="foundation" style={{ backgroundImage: `linear-gradient(color-mix(in srgb, var(--paper) 50%, transparent), color-mix(in srgb, var(--paper) 50%, transparent)), url(${import.meta.env.BASE_URL}media/${egypt ? "sandstone" : "papyrus"}-texture.jpg)` }}>
+        <section className="section intro-section" id="foundation" style={{ backgroundImage: `linear-gradient(color-mix(in srgb, var(--paper) 50%, transparent), color-mix(in srgb, var(--paper) 50%, transparent)), url(${import.meta.env.BASE_URL.replace(/\/?$/, "/")}media/${egypt ? "sandstone" : "papyrus"}-texture.jpg)` }}>
           <SectionLabel number="01">Foundation</SectionLabel>
           <div className="intro-grid">
             <div className="foundation-heading">
               <h2>Two expressions<br />One spirit</h2>
-              <img className="foundation-couple" src={`${import.meta.env.BASE_URL}media/${egypt ? "TR_couple_ME_complete.svg" : "TR_couple_CA.svg"}`} alt={`${egypt ? "Modern Egyptian" : "Chibi Anime"} couple sharing ramen`} />
+              <img className="foundation-couple" src={`${import.meta.env.BASE_URL.replace(/\/?$/, "/")}media/${egypt ? "TR_couple_ME_complete.svg" : "TR_couple_CA.svg"}`} alt={`${egypt ? "Modern Egyptian" : "Chibi Anime"} couple sharing ramen`} />
             </div>
             <div>
               <p className="lead">{copy.foundation}</p>
@@ -506,17 +506,17 @@ export default function App() {
             <div className="logo-wordmarks">
               <div className="logo-card logo-card-light">
                 <span className="card-kicker">Wordmark-on light backgrounds</span>
-                <img alt={`Tutenramen ${egypt ? "Modern Egyptian" : "Chibi Anime"} wordmark on light backgrounds`} src={egypt ? assets.wordmarkEgypt : `${import.meta.env.BASE_URL}media/TR_wordmark_carnelian.svg`} />
+                <img alt={`Tutenramen ${egypt ? "Modern Egyptian" : "Chibi Anime"} wordmark on light backgrounds`} src={egypt ? assets.wordmarkEgypt : `${import.meta.env.BASE_URL.replace(/\/?$/, "/")}media/TR_wordmark_carnelian.svg`} />
               </div>
               <div className="logo-card logo-card-dark">
                 <span className="card-kicker">Wordmark-on dark backgrounds</span>
-                <img alt={`Tutenramen ${egypt ? "Modern Egyptian" : "Chibi Anime"} wordmark on dark backgrounds`} src={`${import.meta.env.BASE_URL}media/${egypt ? "TR_wordmark_golden.svg" : "TR_wordmark_carnelian_sunset.svg"}`} />
+                <img alt={`Tutenramen ${egypt ? "Modern Egyptian" : "Chibi Anime"} wordmark on dark backgrounds`} src={`${import.meta.env.BASE_URL.replace(/\/?$/, "/")}media/${egypt ? "TR_wordmark_golden.svg" : "TR_wordmark_carnelian_sunset.svg"}`} />
               </div>
             </div>
             <div className="logo-symbol">
               <span className="card-kicker">Monogram</span>
               <img
-                src={`${import.meta.env.BASE_URL}media/${egypt ? "TR_logo_ME_current.svg" : "TR_logo_CA_updated.svg"}`}
+                src={`${import.meta.env.BASE_URL.replace(/\/?$/, "/")}media/${egypt ? "TR_logo_ME_current.svg" : "TR_logo_CA_updated.svg"}`}
                 alt={`Tutenramen ${egypt ? "Modern Egyptian" : "Chibi Anime"} logo`}
               />
             </div>
@@ -525,7 +525,7 @@ export default function App() {
             <div className="clearspace-diagram" role="img" aria-label="Wordmark with a minimum clear space of one capital-letter height on all four sides">
               <span className="clearspace-x clearspace-x-top" aria-hidden="true">x</span>
               <span className="clearspace-x clearspace-x-left" aria-hidden="true">x</span>
-              <img src={`${import.meta.env.BASE_URL}media/wordmark-obsidian-${egypt ? "ME" : "CA"}.svg`} alt="" />
+              <img src={`${import.meta.env.BASE_URL.replace(/\/?$/, "/")}media/wordmark-obsidian-${egypt ? "ME" : "CA"}.svg`} alt="" />
               <span className="clearspace-x clearspace-x-right" aria-hidden="true">x</span>
               <span className="clearspace-x clearspace-x-bottom" aria-hidden="true">x</span>
             </div>
@@ -561,7 +561,7 @@ export default function App() {
                   className="texture-preview"
                   role="img"
                   aria-label={`${texture} repeating texture`}
-                  style={{ backgroundImage: `url(${import.meta.env.BASE_URL}media/${texture.toLowerCase()}-texture.jpg)` }}
+                  style={{ backgroundImage: `url(${import.meta.env.BASE_URL.replace(/\/?$/, "/")}media/${texture.toLowerCase()}-texture.jpg)` }}
                 />
                 <figcaption>{texture}</figcaption>
               </figure>
@@ -585,7 +585,7 @@ export default function App() {
           </div>
         </section>
 
-        <section className="section type-section" id="type" style={{ backgroundImage: `linear-gradient(color-mix(in srgb, var(--paper) 50%, transparent), color-mix(in srgb, var(--paper) 50%, transparent)), url(${import.meta.env.BASE_URL}media/${egypt ? "sandstone" : "papyrus"}-texture.jpg)`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
+        <section className="section type-section" id="type" style={{ backgroundImage: `linear-gradient(color-mix(in srgb, var(--paper) 50%, transparent), color-mix(in srgb, var(--paper) 50%, transparent)), url(${import.meta.env.BASE_URL.replace(/\/?$/, "/")}media/${egypt ? "sandstone" : "papyrus"}-texture.jpg)`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
           <SectionLabel number="04">Typography</SectionLabel>
           <div className="type-grid">
             <div className={egypt ? "type-display" : "type-display type-display-anime"}>
@@ -641,7 +641,7 @@ export default function App() {
           <UsageRules doText={copy.rules.imagery.do} dontText={copy.rules.imagery.dont} />
         </section>
 
-        <section className="section illustration-section" id="illustration" style={{ backgroundImage: `linear-gradient(color-mix(in srgb, var(--paper) 50%, transparent), color-mix(in srgb, var(--paper) 50%, transparent)), url(${import.meta.env.BASE_URL}media/${egypt ? "sandstone" : "papyrus"}-texture.jpg)`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
+        <section className="section illustration-section" id="illustration" style={{ backgroundImage: `linear-gradient(color-mix(in srgb, var(--paper) 50%, transparent), color-mix(in srgb, var(--paper) 50%, transparent)), url(${import.meta.env.BASE_URL.replace(/\/?$/, "/")}media/${egypt ? "sandstone" : "papyrus"}-texture.jpg)`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
           <SectionLabel number="06">Illustration</SectionLabel>
           <div className="section-heading">
             <h2>{egypt ? <>Heritage<br />in every line</> : <>Drawn from<br />the Nile</>}</h2>
@@ -651,7 +651,7 @@ export default function App() {
             {illustrationSets[direction].map((art) => (
               <figure className={art.label === "Characters" ? "illustration-card illustration-card-wide" : art.label === "Gold mask" ? "illustration-card illustration-card-gold-mask" : art.label === "Ninja mummy" ? "illustration-card illustration-card-mummy" : "illustration-card"} key={art.file}>
                 <div className={art.label === "Ninja mummy" ? "illustration-art illustration-art-mummy" : "illustration-art"}>
-                  <img src={["pyramid_ME.svg", "Obelisk_ME.svg", "gold-mask-ME.png", "Pyramid_CA.svg"].includes(art.file) ? `${import.meta.env.BASE_URL}media/${art.file}` : `${CDN}/${art.file}`} alt={`${egypt ? "Modern Egyptian" : "Chibi Anime"} Tutenramen ${art.label.toLowerCase()} illustration`} loading="lazy" decoding="async" />
+                  <img src={["pyramid_ME.svg", "Obelisk_ME.svg", "gold-mask-ME.png", "Pyramid_CA.svg"].includes(art.file) ? `${import.meta.env.BASE_URL.replace(/\/?$/, "/")}media/${art.file}` : `${CDN}/${art.file}`} alt={`${egypt ? "Modern Egyptian" : "Chibi Anime"} Tutenramen ${art.label.toLowerCase()} illustration`} loading="lazy" decoding="async" />
                 </div>
                 <figcaption>{art.label}</figcaption>
               </figure>
@@ -673,7 +673,7 @@ export default function App() {
                   {egypt && video.label === "Date night" ? (
                     <video
                       key={direction}
-                      src={`${import.meta.env.BASE_URL}media/${egypt ? "Tutenramen_KeyArt_B2.mp4" : "Tutenramen_KeyArt_A2.mp4"}`}
+                      src={`${import.meta.env.BASE_URL.replace(/\/?$/, "/")}media/${egypt ? "Tutenramen_KeyArt_B2.mp4" : "Tutenramen_KeyArt_A2.mp4"}`}
                       aria-label={`${egypt ? "Modern Egyptian" : "Chibi Anime"} key art animation`}
                       autoPlay muted loop playsInline preload="auto"
                     />
@@ -693,7 +693,7 @@ export default function App() {
           <div className="motion-animation-grid">
             <figure className="motion-card motion-card-monogram">
               <div className="motion-player motion-player-square">
-                <video src={`${import.meta.env.BASE_URL}media/${egypt ? "tutenramenTurnaround_B3.mp4" : "tutenramenTurnaround_A0.mp4"}`} aria-label="Animated monogram" autoPlay muted loop playsInline preload="auto" />
+                <video src={`${import.meta.env.BASE_URL.replace(/\/?$/, "/")}media/${egypt ? "tutenramenTurnaround_B3.mp4" : "tutenramenTurnaround_A0.mp4"}`} aria-label="Animated monogram" autoPlay muted loop playsInline preload="auto" />
               </div>
               <figcaption>Animated monogram</figcaption>
             </figure>
