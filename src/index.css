@@ -688,3 +688,7 @@ main a:focus-visible {
   .approval-checklist ul { column-gap: 0; }
   .approval-checklist li:nth-child(odd) { padding-right: clamp(32px, 4vw, 72px); }
 }
+
+.text-link { font-size: 13px; }
+.side-links a { font-size: 12px; }
+footer > a { font-size: 11px; }
