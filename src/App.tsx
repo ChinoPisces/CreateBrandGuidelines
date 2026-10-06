@@ -188,7 +188,7 @@ const brandCopy = {
     "illustration": "Give pharaohs, queens and the ninja mummy big appetites and readable expressions. Bring Egyptian landmarks into the expressive world of Japanese character art. Let gestures and relationships tell the story; a raised eyebrow can say more than a wall of hieroglyphs.",
     "motion": "Give the cast a little comic timing: a pharaoh reaching for ramen, a queen enjoying a noodle, a ninja mummy making an entrance. Let characters anticipate, react and settle into a clear pose. Keep the loops comfortable and every important feature inside the frame.",
     "voice": "Borrow the cast’s personality: a pharaoh with a ramen craving, a queen negotiating the last noodle, a ninja mummy arriving just in time for lunch. Keep the lines short, warm and appetizing. Menus, ingredients, allergens and prices should be easy to understand.",
-    "menu": "A royal appetite deserves a generous bowl of ramen.",
+    "menu": "Ramen fit for a pharaoh. Crown optional.",
     "social": "Even a pharaoh needs a ramen break.",
     "service": "First ramen with us? Let’s find your favorite bowl.",
     "footerKicker": "From papyrus to ramen",
