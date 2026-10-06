@@ -178,7 +178,7 @@ const brandCopy = {
     "gradient": "Give the approved color pairs a smooth handoff. Two colors, one direction, no surprise guests. Keep text readable from one end of the blend to the other.",
     "typeDisplay": "Use bold Montserrat for headlines with something to say. Keep them short, give them space, and let the words do the work. A good punchline needs room to land.",
     "typeUtility": "Use Montserrat for menus, prices, ingredients and navigation. Bring personality to the invitation; keep the practical details delightfully obvious.",
-    "display": "Ramen for a pharaoh",
+    "display": "Ramen, meet Egypt",
     "heading": "Royal appetite, extra noodles",
     "body": "A pharaoh’s appetite, a ramen lover’s happy place.",
     "imagery": "Show a world where Egyptian characters and Japanese ramen feel at home together. Let approved packaging, playful motifs and warm settings bring the personality. Keep the branding consistent and the bowl easy to spot.",
@@ -188,10 +188,10 @@ const brandCopy = {
     "illustration": "Give pharaohs, queens and the ninja mummy big appetites and readable expressions. Bring Egyptian landmarks into the expressive world of Japanese character art. Let gestures and relationships tell the story; a raised eyebrow can say more than a wall of hieroglyphs.",
     "motion": "Give the cast a little comic timing: a pharaoh reaching for ramen, a queen enjoying a noodle, a ninja mummy making an entrance. Let characters anticipate, react and settle into a clear pose. Keep the loops comfortable and every important feature inside the frame.",
     "voice": "Borrow the cast’s personality: a pharaoh with a ramen craving, a queen negotiating the last noodle, a ninja mummy arriving just in time for lunch. Keep the lines short, warm and appetizing. Menus, ingredients, allergens and prices should be easy to understand.",
-    "menu": "Ramen fit for a pharaoh. Crown optional.",
-    "social": "Even a pharaoh needs a ramen break.",
+    "menu": "Ramen so good, your chopsticks may ask for seconds.",
+    "social": "Your ramen is ready. The pyramid can wait.",
     "service": "First ramen with us? Let’s find your favorite bowl.",
-    "footerKicker": "The pharaoh’s decree",
+    "footerKicker": "Egyptian tales, Japanese ramen",
     "footerFirst": "Pass the ramen",
     "footerLast": "Keep it coming",
     "rules": {
@@ -644,7 +644,7 @@ export default function App() {
         <section className="section illustration-section" id="illustration" style={{ backgroundImage: `linear-gradient(color-mix(in srgb, var(--paper) 50%, transparent), color-mix(in srgb, var(--paper) 50%, transparent)), url(${import.meta.env.BASE_URL}media/${egypt ? "sandstone" : "papyrus"}-texture.jpg)`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
           <SectionLabel number="06">Illustration</SectionLabel>
           <div className="section-heading">
-            <h2>{egypt ? <>Heritage<br />in every line</> : <>Pharaohs<br />and friends</>}</h2>
+            <h2>{egypt ? <>Heritage<br />in every line</> : <>Ancient icons<br />Ramen stories</>}</h2>
             <p>{copy.illustration}</p>
           </div>
           <div className="illustration-grid">
@@ -663,7 +663,7 @@ export default function App() {
         <section className="section motion-section" id="motion">
           <SectionLabel number="07">Motion</SectionLabel>
           <div className="section-heading">
-            <h2>{egypt ? <>Grace in<br />every gesture</> : <>Pharaohs<br />in motion</>}</h2>
+            <h2>{egypt ? <>Grace in<br />every gesture</> : <>Ramen takes<br />the stage</>}</h2>
             <p>{copy.motion}</p>
           </div>
           <div className="motion-grid">
