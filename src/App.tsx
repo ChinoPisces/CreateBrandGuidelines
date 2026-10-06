@@ -610,7 +610,7 @@ export default function App() {
         <section className="section imagery-section" id="imagery">
           <SectionLabel number="05">Imagery</SectionLabel>
           <div className="section-heading">
-            <h2>{egypt ? <>An invitation<br />to linger</> : <>Ramen in<br />royal company</>}</h2>
+            <h2>{egypt ? <>An invitation<br />to linger</> : <>A feast<br />for the eyes</>}</h2>
             <p>{copy.imagery}</p>
           </div>
           <div className="image-mosaic">
