@@ -89,7 +89,7 @@ export default function ScrollMural({
     const schedule = () => { if (!request) request = requestAnimationFrame(render); };
     Promise.all([
       loadRuntime(),
-      fetch(`${import.meta.env.BASE_URL}${source}`, { signal: controller.signal })
+      fetch(`${import.meta.env.BASE_URL.replace(/\/?$/, "/")}${source}`, { signal: controller.signal })
         .then(response => { if (!response.ok) throw new Error("Animation unavailable"); return response.json(); }),
     ]).then(([lottie, data]) => {
       if (disposed) return;
