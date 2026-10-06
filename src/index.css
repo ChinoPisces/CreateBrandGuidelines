@@ -683,3 +683,8 @@ main a:focus-visible {
 }
 
 .theme-anime .motion-section h2 { font-size: clamp(42px, 5.2vw, 74px); }
+
+@media (min-width: 821px) {
+  .approval-checklist ul { column-gap: 0; }
+  .approval-checklist li:nth-child(odd) { padding-right: clamp(32px, 4vw, 72px); }
+}
