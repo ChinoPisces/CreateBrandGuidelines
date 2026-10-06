@@ -94,6 +94,147 @@ const gradients = {
   ],
 };
 
+const brandCopy = {
+  "egypt": {
+    "hero": "Inspired by Egyptian heritage, made for a contemporary table. Tutenramen brings the pleasure of ramen to a fusion dining experience shaped by rich symbolism, considered craft and generous hospitality.",
+    "foundation": "Tutenramen brings ramen and Egyptian imagination to the same table. This fusion dining experience pairs generous bowls with a considered setting, drawing on the richness of Egyptian visual heritage. Stone, precious color and ancient forms lend a sense of ceremony; attentive hospitality makes it welcoming.",
+    "foundationNote": "Prestige lives in the care of the experience, from the first impression to the final spoonful. This guide translates that spirit into a consistent system of marks, color, type, imagery and movement.",
+    "pillars": [
+      "Let the bowl command attention through texture, warmth and generous presentation.",
+      "Offer an unhurried welcome, with thoughtful details and hospitality that puts guests at ease.",
+      "Draw on Egyptian symbols with purpose, giving guests something meaningful to notice."
+    ],
+    "logo": "Treat the signature as a seal of distinction. Use the approved artwork with generous clear space, balanced proportions and a background that gives it presence.",
+    "color": "Papyrus, Desert Sand and Obsidian create a composed foundation. Antique Gold recalls precious ornament, Lapis Lazuli lends depth and Carnelian Red brings warmth. Use these accents with restraint, allowing each to earn its place.",
+    "gradient": "Let a gradual blend suggest the warmth of metal or the depth of stone. Use only the approved two-color pairings, with one clear direction and no extra color stops.",
+    "typeDisplay": "Use Georgia to give headlines the composure of an inscription. Let scale, measured spacing and a clear hierarchy convey distinction.",
+    "typeUtility": "Use Montserrat for menus, prices, ingredients and navigation. Practical information deserves the same care as the headline: clear, legible and easy to find.",
+    "display": "Heritage at the table",
+    "heading": "Rich spices, quiet ceremony",
+    "body": "A generous bowl, a considered welcome, a moment to savor.",
+    "imagery": "Photograph the invitation as carefully as the food. Warm light, tactile materials and considered compositions should convey the pleasure of dining here. Use approved photography with consistent branding.",
+    "product": "Let broth, steam and texture lead. Give packaging the same considered treatment.",
+    "environment": "Show how light, materials and signage create a complete dining experience.",
+    "detail": "Look closely at the objects guests touch. Craft is most persuasive in the details.",
+    "illustration": "Draw on the visual language of Egyptian heritage with clarity and respect. Landmarks establish scale; figures bring ceremony and human connection. Give each element a purpose rather than filling space with symbols.",
+    "motion": "Let movement unfold with quiet assurance. Measured gestures and graceful transitions should reveal the scene, invite attention and leave room to appreciate the detail.",
+    "voice": "Write with the assurance of a gracious host. Evoke heritage through precise details and a sense of occasion. Favor warmth over grandeur, and let the food carry the promise. Menus, prices and service information should always be plain and useful.",
+    "menu": "Fragrant broth, generous noodles, a bowl to savor.",
+    "social": "An evening of warm spices and good company awaits.",
+    "service": "Welcome to the table. May we help you choose your bowl?",
+    "footerKicker": "The art of a considered welcome",
+    "footerFirst": "Every detail",
+    "footerLast": "A lasting impression",
+    "rules": {
+      "foundation": {
+        "do": "Choose the expression for the occasion, then carry its character through the complete experience.",
+        "dont": "Choose solely by country or age, or mix expressions without a clear purpose."
+      },
+      "logo": {
+        "do": "Use the approved signature for the background, preserve its proportions and leave at least one cap-height of clear space.",
+        "dont": "Redraw, stretch, add effects or combine the two signatures in one lockup."
+      },
+      "color": {
+        "do": "Establish a calm foundation, use accents selectively and preserve readable contrast.",
+        "dont": "Give every color equal weight or let decoration make practical information difficult to read."
+      },
+      "gradient": {
+        "do": "Use approved two-stop blends with a gradual transition. Keep one direction within an application and check text contrast across the entire blend.",
+        "dont": "Add extra color stops, abrupt bands or drastic shifts between unrelated colors. Avoid stacked gradients that compete with the food, signature or essential information."
+      },
+      "type": {
+        "do": "Give storytelling and practical information distinct roles. Check prices, ingredients and navigation at their actual viewing size.",
+        "dont": "Let decorative treatments or tight spacing undermine essential information."
+      },
+      "imagery": {
+        "do": "Use approved photography with consistent branding. Let food, light and materials carry the atmosphere, and compose crops intentionally.",
+        "dont": "Introduce conflicting logos, unapproved photography or heavy treatments that obscure the food and setting."
+      },
+      "illustration": {
+        "do": "Use approved artwork, preserve its proportions and give defining details room to be seen.",
+        "dont": "Mix illustration styles, distort symbols or crop away defining features and artwork edges."
+      },
+      "motion": {
+        "do": "Use measured movement to reveal detail, create depth or guide attention. Review every frame of the sequence.",
+        "dont": "Expose cropped edges, disrupt the composition or compete with essential information."
+      },
+      "voice": {
+        "do": "Be warm, assured and specific. Let food, craft and hospitality convey a sense of occasion.",
+        "dont": "Invent provenance or let elaborate lore and exaggerated grandeur hide the useful message."
+      }
+    }
+  },
+  "anime": {
+    "hero": "Egyptian imagination meets a serious noodle habit. Tutenramen serves fusion dining with big flavor, a warm welcome and a cast of characters who are very committed to lunch.",
+    "foundation": "Ramen meets Egyptian imagination, and dinner gets a personality. Tutenramen turns fusion dining into a world of generous bowls, curious characters and warm welcomes. Come for the noodles. Stay for the plot twist.",
+    "foundationNote": "The personality is playful; the care is real. Keep every touchpoint easy to recognize and easy to enjoy, from a menu that makes sense to a character worth taking home.",
+    "pillars": [
+      "Make the food irresistible. The characters can steal a scene; the noodles should steal lunch.",
+      "Welcome everyone, make the useful stuff easy, and leave room for another pair of chopsticks.",
+      "Reward a closer look with expressive gestures, small surprises and a reason to smile."
+    ],
+    "logo": "Give the name a confident entrance. Use the approved artwork, keep its proportions and leave breathing room. Big personality works best when everyone can read it.",
+    "color": "Sunlit Papyrus gives the colors room to play. Sunset brings warmth, Lapis Lazuli adds punch and Carnelian Red draws the eye. Give one color the lead; the others can be its enthusiastic supporting cast.",
+    "gradient": "Give the approved color pairs a smooth handoff. Two colors, one direction, no surprise guests. Keep text readable from one end of the blend to the other.",
+    "typeDisplay": "Use bold Montserrat for headlines with something to say. Keep them short, give them space, and let the words do the work. A good punchline needs room to land.",
+    "typeUtility": "Use Montserrat for menus, prices, ingredients and navigation. Bring personality to the invitation; keep the practical details delightfully obvious.",
+    "display": "All hail the noodles",
+    "heading": "Big broth, bigger appetite",
+    "body": "Bring your appetite. Your chopsticks have plans.",
+    "imagery": "Make the food look delicious and the world feel fun to step into. Let approved packaging, expressive details and warm settings bring the personality. Keep the branding consistent and the bowl easy to spot.",
+    "product": "Put the food or packaging in the spotlight. Props can have a cameo.",
+    "environment": "Show a place people want to enter, photograph and bring a friend to.",
+    "detail": "Turn an everyday object into a small discovery. Even a menu can have personality.",
+    "illustration": "Give our little heroes big appetites and readable expressions. Rounded landmarks set the scene; gestures and relationships tell the story. A raised eyebrow can say more than a wall of hieroglyphs.",
+    "motion": "Give each movement a little comic timing. Let characters anticipate, react and settle into a clear pose. Keep the joke readable, the loops comfortable and every important feature inside the frame.",
+    "voice": "Write like a quick-witted friend who knows where to eat. Keep the language warm, short and appetizing. Use a well-timed joke, then get to the useful part. Humor belongs in the invitation; ingredients, allergens and prices need clarity.",
+    "menu": "Big broth. Generous noodles. Your chopsticks approve.",
+    "social": "Your plans called. They said ramen.",
+    "service": "First bowl with us? We’ll help you find your new favorite.",
+    "footerKicker": "Good taste, excellent company",
+    "footerFirst": "A little mischief",
+    "footerLast": "A lot of flavor",
+    "rules": {
+      "foundation": {
+        "do": "Choose the expression for the occasion and carry it through the whole application, from the first hello to the last noodle.",
+        "dont": "Choose solely by country or age, or turn the two expressions into an accidental mash-up."
+      },
+      "logo": {
+        "do": "Choose the approved signature for the background, keep its proportions and leave at least one cap-height of breathing room.",
+        "dont": "Stretch, redraw or add effects to the signature, or squeeze both signatures into one lockup."
+      },
+      "color": {
+        "do": "Give one color the lead, use accents for energy and keep every useful word easy to read.",
+        "dont": "Make every color shout at once or put practical information on a background that hides it."
+      },
+      "gradient": {
+        "do": "Use approved two-stop blends with a smooth transition. Keep one direction within an application and check text contrast from end to end.",
+        "dont": "Invite extra color stops, abrupt bands or unrelated colors to the party. Avoid stacked gradients that compete with the food, signature or useful information."
+      },
+      "type": {
+        "do": "Keep headlines expressive and practical details clear. Check prices, ingredients and navigation at their actual viewing size.",
+        "dont": "Make guests decipher decorative type or crowded spacing before they can order."
+      },
+      "imagery": {
+        "do": "Use approved photography with consistent branding. Give the food top billing and compose crops intentionally.",
+        "dont": "Introduce conflicting logos or unapproved photography, or let props and heavy effects steal the bowl’s spotlight."
+      },
+      "illustration": {
+        "do": "Use approved artwork and preserve the proportions, expressions and gestures that make the characters recognizable.",
+        "dont": "Mix illustration styles, stretch characters or crop away a face, gesture or defining edge."
+      },
+      "motion": {
+        "do": "Use timing to reveal character, create depth or guide attention. Watch every frame to make sure the joke and the composition land.",
+        "dont": "Cut off defining features, expose artwork edges or let movement distract from what guests need to know."
+      },
+      "voice": {
+        "do": "Keep it warm, witty and appetizing. Use a joke when it helps the message, then make the useful part easy to find.",
+        "dont": "Mock guests, force a joke into every line or make ingredients, allergens and prices part of the punchline."
+      }
+    }
+  }
+};
+
 function UsageRules({ doText, dontText }: { doText: string; dontText: string }) {
   return (
     <div className="usage-rules" aria-label="Usage guidance">
@@ -145,6 +286,7 @@ export default function App() {
   const [direction, setDirection] = useState<Direction>("egypt");
   const [copied, setCopied] = useState("");
   const egypt = direction === "egypt";
+  const copy = brandCopy[direction];
 
   useLayoutEffect(() => {
     document.querySelectorAll(".page-content h2, .page-content h3, .page-content p, .page-content figcaption, .page-content li, .expression-card > strong, .voice-examples > article").forEach(group => {
@@ -312,10 +454,7 @@ export default function App() {
               <br />
               <em>Fresh energy</em>
             </h1>
-            <p>
-              Egyptian imagination. The pleasure of ramen. Two expressions
-              that share one appetite, one welcome and one spirit of discovery.
-            </p>
+            <p>{copy.hero}</p>
             <a className="text-link" href="#foundation">
               Explore the system <span>↓</span>
             </a>
@@ -338,17 +477,13 @@ export default function App() {
               <img className="foundation-couple" src={`${import.meta.env.BASE_URL}media/${egypt ? "TR_couple_ME_complete.svg" : "TR_couple_CA.svg"}`} alt={`${egypt ? "Modern Egyptian" : "Chibi Anime"} couple sharing ramen`} />
             </div>
             <div>
-              <p className="lead">
-                Tutenramen brings the pleasure of ramen into a world of Egyptian imagination, creating a fusion dining experience rooted in curiosity and discovery.
-                It is a place for generous bowls, warm welcomes and curious appetites,
-                where every meal offers something to discover and every guest feels invited to stay.
-              </p>
-              <p className="foundation-note">The expression changes. The food, hospitality and spirit of discovery remain constant. This guide explains how to choose an expression and carry it consistently through an experience.</p>
+              <p className="lead">{copy.foundation}</p>
+              <p className="foundation-note">{copy.foundationNote}</p>
               <div className="pillars">
                 {[
-                  ["Appetite", "Keep the food compelling and the experience easy to enjoy."],
-                  ["Generosity", "Make every encounter feel welcoming, abundant and considered."],
-                  ["Discovery", "Give people something distinctive to notice, explore and remember."],
+                  ["Appetite", copy.pillars[0]],
+                  ["Generosity", copy.pillars[1]],
+                  ["Discovery", copy.pillars[2]],
                 ].map(([title, copy]) => (
                   <article key={title}>
                     <h3>{title}</h3>
@@ -358,14 +493,14 @@ export default function App() {
               </div>
             </div>
           </div>
-          <UsageRules doText="Choose an expression for the feeling and occasion you want to create. Carry it through the complete application." dontText="Choose solely by country, age or personal taste, or combine styles simply because both are available." />
+          <UsageRules doText={copy.rules.foundation.do} dontText={copy.rules.foundation.dont} />
         </section>
 
         <section className="section logo-section" id="logo">
           <SectionLabel number="02">Logo system</SectionLabel>
           <div className="section-heading">
             <h2>One name<br />Two signatures</h2>
-            <p>Use the signature belonging to your chosen expression. Keep its proportions, clear space and contrast consistent across the application.</p>
+            <p>{copy.logo}</p>
           </div>
           <div className="logo-grid logo-showcase">
             <div className="logo-wordmarks">
@@ -396,14 +531,14 @@ export default function App() {
             </div>
             <p><strong>Clear space</strong><br />Let x equal the height of a capital letter in the wordmark. Leave at least x of empty space above, below and on both sides. Keep text, images and edges outside this area.</p>
           </div>
-          <UsageRules doText="Use the approved signature, preserve its proportions and protect at least one cap-height of clear space." dontText="Redraw, stretch, add effects or combine the two signatures in one lockup." />
+          <UsageRules doText={copy.rules.logo.do} dontText={copy.rules.logo.dont} />
         </section>
 
         <section className="section color-section" id="color">
           <SectionLabel number="03">Color</SectionLabel>
           <div className="section-heading">
-            <h2>From sandstone<br />to sunset</h2>
-            <p>{egypt ? "Let papyrus, sand and obsidian establish the atmosphere. Use antique gold for considered details, lapis lazuli for depth and carnelian red for warmth. Keep these accents selective so the composition stays composed." : "Let sunlit papyrus give the composition room to breathe. Use sunset, lapis and carnelian to give character and emphasis."}</p>
+            <h2>{egypt ? <>Earth, stone<br />and gold</> : <>Sunshine with<br />a spicy streak</>}</h2>
+            <p>{copy.color}</p>
           </div>
           <div className={egypt ? "palette palette-modern" : "palette"}>
             {palettes[direction].map((color, index) => (
@@ -432,11 +567,11 @@ export default function App() {
               </figure>
             ))}
           </div>
-          <UsageRules doText="Establish a dominant color within the selected palette. Use accents for emphasis and preserve readable contrast." dontText="Give every color equal weight or place practical information on a background that makes it hard to read." />
+          <UsageRules doText={copy.rules.color.do} dontText={copy.rules.color.dont} />
           <div className="gradient-guidance">
             <div className="guidance-heading">
               <h3>Approved gradients</h3>
-              <p>{egypt ? "Use these approved two-color pairings to bring depth to a background or a considered detail. Keep the blend gradual and the direction consistent, with no additional color stops." : "Use these approved two-color pairings to bring depth to a background or a considered detail. Keep the blend gradual and the direction consistent, with no additional color stops."}</p>
+              <p>{copy.gradient}</p>
             </div>
             <div className="gradient-swatches">
               {gradients[direction].map((gradient) => (
@@ -446,7 +581,7 @@ export default function App() {
                 </figure>
               ))}
             </div>
-            <UsageRules doText="Use the approved two-stop blends with a smooth, gradual transition. Keep one gradient direction within an application and check text contrast across the entire blend." dontText="Add multiple color stops, rainbow effects, abrupt bands or drastic shifts between unrelated colors. Avoid stacking gradients or using them where they compete with the food, logo or essential information." />
+            <UsageRules doText={copy.rules.gradient.do} dontText={copy.rules.gradient.dont} />
           </div>
         </section>
 
@@ -456,27 +591,27 @@ export default function App() {
             <div className={egypt ? "type-display" : "type-display type-display-anime"}>
               <span className="font-name">{egypt ? "Georgia · Storytelling" : "Montserrat · Expressive"}</span>
               <div className="glyph">Aa</div>
-              <p>{egypt ? "Use Georgia for composed headlines and storytelling. Let scale and space give each message presence." : "Use bold Montserrat for direct, expressive headlines. Keep messages short and give the words room to read."}</p>
+              <p>{copy.typeDisplay}</p>
             </div>
             <div className="type-ui">
               <span className="font-name">Montserrat · Utility</span>
               <div className="glyph">Aa</div>
-              <p>Shared functional type for both expressions. Use Montserrat for navigation, labels, prices and practical information, with a clear hierarchy.</p>
+              <p>{copy.typeUtility}</p>
             </div>
           </div>
           <div className="type-scale">
-            <span>Display 01</span><strong>Flavor with a story</strong><small>64 / 0.94</small>
-            <span>Heading 02</span><b>Warm spices, Deep broth</b><small>34 / 1.05</small>
-            <span>Body</span><p>Made for curious appetites and shared tables.</p><small>16 / 1.65</small>
+            <span>Display 01</span><strong>{copy.display}</strong><small>64 / 0.94</small>
+            <span>Heading 02</span><b>{copy.heading}</b><small>34 / 1.05</small>
+            <span>Body</span><p>{copy.body}</p><small>16 / 1.65</small>
           </div>
-          <UsageRules doText="Give headlines and practical information distinct jobs. Check prices, ingredients and navigation at their actual viewing size." dontText="Use decorative treatments or tight spacing that make essential information difficult to read." />
+          <UsageRules doText={copy.rules.type.do} dontText={copy.rules.type.dont} />
         </section>
 
         <section className="section imagery-section" id="imagery">
           <SectionLabel number="05">Imagery</SectionLabel>
           <div className="section-heading">
-            <h2>Warmth you<br />can almost taste</h2>
-            <p>Make the food inviting and the experience recognizable. Choose approved photographs whose light, setting and branding support the selected expression.</p>
+            <h2>{egypt ? <>An invitation<br />to linger</> : <>Good looks<br />Great noodles</>}</h2>
+            <p>{copy.imagery}</p>
           </div>
           <div className="image-mosaic">
             <figure className="mosaic-main">
@@ -499,20 +634,18 @@ export default function App() {
             </figure>
           </div>
           <div className="application-notes">
-            <p><strong>Product.</strong> Let the bowl or packaging lead; use the setting to support its appeal.</p>
-            <p><strong>Environment.</strong> Carry the chosen expression through the space, signage and guest experience.</p>
-            <p><strong>Detail.</strong> Make everyday objects feel like part of the same considered world.</p>
+            <p><strong>Product</strong> {copy.product}</p>
+            <p><strong>Environment</strong> {copy.environment}</p>
+            <p><strong>Detail</strong> {copy.detail}</p>
           </div>
-          <UsageRules doText="Use approved photography with consistent branding. Preserve the food’s appeal and compose crops intentionally." dontText="Introduce conflicting logos, unapproved photography or a visual treatment that clashes with the application." />
+          <UsageRules doText={copy.rules.imagery.do} dontText={copy.rules.imagery.dont} />
         </section>
 
         <section className="section illustration-section" id="illustration" style={{ backgroundImage: `linear-gradient(color-mix(in srgb, var(--paper) 50%, transparent), color-mix(in srgb, var(--paper) 50%, transparent)), url(${import.meta.env.BASE_URL}media/${egypt ? "sandstone" : "papyrus"}-texture.jpg)`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
           <SectionLabel number="06">Illustration</SectionLabel>
           <div className="section-heading">
-            <h2>{egypt ? <>Symbols with<br />a story</> : <>Characters with<br />personality</>}</h2>
-            <p>{egypt
-              ? "Use geometric landmarks and expressive figures to create a sense of ceremony and discovery. Give each symbol a role in the story."
-              : "Use rounded landmarks and expressive characters to invite connection and play. Let gestures and relationships carry the story."}</p>
+            <h2>{egypt ? <>Heritage<br />in every line</> : <>Little heroes<br />Big appetites</>}</h2>
+            <p>{copy.illustration}</p>
           </div>
           <div className="illustration-grid">
             {illustrationSets[direction].map((art) => (
@@ -524,16 +657,14 @@ export default function App() {
               </figure>
             ))}
           </div>
-          <UsageRules doText="Use the approved artwork, preserve proportions and plan crops around the composition." dontText="Mix illustration styles within an application, distort characters or accidentally cut defining features and artwork edges." />
+          <UsageRules doText={copy.rules.illustration.do} dontText={copy.rules.illustration.dont} />
         </section>
 
         <section className="section motion-section" id="motion">
           <SectionLabel number="07">Motion</SectionLabel>
           <div className="section-heading">
-            <h2>Bring the<br />brand to life</h2>
-            <p>{egypt
-              ? "Let measured gestures and composed pacing reveal the story. Movement should give the scene presence and direct attention."
-              : "Let expressive gestures and playful rhythm reveal personality. Give each action a clear focus and room to land."}</p>
+            <h2>{egypt ? <>Grace in<br />every gesture</> : <>Ready, set<br />Ramen</>}</h2>
+            <p>{copy.motion}</p>
           </div>
           <div className="motion-grid">
             {motionSets[direction].filter(video => video.label !== "Animated monogram").map((video) => (
@@ -579,7 +710,7 @@ export default function App() {
               <figcaption>Steaming bowl</figcaption>
             </figure>
           </div>
-          <UsageRules doText="Give movement a purpose: reveal character, create depth or guide attention. Review the entire sequence in its frame." dontText="Let motion expose cropped edges, break the composition or compete with essential information." />
+          <UsageRules doText={copy.rules.motion.do} dontText={copy.rules.motion.dont} />
         </section>
 
         <section className="mural-section" aria-label={egypt ? "Modern Egyptian mural" : "Chibi Anime mural"}>
@@ -602,15 +733,15 @@ export default function App() {
           <div className="voice-grid">
             <div>
               <h2>Speak with<br /><em>warm confidence</em></h2>
-              <p>{egypt ? "Speak with warmth and quiet assurance. Let the broth, spices and care behind each bowl carry the story. Invite discovery with specific, considered language." : "Speak with warmth, wit and a little playful energy. Use short, direct language that makes the food feel irresistible and every guest feel included. Let the joke support the invitation."}</p>
+              <p>{copy.voice}</p>
             </div>
             <div className="voice-examples">
-              <article><span>Menu</span><p>{egypt ? "Slow-simmered broth, fragrant spices, a bowl worth lingering over." : "Big noodles, bold broth, your new favorite bowl."}</p></article>
-              <article><span>Social</span><p>{egypt ? "As the evening settles, gather around something warm." : "Rainy day? Your bowl of sunshine is ready."}</p></article>
-              <article><span>Service</span><p>{egypt ? "Take your time. We’ll help you find a bowl to savor." : "First bowl with us? Let’s find your favorite."}</p></article>
+              <article><span>Menu</span><p>{copy.menu}</p></article>
+              <article><span>Social</span><p>{copy.social}</p></article>
+              <article><span>Service</span><p>{copy.service}</p></article>
             </div>
           </div>
-          <UsageRules doText="Be welcoming, specific and appetizing. Let personality help people understand the message." dontText="Let elaborate lore, exaggerated grandeur or repeated jokes hide what people need to know." />
+          <UsageRules doText={copy.rules.voice.do} dontText={copy.rules.voice.dont} />
           <div className="approval-checklist">
             <div className="guidance-heading">
               <h3>Before it goes out</h3>
@@ -629,8 +760,8 @@ export default function App() {
 
         <footer>
           <div>
-            <span className="footer-kicker">That’s the spirit.</span>
-            <h2>Every detail<br />Part of the story</h2>
+            <span className="footer-kicker">{copy.footerKicker}</span>
+            <h2>{copy.footerFirst}<br />{copy.footerLast}</h2>
           </div>
           <a href="#top">Back to top ↑</a>
         </footer>
