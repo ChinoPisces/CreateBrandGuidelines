@@ -499,7 +499,7 @@ export default function App() {
         <section className="section logo-section" id="logo">
           <SectionLabel number="02">Logo system</SectionLabel>
           <div className="section-heading">
-            <h2>{egypt ? <>A mark of<br />distinction</> : <>Big character<br />One little mark</>}</h2>
+            <h2>{egypt ? <>A mark of<br />distinction</> : <>Small mark<br />Big spirit</>}</h2>
             <p>{copy.logo}</p>
           </div>
           <div className="logo-grid logo-showcase">
