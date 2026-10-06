@@ -96,8 +96,8 @@ const gradients = {
 
 const brandCopy = {
   "egypt": {
-    "hero": "Inspired by Egyptian heritage, made for a contemporary table. Tutenramen brings the pleasure of ramen to a fusion dining experience shaped by rich symbolism, considered craft and generous hospitality.",
-    "foundation": "Tutenramen brings ramen and Egyptian imagination to the same table. This fusion dining experience pairs generous bowls with a considered setting, drawing on the richness of Egyptian visual heritage. Stone, precious color and ancient forms lend a sense of ceremony; attentive hospitality makes it welcoming.",
+    "hero": "Inspired by Egyptian heritage, made for a contemporary table. Tutenramen brings the comfort of Japanese ramen into a world of sandstone, lapis and gold, with rich symbolism and gracious hospitality shaping the fusion dining experience.",
+    "foundation": "Tutenramen brings Japanese ramen and Egyptian imagination to the same table. This fusion dining experience pairs generous bowls with a considered setting, drawing on the richness of Egyptian visual heritage. Stone, precious color and ancient forms lend a sense of ceremony; attentive hospitality makes it welcoming.",
     "foundationNote": "Prestige lives in the care of the experience, from the first impression to the final spoonful. This guide translates that spirit into a consistent system of marks, color, type, imagery and movement.",
     "pillars": [
       "Let the bowl command attention through texture, warmth and generous presentation.",
@@ -111,20 +111,20 @@ const brandCopy = {
     "typeUtility": "Use Montserrat for menus, prices, ingredients and navigation. Practical information deserves the same care as the headline: clear, legible and easy to find.",
     "display": "Heritage at the table",
     "heading": "Rich spices, quiet ceremony",
-    "body": "A generous bowl, a considered welcome, a moment to savor.",
-    "imagery": "Photograph the invitation as carefully as the food. Warm light, tactile materials and considered compositions should convey the pleasure of dining here. Use approved photography with consistent branding.",
-    "product": "Let broth, steam and texture lead. Give packaging the same considered treatment.",
-    "environment": "Show how light, materials and signage create a complete dining experience.",
-    "detail": "Look closely at the objects guests touch. Craft is most persuasive in the details.",
+    "body": "Japanese comfort, Egyptian splendor, a generous bowl to savor.",
+    "imagery": "Frame ramen within an Egyptian-inspired setting. Warm light, sandstone tones and rich material details should convey the pleasure of dining here. Use approved photography with consistent branding.",
+    "product": "Let steam, broth and noodle texture lead. Give Egyptian motifs on approved packaging room to be seen.",
+    "environment": "Show how murals, materials and signage bring Egyptian heritage into the dining experience.",
+    "detail": "Look closely at gold details, Egyptian motifs and the branded objects guests touch.",
     "illustration": "Draw on the visual language of Egyptian heritage with clarity and respect. Landmarks establish scale; figures bring ceremony and human connection. Give each element a purpose rather than filling space with symbols.",
     "motion": "Let movement unfold with quiet assurance. Measured gestures and graceful transitions should reveal the scene, invite attention and leave room to appreciate the detail.",
-    "voice": "Write with the assurance of a gracious host. Evoke heritage through precise details and a sense of occasion. Favor warmth over grandeur, and let the food carry the promise. Menus, prices and service information should always be plain and useful.",
-    "menu": "Fragrant broth, generous noodles, a bowl to savor.",
-    "social": "An evening of warm spices and good company awaits.",
-    "service": "Welcome to the table. May we help you choose your bowl?",
-    "footerKicker": "The art of a considered welcome",
-    "footerFirst": "Every detail",
-    "footerLast": "A lasting impression",
+    "voice": "Write with the assurance of a gracious host. Bring Egyptian heritage into focus through materials, symbols and a sense of occasion; describe Japanese ramen through the pleasure of the bowl. Keep the language warm and precise, with menus, prices and service information plain and useful.",
+    "menu": "Ramen at the heart, Egyptian inspiration in every detail.",
+    "social": "An evening of ramen, warm light and Egyptian imagination.",
+    "service": "Welcome to Tutenramen. Allow us to help you choose a bowl to savor.",
+    "footerKicker": "Two cultures at one table",
+    "footerFirst": "Egyptian heritage",
+    "footerLast": "Japanese comfort",
     "rules": {
       "foundation": {
         "do": "Choose the expression for the occasion, then carry its character through the complete experience.",
@@ -159,41 +159,41 @@ const brandCopy = {
         "dont": "Expose cropped edges, disrupt the composition or compete with essential information."
       },
       "voice": {
-        "do": "Be warm, assured and specific. Let food, craft and hospitality convey a sense of occasion.",
+        "do": "Connect Egyptian heritage and Japanese ramen through specific details. Keep the welcome warm and assured.",
         "dont": "Invent provenance or let elaborate lore and exaggerated grandeur hide the useful message."
       }
     }
   },
   "anime": {
-    "hero": "Egyptian imagination meets a serious noodle habit. Tutenramen serves fusion dining with big flavor, a warm welcome and a cast of characters who are very committed to lunch.",
-    "foundation": "Ramen meets Egyptian imagination, and dinner gets a personality. Tutenramen turns fusion dining into a world of generous bowls, curious characters and warm welcomes. Come for the noodles. Stay for the plot twist.",
-    "foundationNote": "The personality is playful; the care is real. Keep every touchpoint easy to recognize and easy to enjoy, from a menu that makes sense to a character worth taking home.",
+    "hero": "Pharaohs meet ramen, and chopsticks take center stage. Tutenramen brings Egyptian imagination and Japanese comfort together for fusion dining with big flavor and a cast of characters who take their noodles very seriously.",
+    "foundation": "Egyptian imagination meets Japanese ramen. Tutenramen turns fusion dining into a world of generous bowls, expressive pharaohs and warm welcomes. Our characters may have royal titles, but they still have to decide what to order.",
+    "foundationNote": "Bring Egyptian tales to life with the expressive charm of Japanese character art. Keep the world recognizable, the welcome generous and every touchpoint easy to enjoy, from the first look at a menu to the last noodle.",
     "pillars": [
-      "Make the food irresistible. The characters can steal a scene; the noodles should steal lunch.",
-      "Welcome everyone, make the useful stuff easy, and leave room for another pair of chopsticks.",
-      "Reward a closer look with expressive gestures, small surprises and a reason to smile."
+      "Make the ramen irresistible. Even a pharaoh should pause before reaching for the last noodle.",
+      "Welcome everyone, from first-time ramen guests to chopstick regulars. There is room at this table.",
+      "Reward a closer look with Egyptian landmarks, expressive characters and small noodle adventures."
     ],
     "logo": "Give the name a confident entrance. Use the approved artwork, keep its proportions and leave breathing room. Big personality works best when everyone can read it.",
     "color": "Sunlit Papyrus gives the colors room to play. Sunset brings warmth, Lapis Lazuli adds punch and Carnelian Red draws the eye. Give one color the lead; the others can be its enthusiastic supporting cast.",
     "gradient": "Give the approved color pairs a smooth handoff. Two colors, one direction, no surprise guests. Keep text readable from one end of the blend to the other.",
     "typeDisplay": "Use bold Montserrat for headlines with something to say. Keep them short, give them space, and let the words do the work. A good punchline needs room to land.",
     "typeUtility": "Use Montserrat for menus, prices, ingredients and navigation. Bring personality to the invitation; keep the practical details delightfully obvious.",
-    "display": "All hail the noodles",
-    "heading": "Big broth, bigger appetite",
-    "body": "Bring your appetite. Your chopsticks have plans.",
-    "imagery": "Make the food look delicious and the world feel fun to step into. Let approved packaging, expressive details and warm settings bring the personality. Keep the branding consistent and the bowl easy to spot.",
-    "product": "Put the food or packaging in the spotlight. Props can have a cameo.",
-    "environment": "Show a place people want to enter, photograph and bring a friend to.",
-    "detail": "Turn an everyday object into a small discovery. Even a menu can have personality.",
-    "illustration": "Give our little heroes big appetites and readable expressions. Rounded landmarks set the scene; gestures and relationships tell the story. A raised eyebrow can say more than a wall of hieroglyphs.",
-    "motion": "Give each movement a little comic timing. Let characters anticipate, react and settle into a clear pose. Keep the joke readable, the loops comfortable and every important feature inside the frame.",
-    "voice": "Write like a quick-witted friend who knows where to eat. Keep the language warm, short and appetizing. Use a well-timed joke, then get to the useful part. Humor belongs in the invitation; ingredients, allergens and prices need clarity.",
-    "menu": "Big broth. Generous noodles. Your chopsticks approve.",
-    "social": "Your plans called. They said ramen.",
-    "service": "First bowl with us? We’ll help you find your new favorite.",
-    "footerKicker": "Good taste, excellent company",
-    "footerFirst": "A little mischief",
-    "footerLast": "A lot of flavor",
+    "display": "Pharaohs love ramen",
+    "heading": "Royal appetite, extra noodles",
+    "body": "A pharaoh’s appetite, a ramen lover’s happy place.",
+    "imagery": "Show a world where Egyptian characters and Japanese ramen feel at home together. Let approved packaging, playful motifs and warm settings bring the personality. Keep the branding consistent and the bowl easy to spot.",
+    "product": "Give ramen and approved packaging the spotlight. The pharaoh can share the frame.",
+    "environment": "Show how Egyptian landmarks and character details make the restaurant a world guests want to enter.",
+    "detail": "Give menus, signs and everyday objects a little of the cast’s personality. Keep their purpose clear.",
+    "illustration": "Give pharaohs, queens and the ninja mummy big appetites and readable expressions. Bring Egyptian landmarks into the expressive world of Japanese character art. Let gestures and relationships tell the story; a raised eyebrow can say more than a wall of hieroglyphs.",
+    "motion": "Give the cast a little comic timing: a pharaoh reaching for ramen, a queen enjoying a noodle, a ninja mummy making an entrance. Let characters anticipate, react and settle into a clear pose. Keep the loops comfortable and every important feature inside the frame.",
+    "voice": "Borrow the cast’s personality: a pharaoh with a ramen craving, a queen negotiating the last noodle, a ninja mummy arriving just in time for lunch. Keep the lines short, warm and appetizing. Menus, ingredients, allergens and prices should be easy to understand.",
+    "menu": "A royal appetite deserves a generous bowl of ramen.",
+    "social": "Even a pharaoh needs a ramen break.",
+    "service": "First ramen with us? Let’s find your favorite bowl.",
+    "footerKicker": "From papyrus to ramen",
+    "footerFirst": "Chopsticks ready",
+    "footerLast": "Ramen awaits",
     "rules": {
       "foundation": {
         "do": "Choose the expression for the occasion and carry it through the whole application, from the first hello to the last noodle.",
@@ -209,7 +209,7 @@ const brandCopy = {
       },
       "gradient": {
         "do": "Use approved two-stop blends with a smooth transition. Keep one direction within an application and check text contrast from end to end.",
-        "dont": "Invite extra color stops, abrupt bands or unrelated colors to the party. Avoid stacked gradients that compete with the food, signature or useful information."
+        "dont": "Pile on extra color stops, abrupt bands or unrelated colors. Avoid stacked gradients that compete with the ramen, signature or useful information."
       },
       "type": {
         "do": "Keep headlines expressive and practical details clear. Check prices, ingredients and navigation at their actual viewing size.",
@@ -228,7 +228,7 @@ const brandCopy = {
         "dont": "Cut off defining features, expose artwork edges or let movement distract from what guests need to know."
       },
       "voice": {
-        "do": "Keep it warm, witty and appetizing. Use a joke when it helps the message, then make the useful part easy to find.",
+        "do": "Use the Egyptian cast and its love of ramen for warm, playful lines. Make the useful part easy to find.",
         "dont": "Mock guests, force a joke into every line or make ingredients, allergens and prices part of the punchline."
       }
     }
@@ -537,7 +537,7 @@ export default function App() {
         <section className="section color-section" id="color">
           <SectionLabel number="03">Color</SectionLabel>
           <div className="section-heading">
-            <h2>{egypt ? <>Earth, stone<br />and gold</> : <>Sunshine with<br />a spicy streak</>}</h2>
+            <h2>{egypt ? <>Earth, stone<br />and gold</> : <>Papyrus<br />after sunset</>}</h2>
             <p>{copy.color}</p>
           </div>
           <div className={egypt ? "palette palette-modern" : "palette"}>
@@ -610,7 +610,7 @@ export default function App() {
         <section className="section imagery-section" id="imagery">
           <SectionLabel number="05">Imagery</SectionLabel>
           <div className="section-heading">
-            <h2>{egypt ? <>An invitation<br />to linger</> : <>Good looks<br />Great noodles</>}</h2>
+            <h2>{egypt ? <>An invitation<br />to linger</> : <>Ramen in<br />royal company</>}</h2>
             <p>{copy.imagery}</p>
           </div>
           <div className="image-mosaic">
@@ -644,7 +644,7 @@ export default function App() {
         <section className="section illustration-section" id="illustration" style={{ backgroundImage: `linear-gradient(color-mix(in srgb, var(--paper) 50%, transparent), color-mix(in srgb, var(--paper) 50%, transparent)), url(${import.meta.env.BASE_URL}media/${egypt ? "sandstone" : "papyrus"}-texture.jpg)`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
           <SectionLabel number="06">Illustration</SectionLabel>
           <div className="section-heading">
-            <h2>{egypt ? <>Heritage<br />in every line</> : <>Little heroes<br />Big appetites</>}</h2>
+            <h2>{egypt ? <>Heritage<br />in every line</> : <>Pharaohs<br />and friends</>}</h2>
             <p>{copy.illustration}</p>
           </div>
           <div className="illustration-grid">
