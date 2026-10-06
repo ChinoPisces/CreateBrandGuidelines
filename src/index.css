@@ -681,3 +681,5 @@ main a:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   main a { transition: none; }
 }
+
+.theme-anime .motion-section h2 { font-size: clamp(42px, 5.2vw, 74px); }
