@@ -178,7 +178,7 @@ const brandCopy = {
     "gradient": "Give the approved color pairs a smooth handoff. Two colors, one direction, no surprise guests. Keep text readable from one end of the blend to the other.",
     "typeDisplay": "Use bold Montserrat for headlines with something to say. Keep them short, give them space, and let the words do the work. A good punchline needs room to land.",
     "typeUtility": "Use Montserrat for menus, prices, ingredients and navigation. Bring personality to the invitation; keep the practical details delightfully obvious.",
-    "display": "Pharaohs love ramen",
+    "display": "Ramen for a pharaoh",
     "heading": "Royal appetite, extra noodles",
     "body": "A pharaoh’s appetite, a ramen lover’s happy place.",
     "imagery": "Show a world where Egyptian characters and Japanese ramen feel at home together. Let approved packaging, playful motifs and warm settings bring the personality. Keep the branding consistent and the bowl easy to spot.",
