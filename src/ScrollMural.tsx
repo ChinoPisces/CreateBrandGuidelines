@@ -54,7 +54,7 @@ export default function ScrollMural({
     let animation: Animation | undefined;
     const scrollAnimations: Animation[] = [];
     const animationInstances: Animation[] = [];
-    let smokeAnimation: Animation | undefined;
+    const smokeAnimations: Animation[] = [];
     let smokeStarted = 0;
     let disposed = false;
     let ready = false;
@@ -78,13 +78,13 @@ export default function ScrollMural({
       for (const item of scrollAnimations) {
         item.goToAndStop((reverse ? 1 - frameProgress : frameProgress) * Math.max(0, item.totalFrames - 1), true);
       }
-      if (smokeAnimation) {
+      if (smokeAnimations.length) {
         if (!smokeStarted) smokeStarted = time;
         // Advance in one direction, then restart the supplied smoke sequence.
         const smokeProgress = reducedMotion.matches ? 0 : ((time - smokeStarted) % 3000) / 3000;
-        smokeAnimation.goToAndStop(smokeProgress * Math.max(0, smokeAnimation.totalFrames - 1), true);
+        for (const item of smokeAnimations) item.goToAndStop(smokeProgress * Math.max(0, item.totalFrames - 1), true);
       }
-      if (current !== target || (smokeAnimation && !reducedMotion.matches)) request = requestAnimationFrame(render);
+      if (current !== target || (smokeAnimations.length > 0 && !reducedMotion.matches)) request = requestAnimationFrame(render);
     };
     const schedule = () => { if (!request) request = requestAnimationFrame(render); };
     Promise.all([
@@ -102,15 +102,17 @@ export default function ScrollMural({
       }
       const smokeIndices = ambientSmoke
         ? data.layers.flatMap((layer: { ty: number; nm: string }, index: number) =>
-          layer.ty === 4 && ["Shape Layer 1", "Shape Layer 2"].includes(layer.nm) ? [index] : [])
+          layer.ty === 4 && ["Shape Layer 1", "Shape Layer 2", "Shape Layer 4", "Shape Layer 5"].includes(layer.nm) ? [index] : [])
         : [];
-      const groups = smokeIndices.length
-        ? [
-          { layers: data.layers.slice(Math.max(...smokeIndices) + 1), smoke: false },
-          { layers: data.layers.filter((_: unknown, index: number) => smokeIndices.includes(index)), smoke: true },
-          { layers: data.layers.slice(0, Math.min(...smokeIndices)), smoke: false },
-        ]
-        : [{ layers: data.layers, smoke: false }];
+      // Split only contiguous layers so smoke can loop without changing the stacking order.
+      const groups: { layers: unknown[]; smoke: boolean }[] = [];
+      data.layers.forEach((layer: unknown, index: number) => {
+        const smoke = smokeIndices.includes(index);
+        const previous = groups[groups.length - 1];
+        if (previous && previous.smoke === smoke) previous.layers.push(layer);
+        else groups.push({ layers: [layer], smoke });
+      });
+      groups.reverse();
       let loaded = 0;
       for (const group of groups) {
         const surface = document.createElement("div");
@@ -122,7 +124,7 @@ export default function ScrollMural({
           rendererSettings: { preserveAspectRatio: "xMidYMid meet", clearCanvas: true },
         });
         animationInstances.push(item);
-        if (group.smoke) smokeAnimation = item;
+        if (group.smoke) smokeAnimations.push(item);
         else scrollAnimations.push(item);
         animation = item;
         item.addEventListener("DOMLoaded", () => {
