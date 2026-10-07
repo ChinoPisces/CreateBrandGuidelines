@@ -11,7 +11,7 @@ const assets = {
   heroEgypt: `${import.meta.env.BASE_URL.replace(/\/?$/, "/")}media/modern-egyptian-ramen-logo.jpg`,
   heroAnime: `${CDN}/6ab492c7fb1e0a368702ecbb_social-09-photo-wall-p-1080.webp`,
   packagingEgypt: `${import.meta.env.BASE_URL.replace(/\/?$/, "/")}media/modern-egyptian-table-scene.webp`,
-  packagingAnime: `${CDN}/6ab492c2fc8cbd991d51af7b_social-01-tabletop-packaging-p-1080.webp`,
+  packagingAnime: `${CDN}/6ac687075334853662420973_tutenramen-chibi-sustainable-packaging.webp`,
   interiorEgypt: `${import.meta.env.BASE_URL.replace(/\/?$/, "/")}media/modern-egyptian-restaurant-interior.png`,
   detailsEgypt: `${import.meta.env.BASE_URL.replace(/\/?$/, "/")}media/TE_sc_05.png`,
   storefront: `${CDN}/6ab492c5fc8cbd991d51b16c_social-05-storefront-p-1080.webp`,
@@ -618,7 +618,7 @@ export default function App() {
           </div>
           <div className="image-mosaic">
             <figure className="mosaic-main">
-              <img alt={egypt ? "A steaming Tutenramen ramen bowl served at an Egyptian-inspired table" : "Tutenramen branded ramen packaging"} src={egypt ? assets.packagingEgypt : assets.packagingAnime} />
+              <img alt={egypt ? "A steaming Tutenramen ramen bowl served at an Egyptian-inspired table" : "Tutenramen branded kraft packaging with a molded-fiber lid and paper straw"} src={egypt ? assets.packagingEgypt : assets.packagingAnime} />
               <figcaption>01 · Product in context</figcaption>
             </figure>
             <figure>
