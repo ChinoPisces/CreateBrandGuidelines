@@ -696,4 +696,4 @@ footer > a { font-size: 11px; }
 /* Keep the longer anime sign-off proportionate to its available space. */
 .theme-anime footer { container-type: inline-size; }
 .theme-anime footer > div { width: 100%; min-width: 0; }
-.theme-anime footer h2 { font-size: clamp(18px, 7.1cqw, 80px); line-height: 1.02; }
+.theme-anime footer h2 { font-size: clamp(18px, 6.4cqw, 80px); line-height: 1.02; }
