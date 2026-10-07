@@ -122,9 +122,9 @@ const brandCopy = {
     "menu": "Ramen at the heart, Egyptian inspiration in every detail.",
     "social": "An evening of ramen, warm light and Egyptian imagination.",
     "service": "Welcome to Tutenramen. Allow us to help you choose a bowl to savor.",
-    "footerKicker": "Egyptian inspiration, Japanese ramen",
-    "footerFirst": "Gold in the details",
-    "footerLast": "Warmth in the bowl",
+    "footerKicker": "Ancient Egypt, Japanese ramen",
+    "footerFirst": "Ancient splendor",
+    "footerLast": "Japanese comfort",
     "rules": {
       "foundation": {
         "do": "Choose the expression for the occasion, then carry its character through the complete experience.",
@@ -191,9 +191,9 @@ const brandCopy = {
     "menu": "Ramen so good, your chopsticks may ask for seconds.",
     "social": "Your ramen is ready. The pyramid can wait.",
     "service": "First ramen with us? Let’s find your favorite bowl.",
-    "footerKicker": "Egyptian tales, Japanese ramen",
-    "footerFirst": "Pass the ramen",
-    "footerLast": "Keep it coming",
+    "footerKicker": "Ancient Egypt, Japanese ramen",
+    "footerFirst": "Sphinx approved",
+    "footerLast": "Slurp encouraged",
     "rules": {
       "foundation": {
         "do": "Choose the expression for the occasion and carry it through the whole application, from the first hello to the last noodle.",
