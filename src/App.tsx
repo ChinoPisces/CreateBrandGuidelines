@@ -192,8 +192,8 @@ const brandCopy = {
     "social": "Your ramen is ready. The pyramid can wait.",
     "service": "First ramen with us? Let’s find your favorite bowl.",
     "footerKicker": "Chopsticks, chariots and second helpings",
-    "footerFirst": "Great pyramids",
-    "footerLast": "Greater appetites",
+    "footerFirst": "Even legends",
+    "footerLast": "Need noodles",
     "rules": {
       "foundation": {
         "do": "Choose the expression for the occasion and carry it through the whole application, from the first hello to the last noodle.",
