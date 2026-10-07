@@ -692,3 +692,8 @@ main a:focus-visible {
 .text-link { font-size: 13px; }
 .side-links a { font-size: 12px; }
 footer > a { font-size: 11px; }
+
+/* Keep the longer anime sign-off proportionate to its available space. */
+.theme-anime footer { container-type: inline-size; }
+.theme-anime footer > div { width: 100%; min-width: 0; }
+.theme-anime footer h2 { font-size: clamp(18px, 7.1cqw, 80px); line-height: 1.02; }
