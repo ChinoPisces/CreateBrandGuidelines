@@ -122,7 +122,7 @@ const brandCopy = {
     "menu": "Ramen at the heart, Egyptian inspiration in every detail.",
     "social": "An evening of ramen, warm light and Egyptian imagination.",
     "service": "Welcome to Tutenramen. Allow us to help you choose a bowl to savor.",
-    "footerKicker": "Ancient Egypt, Japanese ramen",
+    "footerKicker": "Egyptian heritage, Japanese ramen",
     "footerFirst": "Ancient splendor",
     "footerLast": "Japanese comfort",
     "rules": {
@@ -191,7 +191,7 @@ const brandCopy = {
     "menu": "Ramen so good, your chopsticks may ask for seconds.",
     "social": "Your ramen is ready. The pyramid can wait.",
     "service": "First ramen with us? Let’s find your favorite bowl.",
-    "footerKicker": "Ancient Egypt, Japanese ramen",
+    "footerKicker": "Ancient legends, fresh noodles",
     "footerFirst": "Sphinx approved",
     "footerLast": "Slurp encouraged",
     "rules": {
