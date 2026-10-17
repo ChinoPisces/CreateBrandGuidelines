@@ -766,7 +766,7 @@ export default function App() {
             <span className="footer-kicker">{copy.footerKicker}</span>
             <h2>{copy.footerFirst}<br />{copy.footerLast}</h2>
           </div>
-          <a className="portfolio-return" href="https://www.chinopisces.com/tutenramen">Back to portfolio ↗</a>
+          <a className="portfolio-return" href="https://www.chinopisces.com/design">Back to portfolio ↗</a>
           <a href="#top">Back to top ↑</a>
         </footer>
       </div>
